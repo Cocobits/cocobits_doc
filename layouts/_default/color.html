@@ -1,0 +1,637 @@
+{{ define "main" }}
+<!-- content -->
+<div class="py-6 col-md-9 col-xl-7">
+    <section class="anchor" id="colorDefault">
+        <h2>Color</h2>
+        <hr class="divider">
+        <p>Cocobits offers three tints to use for many use cases and default color utility classes meet WCAG's AAA
+            standards. Colors can be applied to backgrounds, texts and borders.</p>
+        <table class="width-full table-border-collapse my-3">
+            <thead>
+                <tr class="border-bottom">
+                    <th class="text-weight-semibold">Class value</th>
+                    <th class="text-weight-semibold">Color variable</th>
+                </tr>
+            </thead>
+            <tbody class="h6 text-weight-normal divider-row">
+                <tr>
+                    <td><code>color-text-primary</code></td>
+                    <td class="d-flex d-items-center gap-flex-col-2">
+                        <div class="bg-gray-700 rounded-1" style="height: 14px; width: 14px;"></div>
+                        <div>$gray-700</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>color-text-secondary</code></td>
+                    <td class="d-flex d-items-center gap-flex-col-2">
+                        <div class="bg-gray-500 rounded-1" style="height: 14px; width: 14px;"></div>
+                        <div>$gray-500</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>color-text-tertiary</code></td>
+                    <td class="d-flex d-items-center gap-flex-col-2">
+                        <div class="bg-gray-300 rounded-1" style="height: 14px; width: 14px;"></div>
+                        <div>$gray-300</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>color-text-link</code></td>
+                    <td class="d-flex d-items-center gap-flex-col-2">
+                        <div class="bg-blue-300 rounded-1" style="height: 14px; width: 14px;"></div>
+                        <div>$blue-300</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>color-text-error</code></td>
+                    <td class="d-flex d-items-center gap-flex-col-2">
+                        <div class="bg-red-400 rounded-1" style="height: 14px; width: 14px;"></div>
+                        <div>$red-400</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>color-bg-light</code></td>
+                    <td class="d-flex d-items-center gap-flex-col-2">
+                        <div class="bg-gray-050 rounded-1" style="height: 14px; width: 14px;"></div>
+                        <div>$gray-050</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>color-bg-dark</code></td>
+                    <td class="d-flex d-items-center gap-flex-col-2">
+                        <div class="bg-blue-700 rounded-1" style="height: 14px; width: 14px;"></div>
+                        <div>$blue-700</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>color-bg-info</code></td>
+                    <td class="d-flex d-items-center gap-flex-col-2">
+                        <div class="bg-blue-050 rounded-1" style="height: 14px; width: 14px;"></div>
+                        <div>$blue-050</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>color-bg-error</code></td>
+                    <td class="d-flex d-items-center gap-flex-col-2">
+                        <div class="bg-red-050 rounded-1" style="height: 14px; width: 14px;"></div>
+                        <div>$red-050</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>color-border-primary</code></td>
+                    <td class="d-flex d-items-center gap-flex-col-2">
+                        <div class="bg-gray-200 rounded-1" style="height: 14px; width: 14px;"></div>
+                        <div>$gray-200</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="p-3 border rounded overflow-hidden">
+            <div class="d-grid grid-flow-row gap-row-3 text-align-left">
+                <div class="color-text-primary">color-text-primary</div>
+                <div class="color-text-secondary">color-text-secondary</div>
+                <div class="color-text-tertiary">color-text-tertiary</div>
+                <div class="color-text-link">color-text-link</div>
+                <div class="color-text-error">color-text-error</div>
+                <div class="p-2 color-bg-light rounded">color-bg-light</div>
+                <div class="p-2 color-bg-dark rounded color-text-tertiary">color-bg-dark color-text-tertiary</div>
+                <div class="p-2 color-bg-info rounded">color-bg-info</div>
+                <div class="p-2 color-text-error color-bg-error rounded">color-bg-error color-text-error</div>
+                <div class="p-2 border color-border-primary rounded">color-border-primary</div>
+                <div class="p-2 border color-border-error color-text-error rounded">color-border-error color-text-error
+                </div>
+            </div>
+        </div>
+        <pre>
+        &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">color-bg-error color-text-error</span>"&gt;...&lt;/div&gt;
+        </pre>
+        <!-- gray tints -->
+        <h3 id="grayTint" class="anchor mt-6 text-weight-light">Gray Tints</h3>
+        <table class="width-full table-border-collapse my-3">
+            <thead>
+                <tr class="border-bottom">
+                    <th class="text-weight-semibold">Class value</th>
+                    <th class="text-weight-semibold">Tint</th>
+                </tr>
+            </thead>
+            <tbody class="h6 text-weight-normal divider-row">
+                <tr>
+                    <td><code>gray-050</code></td>
+                    <td class="d-flex d-items-center gap-flex-col-2">
+                        <div class="bg-gray-050 rounded-1" style="height: 14px; width: 14px;"></div>
+                        <div>rgb(248, 248, 250)</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>gray-100</code></td>
+                    <td class="d-flex d-items-center gap-flex-col-2">
+                        <div class="bg-gray-100 rounded-1" style="height: 14px; width: 14px;"></div>
+                        <div>rgb(231, 231, 231)</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>gray-200</code></td>
+                    <td class="d-flex d-items-center gap-flex-col-2">
+                        <div class="bg-gray-200 rounded-1" style="height: 14px; width: 14px;"></div>
+                        <div>rgb(209, 209, 209)</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>gray-300</code></td>
+                    <td class="d-flex d-items-center gap-flex-col-2">
+                        <div class="bg-gray-300 rounded-1" style="height: 14px; width: 14px;"></div>
+                        <div>rgb(170, 170, 171)</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>gray-400</code></td>
+                    <td class="d-flex d-items-center gap-flex-col-2">
+                        <div class="bg-gray-400 rounded-1" style="height: 14px; width: 14px;"></div>
+                        <div>rgb(122, 122, 123)</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>gray-500</code></td>
+                    <td class="d-flex d-items-center gap-flex-col-2">
+                        <div class="bg-gray-500 rounded-1" style="height: 14px; width: 14px;"></div>
+                        <div>rgb(76, 76, 76)</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>gray-600</code></td>
+                    <td class="d-flex d-items-center gap-flex-col-2">
+                        <div class="bg-gray-600 rounded-1" style="height: 14px; width: 14px;"></div>
+                        <div>rgb(41, 41, 42)</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>gray-700</code></td>
+                    <td class="d-flex d-items-center gap-flex-col-2">
+                        <div class="bg-gray-700 rounded-1" style="height: 14px; width: 14px;"></div>
+                        <div>rgb(15, 15, 15)</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="p-3 border rounded overflow-hidden">
+            <div class="d-grid grid-flow-col text-align-center">
+                <div class="d-grid d-items-center height-8 gray-050">gray-050</div>
+                <div class="d-grid d-items-center height-8 gray-100">gray-100</div>
+                <div class="d-grid d-items-center height-8 gray-200">gray-200</div>
+                <div class="d-grid d-items-center height-8 gray-300">gray-300</div>
+                <div class="d-grid d-items-center height-8 gray-400">gray-400</div>
+                <div class="d-grid d-items-center height-8 gray-500">gray-500</div>
+                <div class="d-grid d-items-center height-8 gray-600">gray-600</div>
+                <div class="d-grid d-items-center height-8 gray-700">gray-700</div>
+            </div>
+        </div>
+        <pre>
+        &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">gray-400</span>"&gt;...&lt;/div&gt;
+        </pre>
+        <!-- blue tints -->
+        <h3 id="blueTint" class="anchor mt-6 text-weight-light">Blues Tints</h3>
+        <table class="width-full table-border-collapse my-3">
+            <thead>
+                <tr class="border-bottom">
+                    <th class="text-weight-semibold">Class value</th>
+                    <th class="text-weight-semibold">Tint</th>
+                </tr>
+            </thead>
+            <tbody class="h6 text-weight-normal divider-row">
+                <tr>
+                    <td><code>blue-050</code></td>
+                    <td class="d-flex d-items-center gap-flex-col-2">
+                        <div class="bg-blue-050 rounded-1" style="height: 14px; width: 14px;"></div>
+                        <div>rgb(235, 244, 254)</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>blue-100</code></td>
+                    <td class="d-flex d-items-center gap-flex-col-2">
+                        <div class="bg-blue-100 rounded-1" style="height: 14px; width: 14px;"></div>
+                        <div>rgb(211, 231, 255)</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>blue-200</code></td>
+                    <td class="d-flex d-items-center gap-flex-col-2">
+                        <div class="bg-blue-200 rounded-1" style="height: 14px; width: 14px;"></div>
+                        <div>rgb(137, 186, 248)</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>blue-300</code></td>
+                    <td class="d-flex d-items-center gap-flex-col-2">
+                        <div class="bg-blue-300 rounded-1" style="height: 14px; width: 14px;"></div>
+                        <div>rgb(59, 140, 244)</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>blue-400</code></td>
+                    <td class="d-flex d-items-center gap-flex-col-2">
+                        <div class="bg-blue-400 rounded-1" style="height: 14px; width: 14px;"></div>
+                        <div>rgb(47, 112, 195)</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>blue-500</code></td>
+                    <td class="d-flex d-items-center gap-flex-col-2">
+                        <div class="bg-blue-500 rounded-1" style="height: 14px; width: 14px;"></div>
+                        <div>rgb(35, 84, 146)</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>blue-600</code></td>
+                    <td class="d-flex d-items-center gap-flex-col-2">
+                        <div class="bg-blue-600 rounded-1" style="height: 14px; width: 14px;"></div>
+                        <div>rgb(18, 42, 73)</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>blue-700</code></td>
+                    <td class="d-flex d-items-center gap-flex-col-2">
+                        <div class="bg-blue-700 rounded-1" style="height: 14px; width: 14px;"></div>
+                        <div>rgb(12, 28, 49)</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="p-3 border rounded overflow-hidden">
+            <div class="d-grid grid-flow-col text-align-center">
+                <div class="d-grid d-items-center height-8 blue-050">blue-050</div>
+                <div class="d-grid d-items-center height-8 blue-100">blue-100</div>
+                <div class="d-grid d-items-center height-8 blue-200">blue-200</div>
+                <div class="d-grid d-items-center height-8 blue-300">blue-300</div>
+                <div class="d-grid d-items-center height-8 blue-400">blue-400</div>
+                <div class="d-grid d-items-center height-8 blue-500">blue-500</div>
+                <div class="d-grid d-items-center height-8 blue-600">blue-600</div>
+                <div class="d-grid d-items-center height-8 blue-700">blue-700</div>
+            </div>
+        </div>
+        <pre>
+        &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">blue-400</span>"&gt;...&lt;/div&gt;
+        </pre>
+        <!-- red tints -->
+        <h3 id="redTint" class="anchor mt-6 text-weight-light">Red Tints</h3>
+        <table class="width-full table-border-collapse my-3">
+            <thead>
+                <tr class="border-bottom">
+                    <th class="text-weight-semibold">Class value</th>
+                    <th class="text-weight-semibold">Tint</th>
+                </tr>
+            </thead>
+            <tbody class="h6 text-weight-normal divider-row">
+                <tr>
+                    <td><code>red-050</code></td>
+                    <td class="d-flex d-items-center gap-flex-col-2">
+                        <div class="bg-red-050 rounded-1" style="height: 14px; width: 14px;"></div>
+                        <div>rgb(255, 234, 234)</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>red-100</code></td>
+                    <td class="d-flex d-items-center gap-flex-col-2">
+                        <div class="bg-red-100 rounded-1" style="height: 14px; width: 14px;"></div>
+                        <div>rgb(255, 205, 205)</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>red-200</code></td>
+                    <td class="d-flex d-items-center gap-flex-col-2">
+                        <div class="bg-red-200 rounded-1" style="height: 14px; width: 14px;"></div>
+                        <div>rgb(255, 169, 169)</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>red-300</code></td>
+                    <td class="d-flex d-items-center gap-flex-col-2">
+                        <div class="bg-red-300 rounded-1" style="height: 14px; width: 14px;"></div>
+                        <div>rgb(255, 122, 122)</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>red-400</code></td>
+                    <td class="d-flex d-items-center gap-flex-col-2">
+                        <div class="bg-red-400 rounded-1" style="height: 14px; width: 14px;"></div>
+                        <div>rgb(255, 77, 77)</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>red-500</code></td>
+                    <td class="d-flex d-items-center gap-flex-col-2">
+                        <div class="bg-red-500 rounded-1" style="height: 14px; width: 14px;"></div>
+                        <div>rgb(236, 32, 32)</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>red-600</code></td>
+                    <td class="d-flex d-items-center gap-flex-col-2">
+                        <div class="bg-red-600 rounded-1" style="height: 14px; width: 14px;"></div>
+                        <div>rgb(193, 16, 16)</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>red-700</code></td>
+                    <td class="d-flex d-items-center gap-flex-col-2">
+                        <div class="bg-red-700 rounded-1" style="height: 14px; width: 14px;"></div>
+                        <div>rgb(139, 12, 12)</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="p-3 border rounded overflow-hidden">
+            <div class="d-grid grid-flow-col text-align-center">
+                <div class="d-grid d-items-center height-8 red-050">red-050</div>
+                <div class="d-grid d-items-center height-8 red-100">red-100</div>
+                <div class="d-grid d-items-center height-8 red-200">red-200</div>
+                <div class="d-grid d-items-center height-8 red-300">red-300</div>
+                <div class="d-grid d-items-center height-8 red-400">red-400</div>
+                <div class="d-grid d-items-center height-8 red-500">red-500</div>
+                <div class="d-grid d-items-center height-8 red-600">red-600</div>
+                <div class="d-grid d-items-center height-8 red-700">red-700</div>
+            </div>
+        </div>
+        <pre>
+        &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">red-400</span>"&gt;...&lt;/div&gt;
+        </pre>
+        <!-- background gray tints -->
+        <h3 id="bgGrayTint" class="anchor mt-6 text-weight-light">Background Gray Tints</h3>
+        <table class="width-full table-border-collapse my-3">
+            <thead>
+                <tr class="border-bottom">
+                    <th class="text-weight-semibold">Class value</th>
+                    <th class="text-weight-semibold">Tint</th>
+                </tr>
+            </thead>
+            <tbody class="h6 text-weight-normal divider-row">
+                <tr>
+                    <td><code>bg-black</code></td>
+                    <td class="d-flex d-items-center gap-flex-col-2">
+                        <div class="bg-black rounded-1" style="height: 14px; width: 14px;"></div>
+                        <div>rgb(0, 0, 0)</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>bg-white</code></td>
+                    <td class="d-flex d-items-center gap-flex-col-2">
+                        <div class="border rounded-1" style="height: 14px; width: 14px;"></div>
+                        <div>rgb(255, 255, 255)</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>bg-gray-050</code></td>
+                    <td class="d-flex d-items-center gap-flex-col-2">
+                        <div class="bg-gray-050 rounded-1" style="height: 14px; width: 14px;"></div>
+                        <div>rgb(248, 248, 250)</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>bg-gray-100</code></td>
+                    <td class="d-flex d-items-center gap-flex-col-2">
+                        <div class="bg-gray-100 rounded-1" style="height: 14px; width: 14px;"></div>
+                        <div>rgb(231, 231, 231)</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>bg-gray-200</code></td>
+                    <td class="d-flex d-items-center gap-flex-col-2">
+                        <div class="bg-gray-200 rounded-1" style="height: 14px; width: 14px;"></div>
+                        <div>rgb(209, 209, 209)</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>bg-gray-300</code></td>
+                    <td class="d-flex d-items-center gap-flex-col-2">
+                        <div class="bg-gray-300 rounded-1" style="height: 14px; width: 14px;"></div>
+                        <div>rgb(170, 170, 171)</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>bg-gray-400</code></td>
+                    <td class="d-flex d-items-center gap-flex-col-2">
+                        <div class="bg-gray-400 rounded-1" style="height: 14px; width: 14px;"></div>
+                        <div>rgb(122, 122, 123)</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>bg-gray-500</code></td>
+                    <td class="d-flex d-items-center gap-flex-col-2">
+                        <div class="bg-gray-500 rounded-1" style="height: 14px; width: 14px;"></div>
+                        <div>rgb(76, 76, 76)</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>bg-gray-600</code></td>
+                    <td class="d-flex d-items-center gap-flex-col-2">
+                        <div class="bg-gray-600 rounded-1" style="height: 14px; width: 14px;"></div>
+                        <div>rgb(41, 41, 42)</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>bg-gray-700</code></td>
+                    <td class="d-flex d-items-center gap-flex-col-2">
+                        <div class="bg-gray-700 rounded-1" style="height: 14px; width: 14px;"></div>
+                        <div>rgb(15, 15, 15)</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="p-3 border rounded overflow-hidden">
+            <div class="d-grid grid-flow-col text-align-center">
+                <div class="d-grid d-items-center height-8 bg-white text-small">bg-white</div>
+                <div class="d-grid d-items-center height-8 bg-gray-050 text-small">bg-gray-050</div>
+                <div class="d-grid d-items-center height-8 bg-gray-100 text-small">bg-gray-100</div>
+                <div class="d-grid d-items-center height-8 bg-gray-200 text-small">bg-gray-200</div>
+                <div class="d-grid d-items-center height-8 bg-gray-300 text-small">bg-gray-300</div>
+                <div class="d-grid d-items-center height-8 bg-gray-400 text-small">bg-gray-400</div>
+                <div class="d-grid d-items-center height-8 bg-gray-500 text-small">bg-gray-500</div>
+                <div class="d-grid d-items-center height-8 bg-gray-600 text-small">bg-gray-600</div>
+                <div class="d-grid d-items-center height-8 bg-gray-700 text-small">bg-gray-700</div>
+                <div class="d-grid d-items-center height-8 bg-black text-small">bg-black</div>
+            </div>
+        </div>
+        <pre>
+        &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">bg-gray-400</span>"&gt;...&lt;/div&gt;
+        </pre>
+        <!-- blue tints -->
+        <h3 id="bgBlueTint" class="anchor mt-6 text-weight-light">Background Blues Tints</h3>
+        <table class="width-full table-border-collapse my-3">
+            <thead>
+                <tr class="border-bottom">
+                    <th class="text-weight-semibold">Class value</th>
+                    <th class="text-weight-semibold">Tint</th>
+                </tr>
+            </thead>
+            <tbody class="h6 text-weight-normal divider-row">
+                <tr>
+                    <td><code>bg-blue-050</code></td>
+                    <td class="d-flex d-items-center gap-flex-col-2">
+                        <div class="bg-blue-050 rounded-1" style="height: 14px; width: 14px;"></div>
+                        <div>rgb(235, 244, 254)</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>bg-blue-100</code></td>
+                    <td class="d-flex d-items-center gap-flex-col-2">
+                        <div class="bg-blue-100 rounded-1" style="height: 14px; width: 14px;"></div>
+                        <div>rgb(211, 231, 255)</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>bg-blue-200</code></td>
+                    <td class="d-flex d-items-center gap-flex-col-2">
+                        <div class="bg-blue-200 rounded-1" style="height: 14px; width: 14px;"></div>
+                        <div>rgb(137, 186, 248)</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>bg-blue-300</code></td>
+                    <td class="d-flex d-items-center gap-flex-col-2">
+                        <div class="bg-blue-300 rounded-1" style="height: 14px; width: 14px;"></div>
+                        <div>rgb(59, 140, 244)</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>bg-blue-400</code></td>
+                    <td class="d-flex d-items-center gap-flex-col-2">
+                        <div class="bg-blue-400 rounded-1" style="height: 14px; width: 14px;"></div>
+                        <div>rgb(47, 112, 195)</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>bg-blue-500</code></td>
+                    <td class="d-flex d-items-center gap-flex-col-2">
+                        <div class="bg-blue-500 rounded-1" style="height: 14px; width: 14px;"></div>
+                        <div>rgb(35, 84, 146)</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>bg-blue-600</code></td>
+                    <td class="d-flex d-items-center gap-flex-col-2">
+                        <div class="bg-blue-600 rounded-1" style="height: 14px; width: 14px;"></div>
+                        <div>rgb(18, 42, 73)</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>bg-blue-700</code></td>
+                    <td class="d-flex d-items-center gap-flex-col-2">
+                        <div class="bg-blue-700 rounded-1" style="height: 14px; width: 14px;"></div>
+                        <div>rgb(12, 28, 49)</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="p-3 border rounded overflow-hidden">
+            <div class="d-grid grid-flow-col text-align-center">
+                <div class="d-grid d-items-center height-8 bg-blue-050 text-small">bg-blue-050</div>
+                <div class="d-grid d-items-center height-8 bg-blue-100 text-small">bg-blue-100</div>
+                <div class="d-grid d-items-center height-8 bg-blue-200 text-small">bg-blue-200</div>
+                <div class="d-grid d-items-center height-8 bg-blue-300 text-small">bg-blue-300</div>
+                <div class="d-grid d-items-center height-8 bg-blue-400 text-small">bg-blue-400</div>
+                <div class="d-grid d-items-center height-8 bg-blue-500 text-small">bg-blue-500</div>
+                <div class="d-grid d-items-center height-8 bg-blue-600 text-small">bg-blue-600</div>
+                <div class="d-grid d-items-center height-8 bg-blue-700 text-small">bg-blue-700</div>
+            </div>
+        </div>
+        <pre>
+        &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">bg-blue-400</span>"&gt;...&lt;/div&gt;
+        </pre>
+        <!-- red tints -->
+        <h3 id="bgRedTint" class="anchor mt-6 text-weight-light">Background Red Tints</h3>
+        <table class="width-full table-border-collapse my-3">
+            <thead>
+                <tr class="border-bottom">
+                    <th class="text-weight-semibold">Class value</th>
+                    <th class="text-weight-semibold">Tint</th>
+                </tr>
+            </thead>
+            <tbody class="h6 text-weight-normal divider-row">
+                <tr>
+                    <td><code>bg-red-050</code></td>
+                    <td class="d-flex d-items-center gap-flex-col-2">
+                        <div class="bg-red-050 rounded-1" style="height: 14px; width: 14px;"></div>
+                        <div>rgb(255, 234, 234)</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>bg-red-100</code></td>
+                    <td class="d-flex d-items-center gap-flex-col-2">
+                        <div class="bg-red-100 rounded-1" style="height: 14px; width: 14px;"></div>
+                        <div>rgb(255, 205, 205)</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>bg-red-200</code></td>
+                    <td class="d-flex d-items-center gap-flex-col-2">
+                        <div class="bg-red-200 rounded-1" style="height: 14px; width: 14px;"></div>
+                        <div>rgb(255, 169, 169)</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>bg-red-300</code></td>
+                    <td class="d-flex d-items-center gap-flex-col-2">
+                        <div class="bg-red-300 rounded-1" style="height: 14px; width: 14px;"></div>
+                        <div>rgb(255, 122, 122)</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>bg-red-400</code></td>
+                    <td class="d-flex d-items-center gap-flex-col-2">
+                        <div class="bg-red-400 rounded-1" style="height: 14px; width: 14px;"></div>
+                        <div>rgb(255, 77, 77)</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>bg-red-500</code></td>
+                    <td class="d-flex d-items-center gap-flex-col-2">
+                        <div class="bg-red-500 rounded-1" style="height: 14px; width: 14px;"></div>
+                        <div>rgb(236, 32, 32)</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>bg-red-600</code></td>
+                    <td class="d-flex d-items-center gap-flex-col-2">
+                        <div class="bg-red-600 rounded-1" style="height: 14px; width: 14px;"></div>
+                        <div>rgb(193, 16, 16)</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>bg-red-700</code></td>
+                    <td class="d-flex d-items-center gap-flex-col-2">
+                        <div class="bg-red-700 rounded-1" style="height: 14px; width: 14px;"></div>
+                        <div>rgb(139, 12, 12)</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="p-3 border rounded overflow-hidden">
+            <div class="d-grid grid-flow-col text-align-center">
+                <div class="d-grid d-items-center height-8 bg-red-050 text-small">bg-red-050</div>
+                <div class="d-grid d-items-center height-8 bg-red-100 text-small">bg-red-100</div>
+                <div class="d-grid d-items-center height-8 bg-red-200 text-small">bg-red-200</div>
+                <div class="d-grid d-items-center height-8 bg-red-300 text-small">bg-red-300</div>
+                <div class="d-grid d-items-center height-8 bg-red-400 text-small">bg-red-400</div>
+                <div class="d-grid d-items-center height-8 bg-red-500 text-small">bg-red-500</div>
+                <div class="d-grid d-items-center height-8 bg-red-600 text-small">bg-red-600</div>
+                <div class="d-grid d-items-center height-8 bg-red-700 text-small">bg-red-700</div>
+            </div>
+        </div>
+        <pre>
+        &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">bg-red-400</span>"&gt;...&lt;/div&gt;
+        </pre>
+    </section>
+</div>
+<!-- secondary nav -->
+<div class="d-none d-xl-block py-6 col-xl-2 position-sticky d-self-flex-start pl-xl-5" style="top: 40px;">
+    <div class="d-flex flex-col gap-flex-2">
+        <a class="h6 text-decoration-none text-weight-light" href="#colorDefault">Color Default</a>
+        <a class="h6 text-decoration-none text-weight-light" href="#grayTint">Gray Tint</a>
+        <a class="h6 text-decoration-none text-weight-light" href="#blueTint">Blue Tint</a>
+        <a class="h6 text-decoration-none text-weight-light" href="#redTint">Red Tint</a>
+        <a class="h6 text-decoration-none text-weight-light" href="#bgGrayTint">Background Gray Tint</a>
+        <a class="h6 text-decoration-none text-weight-light" href="#bgBlueTint">Background Blue Tint</a>
+        <a class="h6 text-decoration-none text-weight-light" href="#bgRedTint">Background Red Tints</a>
+    </div>  
+</div>
+{{ end }}
+

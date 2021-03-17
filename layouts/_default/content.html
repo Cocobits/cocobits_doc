@@ -1,0 +1,896 @@
+{{ define "main" }}
+<div class="py-6 col-md-9 col-xl-7">
+    <section>
+        <h1>Content</h1>
+        <p class="text-lead">Content utility classes offer variety of ways to group or organize content using borders, box
+            shadows, tables and opacity filters.</p>
+    </section>
+    <!-- border -->
+    <section id="border" class="anchor">
+        <h2>Border</h2>
+        <hr class="divider">
+        <p>The border utilities set borders and element radius with a default border color of <code>gray-200</code>. The
+            border color can be changed by adding custom styles.</p>
+        <table class="width-full table-border-collapse my-3">
+            <thead>
+                <tr class="border-bottom">
+                    <th class="text-weight-semibold">Class value</th>
+                    <th class="text-weight-semibold">Breakpoint</th>
+                    <th class="text-weight-semibold">Border style</th>
+                </tr>
+            </thead>
+            <tbody class="h6 text-weight-normal divider-row">
+                <tr>
+                    <td><code>border-{breakpoint syntax}</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>border: 1px solid $base-border-gray</td>
+                </tr>
+                <tr>
+                    <td><code>border-{breakpoint syntax}-0</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>border: 0</td>
+                </tr>
+                <tr>
+                    <td><code>border-{breakpoint syntax}-x</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>border-right: 1px solid $base-border-gray<br>border:-left: 1px solid $base-border-gray</td>
+                </tr>
+                <tr>
+                    <td><code>border-{breakpoint syntax}-y</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>border-top: 1px solid $base-border-gray<br>border:-bottom: 1px solid $base-border-gray</td>
+                </tr>
+                <tr>
+                    <td><code>border-{breakpoint syntax}-top</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>border-top: 1px solid $base-border-gray</td>
+                </tr>
+                <tr>
+                    <td><code>border-{breakpoint syntax}-right</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>border-right: 1px solid $base-border-gray</td>
+                </tr>
+                <tr>
+                    <td><code>border-{breakpoint syntax}-bottom</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>border-bottom: 1px solid $base-border-gray</td>
+                </tr>
+                <tr>
+                    <td><code>border-{breakpoint syntax}-left</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>border-left: 1px solid $base-border-gray</td>
+                </tr>
+                <tr>
+                    <td><code>border-{breakpoint syntax}-top-0</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>border-top: 0</td>
+                </tr>
+                <tr>
+                    <td><code>border-{breakpoint syntax}-right-0</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>border-right: 0</td>
+                </tr>
+                <tr>
+                    <td><code>border-{breakpoint syntax}-bottom-0</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>border-bottom: 0</td>
+                </tr>
+                <tr>
+                    <td><code>border-{breakpoint syntax}-left-0</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>border-left: 0</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="p-3 border rounded overflow-hidden">
+            <div class="d-grid grid-col-3 gap-2 text-align-center">
+                <div class="d-grid d-items-center height-8 bg-blue-050 border-sm"><code>border-sm</code></div>
+                <div class="d-grid d-items-center height-8 bg-blue-050 border-sm-x"><code>border-sm-x</code></div>
+                <div class="d-grid d-items-center height-8 bg-blue-050 border-sm-y"><code>border-sm-y</code></div>
+                <div class="d-grid d-items-center height-8 bg-blue-050 border-sm-top"><code>border-sm-top</code></div>
+                <div class="d-grid d-items-center height-8 bg-blue-050 border-sm-right"><code>border-sm-right</code></div>
+                <div class="d-grid d-items-center height-8 bg-blue-050 border-sm-bottom"><code>border-sm-bottom</code></div>
+                <div class="d-grid d-items-center height-8 bg-blue-050 border-sm-left"><code>border-sm-left</code></div>
+            </div>
+        </div>
+        <pre>
+    &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">border-sm-x</span>"&gt;...&lt;/div&gt;
+    </pre>
+        <h3 class="mt-6 text-weight-light">Fixed Border</h3>
+        <table class="width-full table-border-collapse my-3">
+            <thead>
+                <tr class="border-bottom">
+                    <th class="text-weight-semibold">Class value</th>
+                    <th class="text-weight-semibold">Border style</th>
+                </tr>
+            </thead>
+            <tbody class="h6 text-weight-normal divider-row">
+                <tr>
+                    <td><code>border</code></td>
+                    <td>border: 1px solid $base-border-gray</td>
+                </tr>
+                <tr>
+                    <td><code>border-0</code></td>
+                    <td>border: 0</td>
+                </tr>
+                <tr>
+                    <td><code>border-x</code></td>
+                    <td>border-right: 1px solid $base-border-gray<br>border:-left: 1px solid $base-border-gray
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>border-y</code></td>
+                    <td>border-top: 1px solid $base-border-gray<br>border:-bottom: 1px solid $base-border-gray
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>border-top</code></td>
+                    <td>border-top: 1px solid $base-border-gray</td>
+                </tr>
+                <tr>
+                    <td><code>border-right</code></td>
+                    <td>border-right: 1px solid $base-border-gray</td>
+                </tr>
+                <tr>
+                    <td><code>border-bottom</code></td>
+                    <td>border-bottom: 1px solid $base-border-gray</td>
+                </tr>
+                <tr>
+                    <td><code>border-left</code></td>
+                    <td>border-left: 1px solid $base-border-gray</td>
+                </tr>
+                <tr>
+                    <td><code>border-top-0</code></td>
+                    <td>border-top: 0</td>
+                </tr>
+                <tr>
+                    <td><code>border-right-0</code></td>
+                    <td>border-right: 0</td>
+                </tr>
+                <tr>
+                    <td><code>border-bottom-0</code></td>
+                    <td>border-bottom: 0</td>
+                </tr>
+                <tr>
+                    <td><code>border-left-0</code></td>
+                    <td>border-left: 0</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <!-- divider -->
+    <section>
+        <h2>Divider</h2>
+        <hr class="divider">
+        <p>Divider utility classes add a border between columns and rows. Dividers require more than one element.</p>
+        <table class="width-full table-border-collapse my-3">
+            <thead>
+                <tr class="border-bottom">
+                    <th class="text-weight-semibold">Class value</th>
+                    <th class="text-weight-semibold">Sets border</th>
+                </tr>
+            </thead>
+            <tbody class="h6 text-weight-normal divider-row">
+                <tr>
+                    <td><code>divider-col</code></td>
+                    <td>right</td>
+                </tr>
+                <tr>
+                    <td><code>divider-row</code></td>
+                    <td>bottom</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="p-3 border rounded overflow-hidden">
+            <div class="d-flex text-align-center divider-col">
+                <div class="d-grid d-items-center height-5 flex-1"><code>divider-col</code></div>
+                <div class="d-grid d-items-center height-5 flex-1"><code>divider-col</code></div>
+                <div class="d-grid d-items-center height-5 flex-1"><code>divider-col</code></div>
+            </div>
+        </div>
+        <pre>
+    &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">d-flex divider-col</span>"&gt;
+    &lt;div&gt;...&lt;/div&gt;
+    &lt;div&gt;...&lt;/div&gt;
+    &lt;div&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+    </pre>
+        <div class="p-3 border rounded overflow-hidden">
+            <div class="d-grid text-align-center divider-row">
+                <div class="d-grid d-content-center flex-1 py-3"><code>divider-row</code></div>
+                <div class="d-grid d-content-center flex-1 py-3"><code>divider-row</code></div>
+                <div class="d-grid d-content-center flex-1 py-3"><code>divider-row</code></div>
+            </div>
+        </div>
+        <pre>
+    &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">d-grid divider-row</span>"&gt;
+    &lt;div&gt;...&lt;/div&gt;
+    &lt;div&gt;...&lt;/div&gt;
+    &lt;div&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+    </pre>
+    </section>
+    <!-- border radius -->
+    <section>
+        <h2>Border Radius</h2>
+        <hr class="divider">
+        <p>Border radius utilities rounds the corner of an element's outer border edge.</p>
+        <table class="width-full table-border-collapse my-3">
+            <thead>
+                <tr class="border-bottom">
+                    <th class="text-weight-semibold">Class value</th>
+                    <th class="text-weight-semibold">Breakpoint</th>
+                    <th class="text-weight-semibold">Radius length</th>
+                </tr>
+            </thead>
+            <tbody class="h6 text-weight-normal divider-row">
+                <tr>
+                    <td><code>rounded-{breakpoint syntax}</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>8px</td>
+                </tr>
+                <tr>
+                    <td><code>rounded-{breakpoint syntax}-0</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>0px</td>
+                </tr>
+                <tr>
+                    <td><code>rounded-{breakpoint syntax}-1</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>2px</td>
+                </tr>
+                <tr>
+                    <td><code>rounded-{breakpoint syntax}-2</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>4px</td>
+                </tr>
+                <tr>
+                    <td><code>rounded-{breakpoint syntax}-3</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>8px</td>
+                </tr>
+                <tr>
+                    <td><code>rounded-{breakpoint syntax}-4</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>16px</td>
+                </tr>
+                <tr>
+                    <td><code>rounded-{breakpoint syntax}-5</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>24px</td>
+                </tr>
+                <tr>
+                    <td><code>rounded</code></td>
+                    <td>-</td>
+                    <td>8px</td>
+                </tr>
+                <tr>
+                    <td><code>rounded-0</code></td>
+                    <td>-</td>
+                    <td>0px</td>
+                </tr>
+                <tr>
+                    <td><code>rounded-1</code></td>
+                    <td>-</td>
+                    <td>2px</td>
+                </tr>
+                <tr>
+                    <td><code>rounded-2</code></td>
+                    <td>-</td>
+                    <td>4px</td>
+                </tr>
+                <tr>
+                    <td><code>rounded-3</code></td>
+                    <td>-</td>
+                    <td>8px</td>
+                </tr>
+                <tr>
+                    <td><code>rounded-4</code></td>
+                    <td>-</td>
+                    <td>16px</td>
+                </tr>
+                <tr>
+                    <td><code>rounded-5</code></td>
+                    <td>-</td>
+                    <td>24px</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="p-3 border rounded overflow-hidden">
+            <div class="d-grid grid-col-3 gap-2 text-align-center">
+                <div class="d-grid d-items-center height-8 bg-blue-100 rounded-0"><code>rounded-0</code></div>
+                <div class="d-grid d-items-center height-8 bg-blue-100 rounded-1"><code>rounded-1</code></div>
+                <div class="d-grid d-items-center height-8 bg-blue-100 rounded-2"><code>rounded-2</code></div>
+                <div class="d-grid d-items-center height-8 bg-blue-100 rounded-3"><code>rounded-3</code></div>
+                <div class="d-grid d-items-center height-8 bg-blue-100 rounded-4"><code>rounded-4</code></div>
+                <div class="d-grid d-items-center height-8 bg-blue-100 rounded-5"><code>rounded-5</code></div>
+            </div>
+        </div>
+        <pre>
+    &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">rounded-4</span>"&gt;...&lt;/div&gt;
+    </pre>
+        <h3 class="mt-6 text-weight-light">Rounded Edges</h3>
+        <p>Choose which edge of an element to set the border radius.</p>
+        <table class="width-full table-border-collapse my-3">
+            <thead>
+                <tr class="border-bottom">
+                    <th class="text-weight-semibold">Class value</th>
+                    <th class="text-weight-semibold">Breakpoint</th>
+                    <th class="text-weight-semibold">Edge</th>
+                    <th class="text-weight-semibold">Radius length</th>
+                </tr>
+            </thead>
+            <tbody class="h6 text-weight-normal divider-row">
+                <tr>
+                    <td><code>rounded-{breakpoint}-{edge}-0</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>top, right, bottom, left</td>
+                    <td>0px</td>
+                </tr>
+                <tr>
+                    <td><code>rounded-{breakpoint}-{edge}-1</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>top, right, bottom, left</td>
+                    <td>2px</td>
+                </tr>
+                <tr>
+                    <td><code>rounded-{breakpoint}-{edge}-2</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>top, right, bottom, left</td>
+                    <td>4px</td>
+                </tr>
+                <tr>
+                    <td><code>rounded-{breakpoint}-{edge}-3</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>top, right, bottom, left</td>
+                    <td>8px</td>
+                </tr>
+                <tr>
+                    <td><code>rounded-{breakpoint}-{edge}-4</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>top, right, bottom, left</td>
+                    <td>16px</td>
+                </tr>
+                <tr>
+                    <td><code>rounded-{breakpoint}-{edge}-5</code></td>
+                    <td>-</td>
+                    <td>top, right, bottom, left</td>
+                    <td>24px</td>
+                </tr>
+                <tr>
+                    <td><code>rounded-{edge}-0</code></td>
+                    <td>-</td>
+                    <td>top, right, bottom, left</td>
+                    <td>0px</td>
+                </tr>
+                <tr>
+                    <td><code>rounded-{edge}-1</code></td>
+                    <td>-</td>
+                    <td>top, right, bottom, left</td>
+                    <td>2px</td>
+                </tr>
+                <tr>
+                    <td><code>rounded-{edge}-2</code></td>
+                    <td>-</td>
+                    <td>top, right, bottom, left</td>
+                    <td>4px</td>
+                </tr>
+                <tr>
+                    <td><code>rounded-{edge}-3</code></td>
+                    <td>-</td>
+                    <td>top, right, bottom, left</td>
+                    <td>8px</td>
+                </tr>
+                <tr>
+                    <td><code>rounded-{edge}-4</code></td>
+                    <td>-</td>
+                    <td>top, right, bottom, left</td>
+                    <td>16px</td>
+                </tr>
+                <tr>
+                    <td><code>rounded-{edge}-5</code></td>
+                    <td>-</td>
+                    <td>top, right, bottom, left</td>
+                    <td>24px</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="p-3 border rounded overflow-hidden">
+            <div class="d-grid grid-col-2 gap-2 text-align-center">
+                <div class="d-grid gap-row-2">
+                    <div class="d-grid d-items-center height-8 bg-blue-100 rounded-top-4"><code>rounded-top-4</code></div>
+                    <div class="d-grid d-items-center height-8 bg-blue-100 rounded-bottom-4"><code>rounded-bottom-4</code>
+                    </div>
+                </div>
+                <div class="d-grid gap-row-2">
+                    <div class="d-grid d-items-center height-8 bg-blue-100 rounded-left-4"><code>rounded-left-4</code></div>
+                    <div class="d-grid d-items-center height-8 bg-blue-100 rounded-right-4"><code>rounded-right-4</code>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <pre>
+    &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">rounded-top-4</span>"&gt;...&lt;/div&gt;
+    </pre>
+        <h3 class="mt-6 text-weight-light">Rounded Full</h3>
+        <p>Create circles and pill shapes using the full round utilities.</p>
+        <table class="width-full table-border-collapse my-3">
+            <thead>
+                <tr class="border-bottom">
+                    <th class="text-weight-semibold">Class value</th>
+                    <th class="text-weight-semibold">Border radius</th>
+                </tr>
+            </thead>
+            <tbody class="h6 text-weight-normal divider-row">
+                <tr>
+                    <td><code>circle</code></td>
+                    <td>border-radius: 50%</td>
+                </tr>
+                <tr>
+                    <td><code>rounded-full</code></td>
+                    <td>border-radius: 1000px</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="p-3 border rounded overflow-hidden">
+            <div class="d-grid d-items-center d-align-center grid-col-2 gap-2 text-align-center">
+                <div class="d-grid d-items-center height-9 bg-blue-100 circle" style="width: 64px;"><code>circle</code>
+                </div>
+                <div class="d-grid d-items-center height-7 col-5 bg-blue-100 rounded-full"><code>rounded-full</code></div>
+            </div>
+        </div>
+        <pre>
+    &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">circle</span>" <span class="pre-attribute">style</span>="<span class="pre-value">height: 64px; width: 64px;</span>"&gt;...&lt;/div&gt;
+    &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">rounded-full</span>"&gt;...&lt;/div&gt;
+    </pre>
+    </section>
+
+    <!-- background -->
+    <section id="background" class="anchor">
+        <h2>Background</h2>
+        <hr class="divider">
+        <h3 class="mt-6 text-weight-light">Background Position</h3>
+        <table class="width-full table-border-collapse my-3">
+            <thead>
+                <tr class="border-bottom">
+                    <th class="text-weight-semibold">Class value</th>
+                    <th class="text-weight-semibold">Background position</th>
+                </tr>
+            </thead>
+            <tbody class="h6 text-weight-normal divider-row">
+                <tr>
+                    <td><code>bg-pos-top</code></td>
+                    <td>top</td>
+                </tr>
+                <tr>
+                    <td><code>bg-pos-right</code></td>
+                    <td>right</td>
+                </tr>
+                <tr>
+                    <td><code>bg-pos-bottom</code></td>
+                    <td>bottom</td>
+                </tr>
+                <tr>
+                    <td><code>bg-pos-left</code></td>
+                    <td>left</td>
+                </tr>
+                <tr>
+                    <td><code>bg-pos-center</code></td>
+                    <td>center</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="p-3 border rounded overflow-hidden" style="height: 300px">
+            <div class="d-grid grid-col-2 height-full text-align-center">
+                <div class="d-grid d-align-center d-items-center rounded bg-repeat-0 bg-pos-left bg-size-height-full"
+                    style="background-image: url('https://images.pexels.com/photos/3472980/pexels-photo-3472980.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');">
+                    <div class="d-grid col-4 py-3 rounded bg-opacity-white-9">
+                        <code>bg-pos-left</code>
+                    </div>
+                </div>
+                <div class="d-grid d-align-center d-items-center rounded bg-repeat-0 bg-pos-right bg-size-height-full"
+                    style="background-image: url('https://images.pexels.com/photos/3472980/pexels-photo-3472980.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');">
+                    <div class="d-grid col-4 py-3 rounded bg-opacity-white-9">
+                        <code>bg-pos-right</code>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <pre>
+    &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">bg-pos-left</span>"&gt;...&lt;/div&gt;
+    </pre>
+
+        <h3 class="mt-6 text-weight-light">Background Size</h3>
+        <table class="width-full table-border-collapse my-3">
+            <thead>
+                <tr class="border-bottom">
+                    <th class="text-weight-semibold">Class value</th>
+                    <th class="text-weight-semibold">Background size</th>
+                </tr>
+            </thead>
+            <tbody class="h6 text-weight-normal divider-row">
+                <tr>
+                    <td><code>bg-size-contain</code></td>
+                    <td>contain</td>
+                </tr>
+                <tr>
+                    <td><code>bg-size-cover</code></td>
+                    <td>cover</td>
+                </tr>
+                <tr>
+                    <td><code>bg-size-auto</code></td>
+                    <td>auto</td>
+                </tr>
+                <tr>
+                    <td><code>bg-size-height-full</code></td>
+                    <td>100% height / auto width</td>
+                </tr>
+                <tr>
+                    <td><code>bg-size-width-full</code></td>
+                    <td>100% width / auto height</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="p-3 border rounded overflow-hidden" style="height: 300px">
+            <div class="d-grid grid-col-2 height-full text-align-center">
+                <div class="d-grid d-align-center d-items-center rounded bg-repeat-0 bg-pos-center bg-size-cover"
+                    style="background-image: url('https://images.pexels.com/photos/3472980/pexels-photo-3472980.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');">
+                    <div class="d-grid col-4 py-3 rounded bg-opacity-white-9">
+                        <code>bg-size-cover</code>
+                    </div>
+                </div>
+                <div class="d-grid d-align-center d-items-center rounded bg-repeat-0 bg-pos-center bg-size-auto"
+                    style="background-image: url('https://images.pexels.com/photos/3472980/pexels-photo-3472980.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');">
+                    <div class="d-grid col-4 py-3 rounded bg-opacity-white-9">
+                        <code>bg-size-auto</code>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <pre>
+    &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">bg-size-cover</span>"&gt;...&lt;/div&gt;
+    </pre>
+
+        <h3 class="mt-6 text-weight-light">Background Repeat</h3>
+        <table class="width-full table-border-collapse my-3">
+            <thead>
+                <tr class="border-bottom">
+                    <th class="text-weight-semibold">Class value</th>
+                    <th class="text-weight-semibold">Background repeat</th>
+                </tr>
+            </thead>
+            <tbody class="h6 text-weight-normal divider-row">
+                <tr>
+                    <td><code>bg-repeat</code></td>
+                    <td>repeat</td>
+                </tr>
+                <tr>
+                    <td><code>bg-repeat-0</code></td>
+                    <td>no repeat</td>
+                </tr>
+                <tr>
+                    <td><code>bg-repeat-x</code></td>
+                    <td>repeat horizontally</td>
+                </tr>
+                <tr>
+                    <td><code>bg-repeat-y</code></td>
+                    <td>repeat vertically</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="p-3 border rounded overflow-hidden" style="height: 300px">
+            <div class="d-grid d-align-center d-items-center rounded bg-repeat-x bg-pos-center bg-size-height-full height-full text-align-center"
+                style="background-image: url('https://images.pexels.com/photos/3472980/pexels-photo-3472980.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');">
+                <div class="d-grid col-4 py-3 rounded bg-opacity-white-9">
+                    <code>bg-repeat-x</code>
+                </div>
+            </div>
+        </div>
+        <pre>
+    &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">bg-repeat-x</span>"&gt;...&lt;/div&gt;
+    </pre>
+
+        <h3 class="mt-6 text-weight-light">Background Color Opacity</h3>
+        <table class="width-full table-border-collapse my-3">
+            <thead>
+                <tr class="border-bottom">
+                    <th class="text-weight-semibold">Class value</th>
+                    <th class="text-weight-semibold">Color</th>
+                    <th class="text-weight-semibold">Opacity scale</th>
+                </tr>
+            </thead>
+            <tbody class="h6 text-weight-normal divider-row">
+                <tr>
+                    <td><code>bg-opacity-white-{amount}</code></td>
+                    <td>white</td>
+                    <td>0-9</td>
+                </tr>
+                <tr>
+                    <td><code>bg-opacity-black-{amount}</code></td>
+                    <td>black</td>
+                    <td>0-9</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="p-3 border rounded overflow-hidden">
+            <div class="d-grid gap-row-3 rounded text-align-center bg-blue-100 p-3">
+                <div class="d-grid grid-col-3 gap-col-2">
+                    <div class="d-grid p-3 bg-opacity-white-2 rounded"><code>bg-opacity-white-2</code></div>
+                    <div class="d-grid p-3 bg-opacity-white-5 rounded"><code>bg-opacity-white-5</code></div>
+                    <div class="d-grid p-3 bg-opacity-white-9 rounded"><code>bg-opacity-white-9</code></div>
+                </div>
+                <div class="d-grid grid-col-3 gap-col-2">
+                    <div class="d-grid p-3 bg-opacity-black-2 rounded"><code>bg-opacity-black-2</code></div>
+                    <div class="d-grid p-3 bg-opacity-black-5 rounded"><code>bg-opacity-black-5</code></div>
+                    <div class="d-grid p-3 bg-opacity-black-9 rounded"><code>bg-opacity-black-9</code></div>
+                </div>
+            </div>
+        </div>
+        <pre>
+    &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">bg-opacity-white-5</span>"&gt;...&lt;/div&gt;
+    </pre>
+    </section>
+
+    <!-- table -->
+    <section id="table" class="anchor">
+        <h2>Table</h2>
+        <hr class="divider">
+        <table class="width-full table-border-collapse my-3">
+            <thead>
+                <tr class="border-bottom">
+                    <th class="text-weight-semibold">Class value</th>
+                    <th class="text-weight-semibold">Property style</th>
+                </tr>
+            </thead>
+            <tbody class="h6 text-weight-normal divider-row">
+                <tr>
+                    <td><code>table-border-collapse</code></td>
+                    <td>border-collapse: collapse</td>
+                </tr>
+                <tr>
+                    <td><code>table-auto</code></td>
+                    <td>table-layout: auto</td>
+                </tr>
+                <tr>
+                    <td><code>table-fixed</code></td>
+                    <td>table-layout: fixed</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="p-3 border rounded">
+            <div class="d-grid grid-col-2 gap-col-3">
+                <table style="border-spacing: 4px; border-collapse: separate;">
+                    <thead>
+                        <tr>
+                            <th class="p-2 border">Not a collapsed border</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="p-2 border">A space separate the table cells.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table-border-collapse">
+                    <thead>
+                        <tr>
+                            <th class="p-2 border">Collapsed border</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="p-2 border">The border around each table cell collapse into a single border.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <pre>
+    &lt;table <span class="pre-attribute">class</span>="<span class="pre-value">table-border-collapse</span>"&gt;
+    ...
+    &lt;/table&gt;
+    </pre>
+    </section>
+
+    <!-- filter -->
+    <section id="filter" class="anchor">
+        <h2>Filter</h2>
+        <hr class="divider">
+        <h3 class="mt-6 text-weight-light">Opacity</h3>
+        <p>Responsive opacity scales from 0 (0% opacity) to 9 (90% opacity).</p>
+        <table class="width-full table-border-collapse my-3">
+            <thead>
+                <tr class="border-bottom">
+                    <th class="text-weight-semibold">Class value</th>
+                    <th class="text-weight-semibold">Breakpoint</th>
+                    <th class="text-weight-semibold">Opacity scale</th>
+                </tr>
+            </thead>
+            <tbody class="h6 text-weight-normal divider-row">
+                <tr>
+                    <td><code>opacity-{breakpoint}-{amount}</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>0-9</td>
+                </tr>
+                <tr>
+                    <td><code>opacity-{breakpoint}-none</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td><code>opacity-{amount}</code></td>
+                    <td>-</td>
+                    <td>0-9</td>
+                </tr>
+                <tr>
+                    <td><code>opacity-none</code></td>
+                    <td>-</td>
+                    <td>1</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="p-3 border rounded overflow-hidden">
+            <div class="d-grid d-items-center d-align-center grid-col-4 gap-col-2 gap-row-4 text-align-center rounded">
+                <div class="d-grid d-items-center height-6 px-5 opacity-sm-2 rounded height-8"><code>opacity-sm-2</code>
+                </div>
+                <div class="d-grid d-items-center height-6 px-5 opacity-sm-4 rounded height-8"><code>opacity-sm-4</code>
+                </div>
+                <div class="d-grid d-items-center height-6 px-5 opacity-sm-8 rounded height-8"><code>opacity-sm-8</code>
+                </div>
+                <div class="d-grid d-items-center height-6 px-5 opacity-sm-none rounded height-8">
+                    <code>opacity-sm-none</code></div>
+            </div>
+        </div>
+        <pre>
+    &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">opacity-sm-4</span>"&gt;...&lt;/div&gt;
+    </pre>
+
+        <h3 class="mt-6 text-weight-light">Blur</h3>
+        <p>Blur filter works best when combined with a background color opacity.</p>
+        <table class="width-full table-border-collapse my-3">
+            <thead>
+                <tr class="border-bottom">
+                    <th class="text-weight-semibold">Class value</th>
+                    <th class="text-weight-semibold">Blur by</th>
+                </tr>
+            </thead>
+            <tbody class="h6 text-weight-normal divider-row">
+                <tr>
+                    <td><code>blur-0</code></td>
+                    <td>none</td>
+                </tr>
+                <tr>
+                    <td><code>blur-1</code></td>
+                    <td>2px</td>
+                </tr>
+                <tr>
+                    <td><code>blur-2</code></td>
+                    <td>4px</td>
+                </tr>
+                <tr>
+                    <td><code>blur-3</code></td>
+                    <td>8px</td>
+                </tr>
+                <tr>
+                    <td><code>blur-4</code></td>
+                    <td>16px</td>
+                </tr>
+                <tr>
+                    <td><code>blur-5</code></td>
+                    <td>24px</td>
+                </tr>
+                <tr>
+                    <td><code>blur-6</code></td>
+                    <td>32px</td>
+                </tr>
+                <tr>
+                    <td><code>blur-7</code></td>
+                    <td>40px</td>
+                </tr>
+                <tr>
+                    <td><code>blur-8</code></td>
+                    <td>48px</td>
+                </tr>
+                <tr>
+                    <td><code>blur-9</code></td>
+                    <td>64px</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="p-3 border rounded overflow-hidden">
+            <div class="d-grid d-items-center d-align-center text-align-center rounded bg-repeat-0 bg-pos-center bg-size-cover"
+                style="background-image: url('https://images.pexels.com/photos/2414036/pexels-photo-2414036.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260'); min-height: 300px;">
+                <div class="d-grid d-items-center col-4 py-6 blur-2 rounded bg-opacity-white-5">
+                    <code>blur-2<br>bg-opacity-white-5</code></div>
+            </div>
+        </div>
+        <pre>
+    &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">blur-2 bg-opacity-white-5</span>"&gt;...&lt;/div&gt;
+    </pre>
+    </section>
+
+    <!-- box shadow -->
+    <section id="boxShadow" class="anchor">
+        <h2>Box Shadow</h2>
+        <hr class="divider">
+        <table class="width-full table-border-collapse my-3">
+            <thead>
+                <tr class="border-bottom">
+                    <th class="text-weight-semibold">Class value</th>
+                    <th class="text-weight-semibold">Box shadow</th>
+                </tr>
+            </thead>
+            <tbody class="h6 text-weight-normal divider-row">
+                <tr>
+                    <td><code>box-shadow-0</code></td>
+                    <td>none</td>
+                </tr>
+                <tr>
+                    <td><code>box-shadow-1</code></td>
+                    <td>0 1px 4px -1px rgba(76, 76, 76, 0.24)</td>
+                </tr>
+                <tr>
+                    <td><code>box-shadow-2</code></td>
+                    <td>0 2px 6px 0 rgba(76, 76, 76, 0.24)</td>
+                </tr>
+                <tr>
+                    <td><code>box-shadow-3</code></td>
+                    <td>0 3px 8px 1px rgba(76, 76, 76, 0.24)</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="p-3 border rounded overflow-hidden">
+            <div class="d-grid d-items-center d-align-center grid-row grid-sm-col-3 gap-col-2 gap-row-4 text-align-center">
+                <div class="d-grid d-items-center height-6 rounded-full bg-white px-5 box-shadow-1">
+                    <code>box-shadow-1</code>
+                </div>
+                <div class="d-grid d-items-center height-6 rounded-full bg-white px-5 box-shadow-2">
+                    <code>box-shadow-2</code>
+                </div>
+                <div class="d-grid d-items-center height-6 rounded-full bg-white px-5 box-shadow-3">
+                    <code>box-shadow-3</code>
+                </div>
+            </div>
+        </div>
+        <pre>
+    &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">box-shadow-2</span>"&gt;...&lt;/div&gt;
+    </pre>
+    </section>
+
+    <!-- hide -->
+    <section id="visuallyHide" class="anchor">
+        <h2>Visually Hide</h2>
+        <hr class="divider">
+        <table class="width-full table-border-collapse my-3">
+            <thead>
+                <tr class="border-bottom">
+                    <th class="text-weight-semibold">Class value</th>
+                    <th class="text-weight-semibold">Hides element</th>
+                </tr>
+            </thead>
+            <tbody class="h6 text-weight-normal divider-row">
+                <tr>
+                    <td><code>display-visually-hide</code></td>
+                    <td>from view but accessible to screen reader</td>
+                </tr>
+                <tr>
+                    <td><code>display-hide</code></td>
+                    <td>from view and screen reader</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</div>
+
+<!-- secondary nav -->
+<div class="d-none d-xl-block py-6 col-xl-2 position-sticky d-self-flex-start pl-xl-5" style="top: 40px;">
+    <div class="d-flex flex-col gap-flex-2">
+        <a class="h6 text-decoration-none text-weight-light" href="#border">Border</a>
+        <a class="h6 text-decoration-none text-weight-light" href="#background">Background</a>
+        <a class="h6 text-decoration-none text-weight-light" href="#table">Table</a>
+        <a class="h6 text-decoration-none text-weight-light" href="#filter">Filter</a>
+        <a class="h6 text-decoration-none text-weight-light" href="#boxShadow">Box Shadow</a>
+        <a class="h6 text-decoration-none text-weight-light" href="#visuallyHide">Visually Hide</a>
+    </div>
+</div>
+{{ end }}

@@ -1,0 +1,566 @@
+{{ define "main" }}
+<div class="py-6 col-md-9 col-xl-7">
+    <!-- getting started -->
+    <section id="intro">
+        <h1>Typography</h1>
+        <p class="text-lead">Type utility classes work together with size, line-height, weights, decorations and alignment
+            to offer versatility across various content use cases.</p>
+    </section>
+    
+    <!-- heading -->
+    <section id="heading" class="anchor">
+        <h2>Heading</h2>
+        <hr class="divider">
+        <p></p>
+        <p>Use <code>&lt;h1&gt;</code> - <code>&lt;h6&gt;</code>. The <code>.h1</code> - <code>.h6</code> can be used to
+            override an
+            element's
+            default size. The <code>display-1</code>, <code>display-2</code> and <code>display-3</code> offer larger sizes
+            for marketing use.</p>
+    
+        <table class="width-full text-align-left table-border-collapse my-3">
+            <thead>
+                <tr class="border-bottom">
+                    <th class="py-2 px-1 text-weight-semibold">Class value</th>
+                    <th class="py-2 px-1 text-weight-semibold">Mobile size</th>
+                    <th class="py-2 px-1 text-weight-semibold">Desktop size</th>
+                    <th class="py-2 px-1 text-weight-semibold">Weight</th>
+                </tr>
+            </thead>
+            <tbody class="h6 text-weight-normal">
+                <tr class="border-bottom">
+                    <td class="py-2 px-1"><code>display-1</code></td>
+                    <td class="py-2 px-1">56px</td>
+                    <td class="py-2 px-1">64px</td>
+                    <td class="py-2 px-1">600</td>
+                </tr>
+                <tr class="border-bottom">
+                    <td class="py-2 px-1"><code>display-2</code></td>
+                    <td class="py-2 px-1">48px</td>
+                    <td class="py-2 px-1">56px</td>
+                    <td class="py-2 px-1">600</td>
+                </tr>
+                <tr class="border-bottom">
+                    <td class="py-2 px-1"><code>display-3</code></td>
+                    <td class="py-2 px-1">40px</td>
+                    <td class="py-2 px-1">48px</td>
+                    <td class="py-2 px-1">600</td>
+                </tr>
+                <tr class="border-bottom">
+                    <td class="py-2 px-1"><code>h1</code></td>
+                    <td class="py-2 px-1">32px</td>
+                    <td class="py-2 px-1">40px</td>
+                    <td class="py-2 px-1">600</td>
+                </tr>
+                <tr class="border-bottom">
+                    <td class="py-2 px-1"><code>h2</code></td>
+                    <td class="py-2 px-1">24px</td>
+                    <td class="py-2 px-1">32px</td>
+                    <td class="py-2 px-1">600</td>
+                </tr>
+                <tr class="border-bottom">
+                    <td class="py-2 px-1"><code>h3</code></td>
+                    <td class="py-2 px-1">20px</td>
+                    <td class="py-2 px-1">24px</td>
+                    <td class="py-2 px-1">600</td>
+                </tr>
+                <tr class="border-bottom">
+                    <td class="py-2 px-1"><code>h4</code></td>
+                    <td class="py-2 px-1">18px</td>
+                    <td class="py-2 px-1">-</td>
+                    <td class="py-2 px-1">600</td>
+                </tr>
+                <tr class="border-bottom">
+                    <td class="py-2 px-1"><code>h5</code></td>
+                    <td class="py-2 px-1">16px</td>
+                    <td class="py-2 px-1">-</td>
+                    <td class="py-2 px-1">600</td>
+                </tr>
+                <tr>
+                    <td class="py-2 px-1"><code>h6</code></td>
+                    <td class="py-2 px-1">14px</td>
+                    <td class="py-2 px-1">-</td>
+                    <td class="py-2 px-1">600</td>
+                </tr>
+            </tbody>
+        </table>
+    
+        <div class="p-3 bg-blue-050 rounded">
+            <h4 class="display-1">Display 1</h4>
+            <h4 class="display-2">Display 2</h4>
+            <h4 class="display-3">Display 3</h4>
+            <h1>Heading 1</h1>
+            <h2>Heading 2</h2>
+            <h3>Heading 3</h3>
+            <h4>Heading 4</h4>
+            <h5>Heading 5</h5>
+            <h6>Heading 6</h6>
+        </div>
+    
+        <pre>
+    &lt;h4 <span class="pre-attribute">class</span>="<span class="pre-value">display-1</span>"&gt;Display 1&lt;h4&gt;
+    &lt;h4 <span class="pre-attribute">class</span>="<span class="pre-value">display-2</span>"&gt;Display 2&lt;h4&gt;
+    &lt;h4 <span class="pre-attribute">class</span>="<span class="pre-value">display-3</span>"&gt;Display 3&lt;h4&gt;
+    &lt;h1&gt;Heading 1&lt;/h1&gt;
+    &lt;h2&gt;Heading 2&lt;/h2&gt;
+    &lt;h3&gt;Heading 3&lt;/h3&gt;
+    &lt;h4&gt;Heading 4&lt;/h4&gt;
+    &lt;h5&gt;Heading 5&lt;/h5&gt;
+    &lt;h6&gt;Heading 6&lt;/h6&gt;
+    </pre>
+    
+    
+    </section>
+    
+    <!-- lead -->
+    <section id="lead" class="anchor">
+        <h2>Lead</h2>
+        <hr class="divider">
+        <p>Use <code>.text-lead</code> for a leading text.</p>
+        <div class="p-3 bg-blue-050 rounded">
+            <p class="text-lead">This is a lead text. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean
+                lacinia bibendum
+                nulla
+                sed
+                consectetur.</p>
+            <p>This is a body text. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean lacinia bibendum
+                nulla
+                sed
+                consectetur.</p>
+        </div>
+        <pre>&lt;p <span class="pre-attribute">class</span>="<span class="pre-value">text-lead</span>&gt;...&lt;/p&gt;</pre>
+    
+    
+    </section>
+    
+    <!-- paragraph -->
+    <section id="paragraph" class="anchor">
+        <h2>Paragraph</h2>
+        <hr class="divider">
+        <p>The <code>&lt;p&gt;</code> tag inherits its font-size and color from the parent element. The default body font
+            size is 16px with a line-height of 1.5.</p>
+        <table class="width-full text-align-left table-border-collapse my-3">
+            <thead>
+                <tr class="border-bottom">
+                    <th class="py-2 px-1 text-weight-semibold">Tag</th>
+                    <th class="py-2 px-1 text-weight-semibold">Font size</th>
+                    <th class="py-2 px-1 text-weight-semibold">Line height</th>
+                </tr>
+            </thead>
+            <tbody class="h6 text-weight-normal">
+                <tr>
+                    <td class="py-2 px-1">&lt;p&gt;</td>
+                    <td class="py-2 px-1">inherit</td>
+                    <td class="py-2 px-1">inherit</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="p-3 bg-blue-050 rounded">
+            <p>This is a body text. Donec ullamcorper nulla non metus auctor fringilla. Aenean lacinia bibendum nulla sed
+                consectetur.
+                Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit
+                amet
+                risus.
+                Maecenas sed diam eget risus varius blandit sit amet non magna. Cum sociis natoque penatibus et magnis
+                dis
+                parturient
+                montes, nascetur ridiculus mus. Etiam porta sem malesuada magna mollis euismod.</p>
+        </div>
+        <pre>&lt;p&gt;...&lt;/p&gt;</pre>
+    </section>
+    
+    <!-- line height -->
+    <section id="lineHeight" class="anchor">
+        <h2>Line Height</h2>
+        <hr class="divider">
+        <table class="width-full text-align-left table-border-collapse my-3">
+            <thead>
+                <tr class="border-bottom">
+                    <th class="py-2 px-1 text-weight-semibold">Class value</td>
+                    <th class="py-2 px-1 text-weight-semibold">Line height</td>
+                </tr>
+            </thead>
+            <tbody class="h6 text-weight-normal">
+                <tr class="border-bottom">
+                    <th class="py-2 px-1 text-weight-semibold"><code>lh-default</code></td>
+                    <th class="py-2 px-1 text-weight-semibold">1.5</td>
+                </tr>
+                <tr class="border-bottom">
+                    <td class="py-2 px-1"><code>lh-condensed</code></td>
+                    <td class="py-2 px-1">1.25</td>
+                </tr>
+                <tr class="border-bottom">
+                    <td class="py-2 px-1"><code>lh-condensed-ultra</code></td>
+                    <td class="py-2 px-1">1</td>
+                </tr>
+                <tr>
+                    <td class="py-2 px-1"><code>lh-0</code></td>
+                    <td class="py-2 px-1">0</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="p-3 bg-blue-050 rounded d-grid grid-lg-cols-4 gap-3 gap-lg-2">
+            <div>
+                <h5>1.5</h5>
+                <p class="lh-default">Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla. Aenean
+                    lacinia
+                    bibendum nulla sed consectetur.
+                    Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo
+                    sit
+                    amet
+                    risus.</p>
+            </div>
+            <div>
+                <h5>1.25</h5>
+                <p class="lh-condensed">Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla. Aenean
+                    lacinia
+                    bibendum nulla sed consectetur.
+                    Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo
+                    sit
+                    amet
+                    risus.</p>
+            </div>
+            <div>
+                <h5>1</h5>
+                <p class="lh-condensed-ultra">Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
+                    Aenean
+                    lacinia bibendum nulla sed consectetur.
+                    Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo
+                    sit
+                    amet
+                    risus.</p>
+            </div>
+            <div>
+                <h5>0</h5>
+                <p class="lh-0">Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla. Aenean lacinia
+                    bibendum nulla sed consectetur.
+                    Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo
+                    sit
+                    amet
+                    risus.</p>
+            </div>
+        </div>
+        <pre>
+    &lt;p <span class="pre-attribute">class</span>="<span class="pre-value">lh-default</span>"&gt;...&lt;/p&gt;  
+    &lt;p <span class="pre-attribute">class</span>="<span class="pre-value">lh-condensed</span>"&gt;...&lt;/p&gt;  
+    </pre>
+    </section>
+    
+    <!-- text styles -->
+    <section id="textStyles" class="anchor">
+        <h2>Text Styles</h2>
+        <hr class="divider">
+        <p class="text-lead">Typographic weights and styles can be adjusted with utility styles.</p>
+        <table class="width-full text-align-left table-border-collapse my-3">
+            <thead>
+                <tr class="border-bottom">
+                    <th class="py-2 px-1 text-weight-semibold">Class value</td>
+                    <th class="py-2 px-1 text-weight-semibold">Property style</td>
+                </tr>
+            </thead>
+            <tbody class="h6 text-weight-normal">
+                <tr class="border-bottom">
+                    <td class="py-2 px-1"><code>text-weight-light</code></td>
+                    <td class="py-2 px-1">font-weight: 300</td>
+                </tr>
+                <tr class="border-bottom">
+                    <td class="py-2 px-1"><code>text-weight-normal</code></td>
+                    <td class="py-2 px-1">font-weight: 400</td>
+                </tr>
+                <tr class="border-bottom">
+                    <td class="py-2 px-1"><code>text-weight-semibold</code></td>
+                    <td class="py-2 px-1">font-weight: 500</td>
+                </tr>
+                <tr class="border-bottom">
+                    <td class="py-2 px-1"><code>text-weight-bold</code></td>
+                    <td class="py-2 px-1">font-weight: 600</td>
+                </tr>
+                <tr class="border-bottom">
+                    <td class="py-2 px-1"><code>text-emphasis</code></td>
+                    <td class="py-2 px-1">font-style: italic</td>
+                </tr>
+                <tr class="border-bottom">
+                    <td class="py-2 px-1"><code>text-strong</code></td>
+                    <td class="py-2 px-1">font-weight: 500</td>
+                </tr>
+                <tr class="border-bottom">
+                    <td class="py-2 px-1"><code>text-uppercase</code></td>
+                    <td class="py-2 px-1">text-transform: uppercase</td>
+                </tr>
+                <tr class="border-bottom">
+                    <td class="py-2 px-1"><code>text-decoration-none</code></td>
+                    <td class="py-2 px-1">text-decoration: none</td>
+                </tr>
+                <tr class="border-bottom">
+                    <td class="py-2 px-1"><code>text-decoration-underline</code></td>
+                    <td class="py-2 px-1">text-decoration: underline</td>
+                </tr>
+                <tr class="border-bottom">
+                    <td class="py-2 px-1"><code>text-decoration-crossout</code></td>
+                    <td class="py-2 px-1">text-decoration: line-through</td>
+                </tr>
+                <tr class="border-bottom">
+                    <td class="py-2 px-1"><code>text-small</code></td>
+                    <td class="py-2 px-1">font-size: 12px</td>
+                </tr>
+                <tr class="border-bottom">
+                    <td class="py-2 px-1"><code>text-align-left</code></td>
+                    <td class="py-2 px-1">text-align: left</td>
+                </tr>
+                <tr class="border-bottom">
+                    <td class="py-2 px-1"><code>text-align-center</code></td>
+                    <td class="py-2 px-1">text-align: center</td>
+                </tr>
+                <tr class="border-bottom">
+                    <td class="py-2 px-1"><code>text-align-right</code></td>
+                    <td class="py-2 px-1">text-align: right</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="p-3 bg-blue-050 rounded">
+            <p class="text-weight-light">Light weight</p>
+            <p class="text-weight-normal">Normal weight</p>
+            <p class="text-weight-semibold">Semi-bold weight</p>
+            <p class="text-weight-bold">Bold weight</p>
+            <p class="text-emphasis">Emphasis</p>
+            <p class="text-strong">Strong</p>
+            <p class="text-uppercase">Uppercase</p>
+            <p class="text-decoration-underline">Underline</p>
+            <p class="text-decoration-crossout">Cross out</p>
+            <p class="text-small">Small</p>
+            <p class="text-align-left">Left align</p>
+            <p class="text-align-center">Center align</p>
+            <p class="text-align-right">Right align</p>
+        </div>
+        <pre>
+    &lt;p <span class="pre-attribute">class</span>="<span class="pre-value">text-weight-light</span>"&gt;Light weight&lt;/p&gt;
+    &lt;p <span class="pre-attribute">class</span>="<span class="pre-value">text-weight-semibold</span>"&gt;Semi-bold weight&lt;/p&gt;
+    &lt;p <span class="pre-attribute">class</span>="<span class="pre-value">text-weight-bold</span>"&gt;Bold weight&lt;/p&gt;
+    &lt;p <span class="pre-attribute">class</span>="<span class="pre-value">text-emphasis</span>"&gt;Emphasis&lt;/p&gt;
+    </pre>
+    </section>
+    
+    <!-- link -->
+    <section id="link" class="anchor">
+        <h2>Link</h2>
+        <hr class="divider">
+        <p>Use text style utility classes to override the default link style. For example, <code>text-decoration-none</code>
+            can be used to eliminate the underline.</p>
+        <div class="p-3 bg-blue-050 rounded d-grid grid-col-2 gap-3">
+            <a href="#">Link default</a>
+            <a class="text-decoration-none blue-400" href="#">Link no underline</a>
+        </div>
+        <pre>
+    &lt;a href="#"&gt;Link default&lt;/a&gt;
+    &lt;a <span class="pre-attribute">class</span>="<span class="pre-value">text-decoration-none blue-400</span>" href="#"&gt;Link no underline&lt;/a&gt;
+    </pre>
+    </section>
+    
+    <!-- hr -->
+    <section id="horizontalRule" class="anchor">
+        <h2>Horizontal Rule</h2>
+        <hr class="divider">
+        <p>Use the <code>&lt;hr&gt;</code> tag to create horizontal rule.</p>
+        <div class="p-3 bg-blue-050 rounded">
+            <hr>
+        </div>
+        <pre>&lt;hr&gt;</pre>
+    
+    </section>
+    
+    <!-- blockquote -->
+    <section id="blockquote" class="anchor">
+        <h2>Blockquote & Cite</h2>
+        <hr class="divider">
+        <p>To add a quote, use the <code>blockquote</code> and <code>cite</code> tags.</p>
+        <table class="width-full text-align-left table-border-collapse my-3">
+            <thead>
+                <tr class="border-bottom">
+                    <th class="py-2 px-1 text-weight-semibold">Tag</td>
+                    <th class="py-2 px-1 text-weight-semibold">Font size</td>
+                    <th class="py-2 px-1 text-weight-semibold">Font weight</td>
+                    <th class="py-2 px-1 text-weight-semibold">Margin</td>
+                </tr>
+            </thead>
+            <tbody class="h6 text-weight-normal">
+                <tr class="border-bottom">
+                    <td class="py-2 px-1"><code>&lt;blockquote&gt;</code></td>
+                    <td class="py-2 px-1">22px</td>
+                    <td class="py-2 px-1">300</td>
+                    <td class="py-2 px-1">2rem 0rem</td>
+                </tr>
+                <tr class="border-bottom">
+                    <td class="py-2 px-1"><code>&lt;cite&gt;</code></td>
+                    <td class="py-2 px-1">14px</td>
+                    <td class="py-2 px-1">300</td>
+                    <td class="py-2 px-1">1rem 0rem</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="p-3 bg-blue-050 rounded">
+            <blockquote>
+                <p>"This is a quote text. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore
+                    et
+                    dolore magna
+                    aliqua."</p>
+                <cite>Citation</cite>
+            </blockquote>
+            <p>"This is a body text. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore
+                et
+                dolore magna
+                aliqua."</p>
+        </div>
+        <pre>
+    &lt;blockquote&gt;
+      &lt;p&gt;...&lt;/p&gt;
+      &lt;cite&gt;...&lt;/cite&gt;
+    &lt;/blockquote&gt;
+    </pre>
+    </section>
+    
+    <!-- list -->
+    <section id="list" class="anchor">
+        <h2>List</h2>
+        <hr class="divider">
+        <p>The list utility class <code>list-style-none</code> can be used to eliminate the list style.</p>
+        <h3 class="mt-6 text-weight-normal">Ordered list</h3>
+        <div class="p-3 bg-blue-050 rounded d-grid grid-col-2 gap-2">
+            <div>
+                <ol>
+                    <li>List item 1</li>
+                    <li>List item 2
+                        <ol>
+                            <li>Nested ordered list item 1</li>
+                            <li>Nested ordered list item 2</li>
+                        </ol>
+                    </li>
+    
+                    <li>List item 3</li>
+                </ol>
+            </div>
+            <div>
+                <ol class="list-style-none">
+                    <li>List item 1</li>
+                    <li>List item 2
+                        <ol class="list-style-none">
+                            <li>Nested ordered list item 1</li>
+                            <li>Nested ordered list item 2</li>
+                        </ol>
+                    </li>
+    
+                    <li>List item 3</li>
+                </ol>
+            </div>
+        </div>
+        <pre>
+    &lt;ol <span class="pre-attribute">class</span>="<span class="pre-value">list-style-none</span>"&gt;
+      &lt;li&gt;...&lt;/li&gt;
+      &lt;li&gt;...
+        &lt;ol <span class="pre-attribute">class</span>="<span class="pre-value">list-style-none</span>"&gt;
+          &lt;li&gt;...&lt;/li&gt;
+          &lt;li&gt;...&lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+      &lt;li&gt;...&lt;/li&gt;
+    &lt;ol&gt;
+    </pre>
+        <h3 class="mt-6 text-weight-normal">Unordered list</h3>
+        <div class="p-3 bg-blue-050 rounded">
+            <ul>
+                <li>List item a</li>
+                <li>List item b
+                    <ul>
+                        <li>Nested unordered list item a</li>
+                        <li>Nested unordered list item b</li>
+                    </ul>
+                </li>
+                <li>List item c</li>
+            </ul>
+        </div>
+        <pre>
+    &lt;ul&gt;
+      &lt;li&gt;...&lt;/li&gt;
+      &lt;li&gt;...
+        &lt;ul&gt;
+          &lt;li&gt;...&lt;/li&gt;
+          &lt;li&gt;...&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;...&lt;/li&gt;
+    &lt;ul&gt;
+    </pre>
+    
+        <h3 class="mt-6 text-weight-normal">Definition list</h3>
+        <div class="p-3 bg-blue-050 rounded">
+            <dl>
+                <dt>Lorem ipsum dolor</dt>
+                <dd>Consectetur adipiscing elit, sed do eiusmod tempor.</dd>
+                <dt>Lorem ipsum dolor</dt>
+                <dd>Consectetur adipiscing elit, sed do eiusmod tempor.</dd>
+            </dl>
+        </div>
+        <pre>
+    &lt;dl&gt;
+      &lt;dt&gt;...&lt;/gt&gt;
+      &lt;dd&gt;...&lt;/dd&gt;
+    &lt;/dl&gt;
+    </pre>
+    </section>
+    
+    <!-- code -->
+    <section id="codePre" class="anchor">
+        <h2>Code & Pre</h2>
+        <hr class="divider">
+        <h3 class="mt-6 text-weight-normal">Code</h3>
+        <div class="p-3 bg-blue-050 rounded">
+            <code>&lt;div&gt;Code&lt;/div&gt;</code>
+        </div>
+        <pre>&lt;code&gt;...&lt;/code&gt;</pre>
+        <h3 class="mt-6 text-weight-normal">Pre</h3>
+        <div class="p-3 bg-blue-050 rounded">
+            <pre>&lt;pre&gt;Code&lt;/pre&gt;</pre>
+        </div>
+        <pre>&lt;pre&gt;...&lt;/pre&gt;</pre>
+    </section>
+    
+    <!-- kdb -->
+    <section id="kbd" class="anchor">
+        <h2>Kbd</h2>
+        <hr class="divider">
+        <div class="p-3 bg-blue-050 rounded">
+            <p>Keyboard shortcut for paste on Mac: <kbd>command</kbd> + <kbd>v</kbd></p>
+        </div>
+        <pre>&lt;kbd&gt;...&lt;/kbd&gt;</pre>
+    </section>
+    
+    <!-- mark -->
+    <section id="mark" class="anchor">
+        <h2>Mark</h2>
+        <hr class="divider">
+    
+        <div class="p-3 bg-blue-050 rounded">
+            <p>You can highlight by surrounding the <mark>desired text with the <code>&lt;mark&gt;</code></mark> tag.</p>
+        </div>
+        <pre>&lt;mark&gt;...&lt;/mark&gt;</pre>
+    </section>
+</div>
+<!-- secondary nav -->
+<div class="d-none d-xl-block py-6 col-xl-2 position-sticky d-self-flex-start pl-xl-5" style="top: 40px;">
+    <div class="d-flex flex-col gap-flex-2">
+        <a class="h6 text-decoration-none text-weight-light" href="#heading">Heading</a>
+        <a class="h6 text-decoration-none text-weight-light" href="#lead">Lead</a>
+        <a class="h6 text-decoration-none text-weight-light" href="#paragraph">Paragraph</a>
+        <a class="h6 text-decoration-none text-weight-light" href="#lineHeight">Line Height</a>
+        <a class="h6 text-decoration-none text-weight-light" href="#link">Link</a>
+        <a class="h6 text-decoration-none text-weight-light" href="#textStyles">Text Styles</a>
+        <a class="h6 text-decoration-none text-weight-light" href="#horizontalRule">Horizontal Rule</a>
+        <a class="h6 text-decoration-none text-weight-light" href="#Blockquote">Blockquote & Cite</a>
+        <a class="h6 text-decoration-none text-weight-light" href="#list">List</a>
+        <a class="h6 text-decoration-none text-weight-light" href="#codePre">Code & Pre</a>
+        <a class="h6 text-decoration-none text-weight-light" href="#kbd">Kbd</a>
+        <a class="h6 text-decoration-none text-weight-light" href="#mark">Mark</a>
+    </div>
+</div>
+{{ end }}

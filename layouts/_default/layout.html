@@ -1,0 +1,2800 @@
+{{ define "main" }}
+<div class="py-6 col-md-9 col-xl-7">
+    <section>
+        <h1>Layout</h1>
+        <p class="text-lead">Layout utility classes provide highly flexible, interchangeable options to change the document
+            layout using display, alignment, float and columns.</p>
+    </section>
+    <!-- breakpoints -->
+
+    <section id="breakpoint" class="anchor">
+        <h2>Breakpoint</h2>
+        <hr class="divider">
+        <p>Breakpoints are based on minimum screen widths, the point where visual change occur. The syntax for each
+            breakpoint is used throughout Cocobits utility classes such as <code>.p-md-6</code> which adds a padding of 40px
+            at the medium breakpoint.</p>
+        <table class="width-full table-border-collapse my-3">
+            <thead>
+                <tr class="border-bottom">
+                    <th class="text-weight-semibold">Breakpoint</th>
+                    <th class="text-weight-semibold">Syntax</th>
+                    <th class="text-weight-semibold">Min-width</th>
+                </tr>
+            </thead>
+            <tbody class="h6 text-weight-normal divider-row">
+                <tr>
+                    <td>small</td>
+                    <td><code>sm</code></td>
+                    <td>544px</td>
+                </tr>
+                <tr>
+                    <td>medium</td>
+                    <td><code>md</code></td>
+                    <td>768px</td>
+                </tr>
+                <tr>
+                    <td>large</td>
+                    <td><code>lg</code></td>
+                    <td>992px</td>
+                </tr>
+                <tr>
+                    <td>extra large</td>
+                    <td><code>xl</code></td>
+                    <td>1200px</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="p-3 border rounded">
+            <div class="p--0 p-sm-6 bg-gray-200 rounded-1">
+                <p class="bg-white">This block starts with 0 padding but adds a 32px padding at the small breakpoint.
+                    Minimize the screen width to see the change.</p>
+            </div>
+        </div>
+        <pre>
+    &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">p-0 p-sm-6</span>"&gt;...&lt;/div&gt;
+    </pre>
+    </section>
+
+    <!-- container -->
+    <section>
+        <h2>Container</h2>
+        <hr class="divider">
+        <p>Use containers to set a defined width with auto right and left margins.</p>
+        <table class="width-full table-border-collapse my-3">
+            <thead>
+                <tr class="border-bottom">
+                    <th class="text-weight-semibold">Class value</th>
+                    <th class="text-weight-semibold">Breakpoint</th>
+                    <th class="text-weight-semibold">Width</th>
+                    <th class="text-weight-semibold">Margin</th>
+                </tr>
+            </thead>
+            <tbody class="h6 text-weight-normal divider-row">
+                <tr>
+                    <td><code>container-sm</code></td>
+                    <td>small</td>
+                    <td>544px</td>
+                    <td>margin-right: auto<br> margin-left: auto</td>
+                </tr>
+                <tr>
+                    <td><code>container-md</code></td>
+                    <td>medium</td>
+                    <td>768px</td>
+                    <td>margin-right: auto<br> margin-left: auto</td>
+                </tr>
+                <tr>
+                    <td><code>container-lg</code></td>
+                    <td>large</td>
+                    <td>992px</td>
+                    <td>margin-right: auto<br> margin-left: auto</td>
+                </tr>
+                <tr>
+                    <td><code>container-xl</code></td>
+                    <td>extra large</td>
+                    <td>1200px</td>
+                    <td>margin-right: auto<br> margin-left: auto</td>
+                </tr>
+                <tr>
+                    <td><code>container-full</code></td>
+                    <td>-</td>
+                    <td>100%</td>
+                    <td>margin-right: 0px<br> margin-left: 0px</td>
+                </tr>
+                <tr>
+                    <td><code>container</code></td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>margin-right: auto<br> margin-left: auto</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="p-3 border rounded">
+            <div class="container-full container-sm p-3 bg-blue-050 rounded-1">
+                <p>This container starts at full width then resizes at the small breakpoint to the small container
+                    (container-sm) with a width of 544px and auto right and left margins.</p>
+            </div>
+        </div>
+        <pre>
+    &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">container-full container-sm p-3</span>"&gt;...&lt;/div&gt;
+    </pre>
+    </section>
+    <!-- Columns -->
+    <section id="column" class="anchor">
+        <h2>Column</h2>
+        <hr class="divider">
+        <p>The grid can be adjusted using column utility classes of percentage-based widths. The grid is based on 12 columns
+            and is responsive. For example, <code>col-md-1</code> is 1/12 of the parent element's width at the medium
+            breakpoint.</p>
+
+        <h3 class="mt-6 text-weight-light">Column Width</h3>
+        <table class="width-full table-border-collapse my-3">
+            <thead>
+                <tr class="border-bottom">
+                    <th class="text-weight-semibold">Class value</th>
+                    <th class="text-weight-semibold">Breakpoint</th>
+                    <th class="text-weight-semibold">Width</th>
+                </tr>
+            </thead>
+            <tbody class="h6 text-weight-normal divider-row">
+                <tr>
+                    <td><code>col-{breakpoint}-1</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>1/12</td>
+                </tr>
+                <tr>
+                    <td><code>col-{breakpoint}-2</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>2/12</td>
+                </tr>
+                <tr>
+                    <td><code>col-{breakpoint}-3</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>3/12</td>
+                </tr>
+                <tr>
+                    <td><code>col-{breakpoint}-4</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>4/12</td>
+                </tr>
+                <tr>
+                    <td><code>col-{breakpoint}-5</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>5/12</td>
+                </tr>
+                <tr>
+                    <td><code>col-{breakpoint}-6</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>6/12</td>
+                </tr>
+                <tr>
+                    <td><code>col-{breakpoint}-7</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>7/12</td>
+                </tr>
+                <tr>
+                    <td><code>col-{breakpoint}-8</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>8/12</td>
+                </tr>
+                <tr>
+                    <td><code>col-{breakpoint}-9</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>9/12</td>
+                </tr>
+                <tr>
+                    <td><code>col-{breakpoint}-10</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>10/12</td>
+                </tr>
+                <tr>
+                    <td><code>col-{breakpoint}-11</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>11/12</td>
+                </tr>
+                <tr>
+                    <td><code>col-{breakpoint}-12</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>12/12</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="p-3 border rounded">
+            <div class="d-grid gap-row-2 text-align-center">
+                <div class="d-flex d-justify-center col-sm-12 bg-blue-100 rounded-1 height-8">
+                    <p><code>col-sm-12</code></p>
+                </div>
+                <div class="d-flex gap-flex-col-2">
+                    <div class="col-sm-1 bg-blue-100 rounded-1 height-8">
+                        <p><code>col-sm-1</code></p>
+                    </div>
+                    <div class="col-sm-11 bg-blue-100 rounded-1 height-8">
+                        <p><code>col-sm-11</code></p>
+                    </div>
+                </div>
+                <div class="d-flex gap-flex-col-2">
+                    <div class="col-sm-2 bg-blue-100 rounded-1 height-8">
+                        <p><code>col-sm-2</code></p>
+                    </div>
+                    <div class="col-sm-10 bg-blue-100 rounded-1 height-8">
+                        <p><code>col-sm-10</code></p>
+                    </div>
+                </div>
+                <div class="d-flex gap-flex-col-2">
+                    <div class="col-sm-3 bg-blue-100 rounded-1 height-8">
+                        <p><code>col-sm-3</code></p>
+                    </div>
+                    <div class="col-sm-9 bg-blue-100 rounded-1 height-8">
+                        <p><code>col-sm-9</code></p>
+                    </div>
+                </div>
+                <div class="d-flex gap-flex-col-2">
+                    <div class="col-sm-4 bg-blue-100 rounded-1 height-8">
+                        <p><code>col-sm-4</code></p>
+                    </div>
+                    <div class="col-sm-8 bg-blue-100 rounded-1 height-8">
+                        <p><code>col-sm-8</code></p>
+                    </div>
+                </div>
+                <div class="d-flex gap-flex-col-2">
+                    <div class="col-sm-5 bg-blue-100 rounded-1 height-8">
+                        <p><code>col-sm-5</code></p>
+                    </div>
+                    <div class="col-sm-7 bg-blue-100 rounded-1 height-8">
+                        <p><code>col-sm-7</code></p>
+                    </div>
+                </div>
+                <div class="d-flex gap-flex-col-2">
+                    <div class="col-sm-6 bg-blue-100 rounded-1 height-8">
+                        <p><code>col-sm-6</code></p>
+                    </div>
+                    <div class="col-sm-6 bg-blue-100 rounded-1 height-8">
+                        <p><code>col-sm-6</code></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <pre>
+    &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">col-sm-12</span>"&gt;...&lt;/div&gt;
+    </pre>
+        <h3 class="mt-6 text-weight-light">Fixed Column Width</h3>
+        <table class="width-full table-border-collapse my-3">
+            <thead>
+                <tr class="border-bottom">
+                    <th class="text-weight-semibold">Class value</th>
+                    <th class="text-weight-semibold">Width</th>
+                </tr>
+            </thead>
+            <tbody class="h6 text-weight-normal divider-row">
+                <tr>
+                    <td><code>col-1</code></td>
+                    <td>1/12</td>
+                </tr>
+                <tr>
+                    <td><code>col-2</code></td>
+                    <td>2/12</td>
+                </tr>
+                <tr>
+                    <td><code>col-3</code></td>
+                    <td>3/12</td>
+                </tr>
+                <tr>
+                    <td><code>col-4</code></td>
+                    <td>4/12</td>
+                </tr>
+                <tr>
+                    <td><code>col-5</code></td>
+                    <td>5/12</td>
+                </tr>
+                <tr>
+                    <td><code>col-6</code></td>
+                    <td>6/12</td>
+                </tr>
+                <tr>
+                    <td><code>col-7</code></td>
+                    <td>7/12</td>
+                </tr>
+                <tr>
+                    <td><code>col-8</code></td>
+                    <td>8/12</td>
+                </tr>
+                <tr>
+                    <td><code>col-9</code></td>
+                    <td>9/12</td>
+                </tr>
+                <tr>
+                    <td><code>col-10</code></td>
+                    <td>10/12</td>
+                </tr>
+                <tr>
+                    <td><code>col-11</code></td>
+                    <td>11/12</td>
+                </tr>
+                <tr>
+                    <td><code>col-12</code></td>
+                    <td>12/12</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="p-3 border rounded">
+            <div class="d-grid gap-row-2 text-align-center">
+                <div class="d-flex d-justify-center col-12 bg-blue-100 rounded-1 height-8">
+                    <p><code>col-12</code></p>
+                </div>
+                <div class="d-flex gap-flex-col-2">
+                    <div class="col-1 bg-blue-100 rounded-1 height-8">
+                        <p><code>col-1</code></p>
+                    </div>
+                    <div class="col-11 bg-blue-100 rounded-1 height-8">
+                        <p><code>col-11</code></p>
+                    </div>
+                </div>
+                <div class="d-flex gap-flex-col-2">
+                    <div class="col-2 bg-blue-100 rounded-1 height-8">
+                        <p><code>col-2</code></p>
+                    </div>
+                    <div class="col-10 bg-blue-100 rounded-1 height-8">
+                        <p><code>col-10</code></p>
+                    </div>
+                </div>
+                <div class="d-flex gap-flex-col-2">
+                    <div class="col-3 bg-blue-100 rounded-1 height-8">
+                        <p><code>col-3</code></p>
+                    </div>
+                    <div class="col-9 bg-blue-100 rounded-1 height-8">
+                        <p><code>col-9</code></p>
+                    </div>
+                </div>
+                <div class="d-flex gap-flex-col-2">
+                    <div class="col-4 bg-blue-100 rounded-1 height-8">
+                        <p><code>col-4</code></p>
+                    </div>
+                    <div class="col-8 bg-blue-100 rounded-1 height-8">
+                        <p><code>col-8</code></p>
+                    </div>
+                </div>
+                <div class="d-flex gap-flex-col-2">
+                    <div class="col-5 bg-blue-100 rounded-1 height-8">
+                        <p><code>col-5</code></p>
+                    </div>
+                    <div class="col-7 bg-blue-100 rounded-1 height-8">
+                        <p><code>col-7</code></p>
+                    </div>
+                </div>
+                <div class="d-flex gap-flex-col-2">
+                    <div class="col-6 bg-blue-100 rounded-1 height-8">
+                        <p><code>col-6</code></p>
+                    </div>
+                    <div class="col-6 bg-blue-100 rounded-1 height-8">
+                        <p><code>col-6</code></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <pre>
+    &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">col-12</span>"&gt;...&lt;/div&gt;
+    </pre>
+        <h3 class="mt-6 text-weight-light">Offset Column Width</h3>
+        <table class="width-full table-border-collapse my-3">
+            <thead>
+                <tr class="border-bottom">
+                    <th class="text-weight-semibold">Class value</th>
+                    <th class="text-weight-semibold">Breakpoint</th>
+                    <th class="text-weight-semibold">Width</th>
+                </tr>
+            </thead>
+            <tbody class="h6 text-weight-normal divider-row">
+                <tr>
+                    <td><code>offset-{breakpoint}-1</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>1/12</td>
+                </tr>
+                <tr>
+                    <td><code>offset-{breakpoint}-2</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>2/12</td>
+                </tr>
+                <tr>
+                    <td><code>offset-{breakpoint}-3</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>3/12</td>
+                </tr>
+                <tr>
+                    <td><code>offset-{breakpoint}-4</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>4/12</td>
+                </tr>
+                <tr>
+                    <td><code>offset-{breakpoint}-5</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>5/12</td>
+                </tr>
+                <tr>
+                    <td><code>offset-{breakpoint}-6</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>6/12</td>
+                </tr>
+                <tr>
+                    <td><code>offset-{breakpoint}-7</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>7/12</td>
+                </tr>
+                <tr>
+                    <td><code>offset-{breakpoint}-8</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>8/12</td>
+                </tr>
+                <tr>
+                    <td><code>offset-{breakpoint}-9</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>9/12</td>
+                </tr>
+                <tr>
+                    <td><code>offset-{breakpoint}-10</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>10/12</td>
+                </tr>
+                <tr>
+                    <td><code>offset-{breakpoint}-11</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>11/12</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="p-3 border rounded">
+            <div class="d-grid gap-row-2 text-align-center">
+                <div class="offset-sm-1 col-11 bg-blue-100 rounded-1 height-8">
+                    <p><code>offset-sm-1</code></p>
+                </div>
+                <div class="offset-sm-2 col-10 bg-blue-100 rounded-1 height-8">
+                    <p><code>offset-sm-2</code></p>
+                </div>
+                <div class="offset-sm-3 col-9 bg-blue-100 rounded-1 height-8">
+                    <p><code>offset-sm-3</code></p>
+                </div>
+                <div class="offset-sm-4 col-8 bg-blue-100 rounded-1 height-8">
+                    <p><code>offset-sm-4</code></p>
+                </div>
+                <div class="offset-sm-5 col-7 bg-blue-100 rounded-1 height-8">
+                    <p><code>offset-sm-5</code></p>
+                </div>
+                <div class="offset-sm-6 col-6 bg-blue-100 rounded-1 height-8">
+                    <p><code>offset-sm-6</code></p>
+                </div>
+            </div>
+        </div>
+        <pre>
+    &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">offset-sm-1 col-11</span>"&gt;...&lt;/div&gt;
+    </pre>
+        <h3 class="mt-6 text-weight-light">Fixed Offset Column Width</h3>
+        <table class="width-full table-border-collapse my-3">
+            <thead>
+                <tr class="border-bottom">
+                    <th class="text-weight-semibold">Class value</th>
+                    <th class="text-weight-semibold">Width</th>
+                </tr>
+            </thead>
+            <tbody class="h6 text-weight-normal divider-row">
+                <tr>
+                    <td><code>offset-1</code></td>
+                    <td>1/12</td>
+                </tr>
+                <tr>
+                    <td><code>offset-2</code></td>
+                    <td>2/12</td>
+                </tr>
+                <tr>
+                    <td><code>offset-3</code></td>
+                    <td>3/12</td>
+                </tr>
+                <tr>
+                    <td><code>offset-4</code></td>
+                    <td>4/12</td>
+                </tr>
+                <tr>
+                    <td><code>offset-5</code></td>
+                    <td>5/12</td>
+                </tr>
+                <tr>
+                    <td><code>offset-6</code></td>
+                    <td>6/12</td>
+                </tr>
+                <tr>
+                    <td><code>offset-7</code></td>
+                    <td>7/12</td>
+                </tr>
+                <tr>
+                    <td><code>offset-8</code></td>
+                    <td>8/12</td>
+                </tr>
+                <tr>
+                    <td><code>offset-9</code></td>
+                    <td>9/12</td>
+                </tr>
+                <tr>
+                    <td><code>offset-10</code></td>
+                    <td>10/12</td>
+                </tr>
+                <tr>
+                    <td><code>offset-11</code></td>
+                    <td>11/12</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="p-3 border rounded">
+            <div class="d-grid gap-row-2 text-align-center">
+                <div class="offset-1 col-11 bg-blue-100 rounded-1 height-8">
+                    <p><code>offset-1</code></p>
+                </div>
+                <div class="offset-2 col-10 bg-blue-100 rounded-1 height-8">
+                    <p><code>offset-2</code></p>
+                </div>
+                <div class="offset-3 col-9 bg-blue-100 rounded-1 height-8">
+                    <p><code>offset-3</code></p>
+                </div>
+                <div class="offset-4 col-8 bg-blue-100 rounded-1 height-8">
+                    <p><code>offset-4</code></p>
+                </div>
+                <div class="offset-5 col-7 bg-blue-100 rounded-1 height-8">
+                    <p><code>offset-5</code></p>
+                </div>
+                <div class="offset-6 col-6 bg-blue-100 rounded-1 height-8">
+                    <p><code>offset-6</code></p>
+                </div>
+            </div>
+        </div>
+        <pre>
+    &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">offset-1 col-11</span>"&gt;...&lt;/div&gt;
+    </pre>
+        <h3 class="mt-6 text-weight-light">Fixed Column Gutter</h3>
+        <p>Gutter utility classes defines the space padding between elements with <code>col-</code> utility class.</p>
+        <table class="width-full table-border-collapse my-3">
+            <thead>
+                <tr class="border-bottom">
+                    <th class="text-weight-semibold">Class value</th>
+                    <th class="text-weight-semibold">Gutter size</th>
+                </tr>
+            </thead>
+            <tbody class="h6 text-weight-normal divider-row">
+                <tr>
+                    <td><code>gutter-narrow</code></td>
+                    <td>16px</td>
+                </tr>
+                <tr>
+                    <td><code>gutter</code></td>
+                    <td>24px</td>
+                </tr>
+                <tr>
+                    <td><code>gutter-wide</code></td>
+                    <td>32px</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="p-3 border rounded">
+            <div class="d-grid gap-row-3 text-align-center">
+                <div class="d-flex gutter-narrow bg-gray-200 outline">
+                    <div class="col-4 d-grid d-items-center"><span class="bg-white"><code>gutter-narrow</code></span></div>
+                    <div class="col-4 d-grid d-items-center"><span class="bg-white"><code>gutter-narrow</code></span></div>
+                    <div class="col-4 d-grid d-items-center"><span class="bg-white"><code>gutter-narrow</code></span></div>
+                </div>
+                <div class="d-flex gutter bg-gray-200 outline">
+                    <div class="col-4 d-grid d-items-center"><span class="bg-white"><code>gutter</code></span></div>
+                    <div class="col-4 d-grid d-items-center"><span class="bg-white"><code>gutter</code></span></div>
+                    <div class="col-4 d-grid d-items-center"><span class="bg-white"><code>gutter</code></span></div>
+                </div>
+                <div class="d-flex gutter-wide bg-gray-200 outline">
+                    <div class="col-4 d-grid d-items-center">
+                        <span class="bg-white"><code>gutter-wide</code></span>
+                    </div>
+                    <div class="col-4 d-grid d-items-center">
+                        <span class="bg-white"><code>gutter-wide</code></span>
+                    </div>
+                    <div class="col-4 d-grid d-items-center">
+                        <span class="bg-white"><code>gutter-wide</code></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <pre>
+    &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">d-flex gutter-wide</span>"&gt;
+    &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">col-4</span>" &gt;...&lt;/div&gt;
+    &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">col-4</span>" &gt;...&lt;/div&gt;
+    &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">col-4</span>" &gt;...&lt;/div&gt;
+    &lt;/div&gt;
+    </pre>
+    </section>
+    <!-- width and height -->
+    <section id="widthHeight" class="anchor">
+        <h2>Width & Height</h2>
+        <hr class="divider">
+        <h3 class="mt-6 text-weight-light">Fixed Height</h3>
+        <p>Height utility classes are useful when requiring consistent heights such as borders or input fields.</p>
+
+        <table class="width-full table-border-collapse my-3">
+            <thead>
+                <tr class="border-bottom">
+                    <th class="text-weight-semibold">Class value</th>
+                    <th class="text-weight-semibold">Height</th>
+                </tr>
+            </thead>
+            <tbody class="h6 text-weight-normal divider-row">
+                <tr>
+                    <td><code>height-0</code></td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td><code>height-1</code></td>
+                    <td>2px</td>
+                </tr>
+                <tr>
+                    <td><code>height-2</code></td>
+                    <td>4px</td>
+                </tr>
+                <tr>
+                    <td><code>height-3</code></td>
+                    <td>8px</td>
+                </tr>
+                <tr>
+                    <td><code>height-4</code></td>
+                    <td>16px</td>
+                </tr>
+                <tr>
+                    <td><code>height-5</code></td>
+                    <td>24px</td>
+                </tr>
+                <tr>
+                    <td><code>height-6</code></td>
+                    <td>32px</td>
+                </tr>
+                <tr>
+                    <td><code>height-7</code></td>
+                    <td>40px</td>
+                </tr>
+                <tr>
+                    <td><code>height-8</code></td>
+                    <td>48px</td>
+                </tr>
+                <tr>
+                    <td><code>height-9</code></td>
+                    <td>64px</td>
+                </tr>
+
+            </tbody>
+        </table>
+        <div class="p-3 border rounded overflow-hidden">
+            <div class="d-grid grid-flow-col d-items-end gap-2 text-align-center">
+                <div class="d-grid d-items-center height-5 bg-blue-100 rounded-1"><code>height-5</code></div>
+                <div class="d-grid d-items-center height-7 bg-blue-100 rounded-1"><code>height-7</code></div>
+                <div class="d-grid d-items-center height-9 bg-blue-100 rounded-1"><code>height-9</code></div>
+            </div>
+        </div>
+        <pre>
+    &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">height-5</span>"&gt;...&lt;/div&gt;
+    </pre>
+
+        <h3 class="mt-6 text-weight-light">Max Width & Height</h3>
+        <table class="width-full table-border-collapse my-3">
+            <thead>
+                <tr class="border-bottom">
+                    <th class="text-weight-semibold">Class value</th>
+                    <th class="text-weight-semibold">Property style</th>
+                </tr>
+            </thead>
+            <tbody class="h6 text-weight-normal divider-row">
+                <tr>
+                    <td><code>width-fit</code></td>
+                    <td>max-width: 100%</td>
+                </tr>
+                <tr>
+                    <td><code>width-full</code></td>
+                    <td>width: 100%</td>
+                </tr>
+                <tr>
+                    <td><code>height-fit</code></td>
+                    <td>max-height: 100%</td>
+                </tr>
+                <tr>
+                    <td><code>height-full</code></td>
+                    <td>height: 100%</td>
+                </tr>
+            </tbody>
+        </table>
+        <pre>
+    &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">width-fit</span>"&gt;...&lt;/div&gt;
+    </pre>
+    </section>
+
+    <!-- display types -->
+    <section id="display" class="anchor">
+        <h2>Display</h2>
+        <hr class="divider">
+        <p>Display of an element can be adjusted with utilities like <code>d-block</code>, <code>d-grid</code> and
+            <code>d-flex</code>.</p>
+        <table class="width-full table-border-collapse my-3">
+            <thead>
+                <tr class="border-bottom">
+                    <th class="text-weight-semibold">Class value</th>
+                    <th class="text-weight-semibold">Breakpoint</th>
+                    <th class="text-weight-semibold">Display style</th>
+                </tr>
+            </thead>
+            <tbody class="h6 text-weight-normal divider-row">
+                <tr>
+                    <td><code>d-{breakpoint}-none</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>none</td>
+                </tr>
+                <tr>
+                    <td><code>d-{breakpoint}-block</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>block</td>
+                </tr>
+                <tr>
+                    <td><code>d-{breakpoint}-grid</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>grid</td>
+                </tr>
+                <tr>
+                    <td><code>d-{breakpoint}-flex</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>flex</td>
+                </tr>
+                <tr>
+                    <td><code>d-{breakpoint}-inline</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>inline</td>
+                </tr>
+                <tr>
+                    <td><code>d-{breakpoint}-inline-block</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>inline-block</td>
+                </tr>
+                <tr>
+                    <td><code>d-{breakpoint}-table</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>table</td>
+                </tr>
+                <tr>
+                    <td><code>d-{breakpoint}-table-cell</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>table-cell</td>
+                </tr>
+                <tr>
+                    <td><code>d-none</code></td>
+                    <td>-</td>
+                    <td>none</td>
+                </tr>
+                <tr>
+                    <td><code>d-block</code></td>
+                    <td>-</td>
+                    <td>block</td>
+                </tr>
+                <tr>
+                    <td><code>d-grid</code></td>
+                    <td>-</td>
+                    <td>grid</td>
+                </tr>
+                <tr>
+                    <td><code>d-flex</code></td>
+                    <td>-</td>
+                    <td>flex</td>
+                </tr>
+                <tr>
+                    <td><code>d-inline</code></td>
+                    <td>-</td>
+                    <td>inline</td>
+                </tr>
+                <tr>
+                    <td><code>d-inline-block</code></td>
+                    <td>-</td>
+                    <td>inline-block</td>
+                </tr>
+                <tr>
+                    <td><code>d-table</code></td>
+                    <td>-</td>
+                    <td>table</td>
+                </tr>
+                <tr>
+                    <td><code>d-table-cell</code></td>
+                    <td>-</td>
+                    <td>table-cell</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <!-- Flexbox -->
+    <section id="flexbox" class="anchor">
+        <h2>Flexbox</h3>
+            <hr class="divider">
+            <h3 class="mt-6 text-weight-light">Flex Row & Reverse</h3>
+            <table class="width-full table-border-collapse my-3">
+                <thead>
+                    <tr class="border-bottom">
+                        <th class="text-weight-semibold">Class value</th>
+                        <th class="text-weight-semibold">Breakpoint</th>
+                        <th class="text-weight-semibold">Flex direction</th>
+                    </tr>
+                </thead>
+                <tbody class="h6 text-weight-normal divider-row">
+                    <tr>
+                        <td><code>flex-{breakpoint}-row</code></td>
+                        <td>sm, md, lg, xl</td>
+                        <td>row</td>
+                    </tr>
+                    <tr>
+                        <td><code>flex-{breakpoint}-row-reverse</code></td>
+                        <td>sm, md, lg, xl</td>
+                        <td>row-reverse</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="p-3 border rounded overflow-hidden">
+                <div class="d-grid gap-row-2">
+                    <div class="d-flex flex-sm-row gap-flex-col-2">
+                        <div class="col-4 d-grid d-items-center pl-3 bg-blue-100 rounded-1 height-8"><span>1
+                                <code>flex-sm-row</code></span></div>
+                        <div class="col-4 d-grid d-items-center pl-3 bg-blue-100 rounded-1 height-8"><span>2
+                                <code>flex-sm-row</code></span></div>
+                        <div class="col-4 d-grid d-items-center pl-3 bg-blue-100 rounded-1 height-8"><span>3
+                                <code>flex-sm-row</code></span></div>
+                    </div>
+                    <div class="d-flex flex-sm-row-reverse gap-flex-col-reverse-2">
+                        <div class="col-4 d-grid d-items-center pl-3 bg-blue-100 rounded-1 height-8"><span>1
+                                <code>flex-sm-row-reverse</code></span></div>
+                        <div class="col-4 d-grid d-items-center pl-3 bg-blue-100 rounded-1 height-8"><span>2
+                                <code>flex-sm-row-reverse</code></span></div>
+                        <div class="col-4 d-grid d-items-center pl-3 bg-blue-100 rounded-1 height-8"><span>3
+                                <code>flex-sm-row-reverse</code></span></div>
+                    </div>
+                </div>
+            </div>
+            <pre>
+    &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">d-flex flex-sm-row gap-flex-col-2</span>"&gt;
+    &lt;div&gt;...&lt;/div&gt;
+    &lt;div&gt;...&lt;/div&gt;
+    &lt;div&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+    </pre>
+
+            <h3 class="mt-6 text-weight-light">Flex Column & Column Reverse</h3>
+            <table class="width-full table-border-collapse my-3">
+                <thead>
+                    <tr class="border-bottom">
+                        <th class="text-weight-semibold">Class value</th>
+                        <th class="text-weight-semibold">Breakpoint</th>
+                        <th class="text-weight-semibold">Flex direction</th>
+                    </tr>
+                </thead>
+                <tbody class="h6 text-weight-normal divider-row">
+                    <tr>
+                        <td><code>flex-{breakpoint}-col</code></td>
+                        <td>sm, md, lg, xl</td>
+                        <td>column</td>
+                    </tr>
+                    <tr>
+                        <td><code>flex-{breakpoint}-col-reverse</code></td>
+                        <td>sm, md, lg, xl</td>
+                        <td>column-reverse</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="p-3 border rounded overflow-hidden">
+                <div class="d-grid gap-row-2">
+                    <div class="d-grid grid-col-2 gap-col-2">
+                        <div class="d-flex flex-sm-col gap-flex-row-2">
+                            <div class="col-12 d-grid d-items-center pl-3 bg-blue-100 rounded-1 height-8"><span>1
+                                    <code>flex-sm-col</code></span></div>
+                            <div class="col-12 d-grid d-items-center pl-3 bg-blue-100 rounded-1 height-8"><span>2
+                                    <code>flex-sm-col</code></span></div>
+                            <div class="col-12 d-grid d-items-center pl-3 bg-blue-100 rounded-1 height-8"><span>3
+                                    <code>flex-sm-col</code></span></div>
+                        </div>
+                        <div class="d-flex flex-sm-col-reverse gap-flex-row-reverse-2">
+                            <div class="col-12 d-grid d-items-center pl-3 bg-blue-100 rounded-1 height-8"><span>1
+                                    <code>flex-sm-col-reverse</code></span></div>
+                            <div class="col-12 d-grid d-items-center pl-3 bg-blue-100 rounded-1 height-8"><span>2
+                                    <code>flex-sm-col-reverse</code></span></div>
+                            <div class="col-12 d-grid d-items-center pl-3 bg-blue-100 rounded-1 height-8"><span>3
+                                    <code>flex-sm-col-reverse</code></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <pre>
+    &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">d-flex flex-sm-col-reverse gap-flex-row-reverse-2</span>"&gt;
+    &lt;div&gt;...&lt;/div&gt;
+    &lt;div&gt;...&lt;/div&gt;
+    &lt;div&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+    </pre>
+
+            <h3 class="mt-6 text-weight-light">Flex Wrap & Nowrap</h3>
+            <table class="width-full table-border-collapse my-3">
+                <thead>
+                    <tr class="border-bottom">
+                        <th class="text-weight-semibold">Class value</th>
+                        <th class="text-weight-semibold">Breakpoint</th>
+                        <th class="text-weight-semibold">Wrap type</th>
+                    </tr>
+                </thead>
+                <tbody class="h6 text-weight-normal divider-row">
+                    <tr>
+                        <td><code>flex-{breakpoint}-wrap</code></td>
+                        <td>sm, md, lg, xl</td>
+                        <td>wrap</td>
+                    </tr>
+                    <tr>
+                        <td><code>flex-{breakpoint}-nowrap</code></td>
+                        <td>sm, md, lg, xl</td>
+                        <td>nowrap</td>
+                    </tr>
+                    <tr>
+                        <td><code>flex-{breakpoint}-wrap-reverse</code></td>
+                        <td>sm, md, lg, xl</td>
+                        <td>wrap-reverse</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="p-3 border rounded overflow-hidden">
+                <div class="d-grid gap-row-3">
+                    <div class="d-flex flex-sm-wrap gap-flex-2">
+                        <div class="col-4 d-grid d-items-center pl-3 bg-blue-100 rounded-1 height-8"><span>1
+                                <code>flex-sm-wrap</code></span></div>
+                        <div class="col-4 d-grid d-items-center pl-3 bg-blue-100 rounded-1 height-8"><span>2
+                                <code>flex-sm-wrap</code></span></div>
+                        <div class="col-4 d-grid d-items-center pl-3 bg-blue-100 rounded-1 height-8"><span>3
+                                <code>flex-sm-wrap</code></span></div>
+                        <div class="col-4 d-grid d-items-center pl-3 bg-blue-100 rounded-1 height-8"><span>4
+                                <code>flex-sm-wrap</code></span></div>
+                    </div>
+                    <div class="d-flex flex-sm-nowrap gap-flex-col-2">
+                        <div class="col-4 d-grid d-items-center pl-3 bg-blue-100 rounded-1 height-8"><span>1
+                                <code>flex-sm-nowrap</code></span></div>
+                        <div class="col-4 d-grid d-items-center pl-3 bg-blue-100 rounded-1 height-8"><span>2
+                                <code>flex-sm-nowrap</code></span></div>
+                        <div class="col-4 d-grid d-items-center pl-3 bg-blue-100 rounded-1 height-8"><span>3
+                                <code>flex-sm-nowrap</code></span></div>
+                        <div class="col-4 d-grid d-items-center pl-3 bg-blue-100 rounded-1 height-8"><span>4
+                                <code>flex-sm-nowrap</code></span></div>
+                    </div>
+                    <div class="d-flex flex-sm-wrap-reverse gap-flex-2">
+                        <div class="col-4 d-grid d-items-center pl-3 bg-blue-100 rounded-1 height-8"><span>1
+                                <code>flex-wrap-reverse</code></span></div>
+                        <div class="col-4 d-grid d-items-center pl-3 bg-blue-100 rounded-1 height-8"><span>2
+                                <code>flex-wrap-reverse</code></span></div>
+                        <div class="col-4 d-grid d-items-center pl-3 bg-blue-100 rounded-1 height-8"><span>3
+                                <code>flex-wrap-reverse</code></span></div>
+                        <div class="col-4 d-grid d-items-center pl-3 bg-blue-100 rounded-1 height-8"><span>4
+                                <code>flex-wrap-reverse</code></span></div>
+                    </div>
+                </div>
+            </div>
+            <pre>
+    &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">d-flex flex-sm-wrap-reverse gap-flex-2</span>"&gt;
+    &lt;div&gt;...&lt;/div&gt;
+    &lt;div&gt;...&lt;/div&gt;
+    &lt;div&gt;...&lt;/div&gt;
+    &lt;div&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+    </pre>
+
+            <h3 class="mt-6 text-weight-light">Flex Grow & Shrink</h3>
+            <table class="width-full table-border-collapse my-3">
+                <thead>
+                    <tr class="border-bottom">
+                        <th class="text-weight-semibold">Class value</th>
+                        <th class="text-weight-semibold">Breakpoint</th>
+                        <th class="text-weight-semibold">Flex style</th>
+                    </tr>
+                </thead>
+                <tbody class="h6 text-weight-normal divider-row">
+                    <tr>
+                        <td><code>flex-{breakpoint}-1</code></td>
+                        <td>sm, md, lg, xl</td>
+                        <td>flex: 1</td>
+                    </tr>
+                    <tr>
+                        <td><code>flex-{breakpoint}-auto</code></td>
+                        <td>sm, md, lg, xl</td>
+                        <td>flex: auto</td>
+                    </tr>
+                    <tr>
+                        <td><code>flex-{breakpoint}-grow-0</code></td>
+                        <td>sm, md, lg, xl</td>
+                        <td>flex-grow: 0</td>
+                    </tr>
+                    <tr>
+                        <td><code>flex-{breakpoint}-shrink-0</code></td>
+                        <td>sm, md, lg, xl</td>
+                        <td>flex-shrink: 0</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="p-3 border rounded overflow-hidden">
+                <div class="d-grid gap-row-2 text-align-center">
+                    <div class="d-flex gap-flex-col-2">
+                        <div class="col-1 d-grid d-items-center bg-blue-100 rounded-1 height-8">
+                            <span><code>col-1</code></span>
+                        </div>
+                        <div class="col-4 flex-sm-1 d-grid d-items-center bg-blue-100 rounded-1 height-8">
+                            <span><code>flex-sm-1</code></span>
+                        </div>
+                        <div class="col-4 d-grid d-items-center bg-blue-100 rounded-1 height-8">
+                            <span><code>col-4</code></span>
+                        </div>
+                    </div>
+                    <div class="d-flex gap-flex-col-2">
+                        <div class="col-1 d-grid d-items-center bg-blue-100 rounded-1 height-8">
+                            <span><code>col-1</code></span>
+                        </div>
+                        <div class="col-4 flex-sm-auto d-grid d-items-center bg-blue-100 rounded-1 height-8">
+                            <span><code>flex-sm-auto</code></span>
+                        </div>
+                        <div class="col-4 d-grid d-items-center bg-blue-100 rounded-1 height-8">
+                            <span><code>col-4</code></span>
+                        </div>
+                    </div>
+                    <div class="d-flex gap-flex-col-2">
+                        <div class="col-1 d-grid d-items-center bg-blue-100 rounded-1 height-8">
+                            <span><code>col-1</code></span>
+                        </div>
+                        <div class="col-4 flex-sm-grow-0 d-grid d-items-center bg-blue-100 rounded-1 height-8">
+                            <span><code>flex-sm-grow-0</code></span>
+                        </div>
+                        <div class="col-4 d-grid d-items-center bg-blue-100 rounded-1 height-8">
+                            <span><code>col-4</code></span>
+                        </div>
+                    </div>
+                    <div class="d-flex gap-flex-col-2">
+                        <div class="col-1 d-grid d-items-center bg-blue-100 rounded-1 height-8">
+                            <span><code>col-1</code></span>
+                        </div>
+                        <div class="col-4 flex-sm-shrink-0 d-grid d-items-center bg-blue-100 rounded-1 height-8">
+                            <span><code>flex-sm-shrink-0</code></span>
+                        </div>
+                        <div class="col-4 d-grid d-items-center bg-blue-100 rounded-1 height-8">
+                            <span><code>col-4</code></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <pre>
+    &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">d-flex gap-flex-col-2</span>"&gt;
+    &lt;div&gt;...&lt;/div&gt;
+    &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">flex-sm-1</span>"&gt;...&lt;/div&gt;
+    &lt;div&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+    </pre>
+
+            <h3 class="mt-6 text-weight-light">Flex Order</h3>
+            <table class="width-full table-border-collapse my-3">
+                <thead>
+                    <tr class="border-bottom">
+                        <th class="text-weight-semibold">Class value</th>
+                        <th class="text-weight-semibold">Breakpoint</th>
+                        <th class="text-weight-semibold">Order</th>
+                    </tr>
+                </thead>
+                <tbody class="h6 text-weight-normal divider-row">
+                    <tr>
+                        <td><code>flex-{breakpoint}-order-1</code></td>
+                        <td>sm, md, lg, xl</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td><code>flex-{breakpoint}-order-2</code></td>
+                        <td>sm, md, lg, xl</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td><code>flex-{breakpoint}-order-none</code></td>
+                        <td>sm, md, lg, xl</td>
+                        <td>inherit</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="p-3 border rounded overflow-hidden">
+                <div class="d-grid gap-row-2">
+                    <div class="d-flex">
+                        <div class="col-4 d-grid d-items-center pl-3 flex-sm-order-2 bg-blue-100 rounded-1 height-8">
+                            <span>1 <code>flex-sm-order-2</code></span>
+                        </div>
+                        <div class="col-4 d-grid d-items-center pl-3 flex-sm-order-none bg-blue-100 rounded-1 height-8">
+                            <span>2 <code>flex-sm-order-none</code></span>
+                        </div>
+                        <div class="col-4 d-grid d-items-center pl-3 flex-sm-order-1 bg-blue-100 rounded-1 height-8">
+                            <span>3 <code>flex-sm-order-1</code></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <pre>
+    &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">d-flex</span>"&gt;
+        &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">flex-sm-order-2</span>"&gt; 1 &lt;/div&gt;
+        &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">flex-sm-order-none</span>"&gt; 2 &lt;/div&gt;
+        &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">flex-sm-order-1</span>"&gt; 3 &lt;/div&gt;
+    &lt;/div&gt;
+    </pre>
+
+            <h3 class="mt-6 text-weight-light">Fixed Flex Properties</h3>
+            <table class="width-full table-border-collapse my-3">
+                <thead>
+                    <tr class="border-bottom">
+                        <th class="text-weight-semibold">Class value</th>
+                        <th class="text-weight-semibold">Property style</th>
+                    </tr>
+                </thead>
+                <tbody class="h6 text-weight-normal divider-row">
+                    <tr>
+                        <td><code>flex-row</code></td>
+                        <td>flex-direction: row</td>
+                    </tr>
+                    <tr>
+                        <td><code>flex-row-reverse</code></td>
+                        <td>flex-direction: row-reverse</td>
+                    </tr>
+                    <tr>
+                        <td><code>flex-col</code></td>
+                        <td>flex-direction: column</td>
+                    </tr>
+                    <tr>
+                        <td><code>flex-col-reverse</code></td>
+                        <td>flex-direction: column-reverse</td>
+                    </tr>
+                    <tr>
+                        <td><code>flex-wrap</code></td>
+                        <td>flex-wrap: wrap</td>
+                    </tr>
+                    <tr>
+                        <td><code>flex-nowrap</code></td>
+                        <td>flex-wrap: nowrap</td>
+                    </tr>
+                    <tr>
+                        <td><code>flex-wrap-reverse</code></td>
+                        <td>flex-wrap: wrap-reverse</td>
+                    </tr>
+                    <tr>
+                        <td><code>flex-1</code></td>
+                        <td>flex: 1</td>
+                    </tr>
+                    <tr>
+                        <td><code>flex-auto</code></td>
+                        <td>flex: auto</td>
+                    </tr>
+                    <tr>
+                        <td><code>flex-grow-0</code></td>
+                        <td>flex-grow: 0</td>
+                    </tr>
+                    <tr>
+                        <td><code>flex-shrink-0</code></td>
+                        <td>flex-shrink: 0</td>
+                    </tr>
+                    <tr>
+                        <td><code>flex-order-1</code></td>
+                        <td>order: 1</td>
+                    </tr>
+                    <tr>
+                        <td><code>flex-order-2</code></td>
+                        <td>order: 2</td>
+                    </tr>
+                    <tr>
+                        <td><code>flex-order-none</code></td>
+                        <td>order: inherit</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 class="mt-6 text-weight-light">Flex Gap</h3>
+            <hr class="divider">
+            <p>Flexbox gaps between elements are not widely supported by browsers so the gap utility classes are a temporary
+                workaround.</p>
+            <table class="width-full table-border-collapse my-3">
+                <thead>
+                    <tr class="border-bottom">
+                        <th class="text-weight-semibold">Class value</th>
+                        <th class="text-weight-semibold">Breakpoint</th>
+                        <th class="text-weight-semibold">Gap size</th>
+                    </tr>
+                </thead>
+                <tbody class="h6 text-weight-normal divider-row">
+                    <tr>
+                        <td><code>gap-{breakpoint}-flex-0</code></td>
+                        <td>sm, md, lg, xl</td>
+                        <td>0px</td>
+                    </tr>
+                    <tr>
+                        <td><code>gap-{breakpoint}-flex-1</code></td>
+                        <td>sm, md, lg, xl</td>
+                        <td>4px</td>
+                    </tr>
+                    <tr>
+                        <td><code>gap-{breakpoint}-flex-2</code></td>
+                        <td>sm, md, lg, xl</td>
+                        <td>8px</td>
+                    </tr>
+                    <tr>
+                        <td><code>gap-{breakpoint}-flex-3</code></td>
+                        <td>sm, md, lg, xl</td>
+                        <td>16px</td>
+                    </tr>
+                    <tr>
+                        <td><code>gap-{breakpoint}-flex-4</code></td>
+                        <td>sm, md, lg, xl</td>
+                        <td>24px</td>
+                    </tr>
+                    <tr>
+                        <td><code>gap-{breakpoint}-flex-5</code></td>
+                        <td>sm, md, lg, xl</td>
+                        <td>32px</td>
+                    </tr>
+                    <tr>
+                        <td><code>gap-{breakpoint}-flex-6</code></td>
+                        <td>sm, md, lg, xl</td>
+                        <td>40px</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="p-3 border rounded">
+                <div class="d-flex flex-wrap gap-flex-2">
+                    <div class="col-4 d-grid d-items-center pl-3 bg-blue-100 rounded-1 height-8"><code>gap-flex-2</code>
+                    </div>
+                    <div class="col-4 d-grid d-items-center pl-3 bg-blue-100 rounded-1 height-8"><code>gap-flex-2</code>
+                    </div>
+                    <div class="col-4 d-grid d-items-center pl-3 bg-blue-100 rounded-1 height-8"><code>gap-flex-2</code>
+                    </div>
+                </div>
+            </div>
+            <pre>
+    &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">d-flex flex-wrap gap-flex-2</span>"&gt;
+    &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">col-4</span>"&gt;...&lt;/div&gt;
+    &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">col-4</span>"&gt;...&lt;/div&gt;
+    &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">col-4</span>"&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+    </pre>
+            <h3 class="mt-6 text-weight-light">Flex Row Gap</h3>
+            <p>The <code>gap-{breakpoint}-flex-row-{integer}</code> adds a gap between rows.
+                <code>gap-{breakpoint}-flex-row-reverse-{integer}</code> can be used for flex reverse rows.</p>
+            <table class="width-full table-border-collapse my-3">
+                <thead>
+                    <tr class="border-bottom">
+                        <th class="text-weight-semibold">Class value</th>
+                        <th class="text-weight-semibold">Breakpoint</th>
+                        <th class="text-weight-semibold">Gap size</th>
+                    </tr>
+                </thead>
+                <tbody class="h6 text-weight-normal divider-row">
+                    <tr>
+                        <td><code>gap-{breakpoint}-flex-row-0</code></td>
+                        <td>sm, md, lg, xl</td>
+                        <td>0px</td>
+                    </tr>
+                    <tr>
+                        <td><code>gap-{breakpoint}-flex-row-1</code></td>
+                        <td>sm, md, lg, xl</td>
+                        <td>4px</td>
+                    </tr>
+                    <tr>
+                        <td><code>gap-{breakpoint}-flex-row-2</code></td>
+                        <td>sm, md, lg, xl</td>
+                        <td>8px</td>
+                    </tr>
+                    <tr>
+                        <td><code>gap-{breakpoint}-flex-row-3</code></td>
+                        <td>sm, md, lg, xl</td>
+                        <td>16px</td>
+                    </tr>
+                    <tr>
+                        <td><code>gap-{breakpoint}-flex-row-4</code></td>
+                        <td>sm, md, lg, xl</td>
+                        <td>24px</td>
+                    </tr>
+                    <tr>
+                        <td><code>gap-{breakpoint}-flex-row-5</code></td>
+                        <td>sm, md, lg, xl</td>
+                        <td>32px</td>
+                    </tr>
+                    <tr>
+                        <td><code>gap-{breakpoint}-flex-row-6</code></td>
+                        <td>sm, md, lg, xl</td>
+                        <td>40px</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="p-3 border rounded">
+                <div class="d-flex flex-col gap-sm-flex-row-3 text-align-center bg-gray-200 outline">
+                    <div class="py-2 col-12 d-grid d-items-center bg-white"><code>gap-sm-row-3</code></div>
+                    <div class="py-2 col-12 d-grid d-items-center bg-white"><code>gap-sm-row-3</code></div>
+                    <div class="py-2 col-12 d-grid d-items-center bg-white"><code>gap-sm-row-3</code></div>
+                </div>
+            </div>
+            <pre>
+    &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">d-flex flex-sm-col gap-sm-flex-row-3</span>"&gt;
+    &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">py-2 col-12</span>"&gt;...&lt;/div&gt;
+    &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">py-2 col-12</span>"&gt;...&lt;/div&gt;
+    &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">py-2 col-12</span>"&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+    </pre>
+            <h3 class="mt-6 text-weight-light">Flex Column Gap</h3>
+            <p>The <code>gap-{breakpoint}-flex-col-{integer}</code> adds a gap between columns.
+                <code>gap-{breakpoint}-flex-col-reverse-{integer}</code> can be used for reverse flex columns.</p>
+            <table class="width-full table-border-collapse my-3">
+                <thead>
+                    <tr class="border-bottom">
+                        <th class="text-weight-semibold">Class value</th>
+                        <th class="text-weight-semibold">Breakpoint</th>
+                        <th class="text-weight-semibold">Gap size</th>
+                    </tr>
+                </thead>
+                <tbody class="h6 text-weight-normal divider-row">
+                    <tr>
+                        <td><code>gap-{breakpoint}-flex-col-0</code></td>
+                        <td>sm, md, lg, xl</td>
+                        <td>0px</td>
+                    </tr>
+                    <tr>
+                        <td><code>gap-{breakpoint}-flex-col-1</code></td>
+                        <td>sm, md, lg, xl</td>
+                        <td>4px</td>
+                    </tr>
+                    <tr>
+                        <td><code>gap-{breakpoint}-flex-col-2</code></td>
+                        <td>sm, md, lg, xl</td>
+                        <td>8px</td>
+                    </tr>
+                    <tr>
+                        <td><code>gap-{breakpoint}-flex-col-3</code></td>
+                        <td>sm, md, lg, xl</td>
+                        <td>16px</td>
+                    </tr>
+                    <tr>
+                        <td><code>gap-{breakpoint}-flex-col-4</code></td>
+                        <td>sm, md, lg, xl</td>
+                        <td>24px</td>
+                    </tr>
+                    <tr>
+                        <td><code>gap-{breakpoint}-flex-col-5</code></td>
+                        <td>sm, md, lg, xl</td>
+                        <td>32px</td>
+                    </tr>
+                    <tr>
+                        <td><code>gap-{breakpoint}-flex-col-6</code></td>
+                        <td>sm, md, lg, xl</td>
+                        <td>40px</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="p-3 border rounded">
+                <div class="d-flex flex-row gap-sm-flex-col-3 text-align-center bg-gray-200 outline">
+                    <div class="col-4 d-grid d-items-center bg-white height-8"><code>gap-sm-col-3</code></div>
+                    <div class="col-4 d-grid d-items-center bg-white height-8"><code>gap-sm-col-3</code></div>
+                    <div class="col-4 d-grid d-items-center bg-white height-8"><code>gap-sm-col-3</code></div>
+                    <div class="col-4 d-grid d-items-center bg-white height-8"><code>gap-sm-col-3</code></div>
+                </div>
+            </div>
+            <pre>
+    &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">d-flex flex-row gap-sm-flex-col-3</span>"&gt;
+    &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">col-4</span>"&gt;...&lt;/div&gt;
+    &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">col-4</span>"&gt;...&lt;/div&gt;
+    &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">col-4</span>"&gt;...&lt;/div&gt;
+    &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">col-4</span>"&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+    </pre>
+            <h3 class="mt-6 text-weight-light">Fixed Flex Gap</h3>
+            <p>Fixed versions of the flex gaps are available as well as reverse flex gaps such as
+                <code>gap-flex-col-reverse-{integer}</code> and <code>gap-flex-row-reverse-{integer}</code>.</p>
+            <table class="width-full table-border-collapse my-3">
+                <thead>
+                    <tr class="border-bottom">
+                        <th class="text-weight-semibold">Class value</th>
+                        <th class="text-weight-semibold">Gap scale</th>
+                    </tr>
+                </thead>
+                <tbody class="h6 text-weight-normal divider-row">
+                    <tr>
+                        <td><code>gap-flex-{integer}</code></td>
+                        <td>0-6</td>
+                    </tr>
+                    <tr>
+                        <td><code>gap-flex-row-{integer}</code></td>
+                        <td>0-6</td>
+                    </tr>
+                    <tr>
+                        <td><code>gap-flex-column-{integer}</code></td>
+                        <td>0-6</td>
+                    </tr>
+                </tbody>
+            </table>
+    </section>
+
+    <!-- grid -->
+    <section id="grid" class="anchor">
+        <h2>Grid</h3>
+            <hr class="divider">
+            <h3 class="mt-6 text-weight-light">Grid Flow Direction</h3>
+            <p>Set the direction of the display element using the grid flow utility classes.</p>
+            <table class="width-full table-border-collapse my-3">
+                <thead>
+                    <tr class="border-bottom">
+                        <th class="text-weight-semibold">Class value</th>
+                        <th class="text-weight-semibold">Grid flow</th>
+                    </tr>
+                </thead>
+                <tbody class="h6 text-weight-normal divider-row">
+                    <tr></tr>
+                    <td><code>grid-flow-row</code></td>
+                    <td>row</td>
+                    </tr>
+                    <tr></tr>
+                    <td><code>grid-flow-col</code></td>
+                    <td>column</td>
+                    </tr>
+                    <tr></tr>
+                    <td><code>grid-flow-row-dense</code></td>
+                    <td>row dense</td>
+                    </tr>
+                    <tr></tr>
+                    <td><code>grid-flow-col-dense</code></td>
+                    <td>column dense</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3 class="mt-6 text-weight-light">Grid Repeat Column</h3>
+            <p>Create repeat of equal width elements using the grid column utility classes.</p>
+            <table class="width-full table-border-collapse my-3">
+                <thead>
+                    <tr class="border-bottom">
+                        <th class="text-weight-semibold">Class value</th>
+                        <th class="text-weight-semibold">Breakpoint</th>
+                        <th class="text-weight-semibold">Repeat columns</th>
+                    </tr>
+                </thead>
+                <tbody class="h6 text-weight-normal divider-row">
+                    <tr>
+                        <td><code>grid-{breakpoint}-col-1</code></td>
+                        <td>sm, md, lg, xl</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td><code>grid-{breakpoint}-col-2</code></td>
+                        <td>sm, md, lg, xl</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td><code>grid-{breakpoint}-col-3</code></td>
+                        <td>sm, md, lg, xl</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td><code>grid-{breakpoint}-col-4</code></td>
+                        <td>sm, md, lg, xl</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td><code>grid-{breakpoint}-col-6</code></td>
+                        <td>sm, md, lg, xl</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td><code>grid-{breakpoint}-col-7</code></td>
+                        <td>sm, md, lg, xl</td>
+                        <td>7</td>
+                    </tr>
+                    <tr>
+                        <td><code>grid-{breakpoint}-col-8</code></td>
+                        <td>sm, md, lg, xl</td>
+                        <td>8</td>
+                    </tr>
+                    <tr>
+                        <td><code>grid-{breakpoint}-col-9</code></td>
+                        <td>sm, md, lg, xl</td>
+                        <td>9</td>
+                    </tr>
+                    <tr>
+                        <td><code>grid-{breakpoint}-col-10</code></td>
+                        <td>sm, md, lg, xl</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td><code>grid-{breakpoint}-col-11</code></td>
+                        <td>sm, md, lg, xl</td>
+                        <td>11</td>
+                    </tr>
+                    <tr>
+                        <td><code>grid-{breakpoint}-col-12</code></td>
+                        <td>sm, md, lg, xl</td>
+                        <td>12</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="p-3 border rounded">
+                <div class="d-grid grid-sm-col-3 gap-col-2 text-align-center">
+                    <div class="d-grid d-items-center bg-blue-100 rounded-1 height-8"><code>grid-sm-col-3</code></div>
+                    <div class="d-grid d-items-center bg-blue-100 rounded-1 height-8"><code>grid-sm-col-3</code></div>
+                    <div class="d-grid d-items-center bg-blue-100 rounded-1 height-8"><code>grid-sm-col-3</code></div>
+                </div>
+            </div>
+            <pre>
+    &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">d-grid grid-sm-col-3</span>"&gt;
+    &lt;div&gt;...&lt;/div&gt;
+    &lt;div&gt;...&lt;/div&gt;
+    &lt;div&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+    </pre>
+
+            <h3 class="mt-6 text-weight-light">Fixed Grid Repeat Column</h3>
+            <table class="width-full table-border-collapse my-3">
+                <thead>
+                    <tr class="border-bottom">
+                        <th class="text-weight-semibold">Class value</th>
+                        <th class="text-weight-semibold">Repeat columns</th>
+                    </tr>
+                </thead>
+                <tbody class="h6 text-weight-normal divider-row">
+                    <tr>
+                        <td><code>grid-col-0</code></td>
+                        <td>none</td>
+                    </tr>
+                    <tr>
+                        <td><code>grid-col-1</code></td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td><code>grid-col-2</code></td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td><code>grid-col-3</code></td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td><code>grid-col-4</code></td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td><code>grid-col-6</code></td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td><code>grid-col-7</code></td>
+                        <td>7</td>
+                    </tr>
+                    <tr>
+                        <td><code>grid-col-8</code></td>
+                        <td>8</td>
+                    </tr>
+                    <tr>
+                        <td><code>grid-col-9</code></td>
+                        <td>9</td>
+                    </tr>
+                    <tr>
+                        <td><code>grid-col-10</code></td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td><code>grid-col-11</code></td>
+                        <td>11</td>
+                    </tr>
+                    <tr>
+                        <td><code>grid-col-12</code></td>
+                        <td>12</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="p-3 border rounded">
+                <div class="d-grid grid-col-4 gap-col-2 text-align-center">
+                    <div class="d-grid d-items-center bg-blue-100 rounded-1 height-8"><code>grid-col-4</code></div>
+                    <div class="d-grid d-items-center bg-blue-100 rounded-1 height-8"><code>grid-col-4</code></div>
+                    <div class="d-grid d-items-center bg-blue-100 rounded-1 height-8"><code>grid-col-4</code></div>
+                    <div class="d-grid d-items-center bg-blue-100 rounded-1 height-8"><code>grid-col-4</code></div>
+                </div>
+            </div>
+            <pre>
+    &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">d-grid grid-col-4</span>"&gt;
+    &lt;div&gt;...&lt;/div&gt;
+    &lt;div&gt;...&lt;/div&gt;
+    &lt;div&gt;...&lt;/div&gt;
+    &lt;div&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+    </pre>
+
+            <h3 class="mt-6 text-weight-light">Grid Gap</h3>
+            <hr class="divider">
+            <p>The grid gap utility classes add equal width margins between display grid columns and rows.</p>
+            <table class="width-full table-border-collapse my-3">
+                <thead>
+                    <tr class="border-bottom">
+                        <th class="text-weight-semibold">Class value</th>
+                        <th class="text-weight-semibold">Breakpoint</th>
+                        <th class="text-weight-semibold">Gap size</th>
+                    </tr>
+                </thead>
+                <tbody class="h6 text-weight-normal divider-row">
+                    <tr>
+                        <td><code>gap-{breakpoint}-0</code></td>
+                        <td>sm, md, lg, xl</td>
+                        <td>0px</td>
+                    </tr>
+                    <tr>
+                        <td><code>gap-{breakpoint}-1</code></td>
+                        <td>sm, md, lg, xl</td>
+                        <td>4px</td>
+                    </tr>
+                    <tr>
+                        <td><code>gap-{breakpoint}-2</code></td>
+                        <td>sm, md, lg, xl</td>
+                        <td>8px</td>
+                    </tr>
+                    <tr>
+                        <td><code>gap-{breakpoint}-3</code></td>
+                        <td>sm, md, lg, xl</td>
+                        <td>16px</td>
+                    </tr>
+                    <tr>
+                        <td><code>gap-{breakpoint}-4</code></td>
+                        <td>sm, md, lg, xl</td>
+                        <td>24px</td>
+                    </tr>
+                    <tr>
+                        <td><code>gap-{breakpoint}-5</code></td>
+                        <td>sm, md, lg, xl</td>
+                        <td>32px</td>
+                    </tr>
+                    <tr>
+                        <td><code>gap-{breakpoint}-6</code></td>
+                        <td>sm, md, lg, xl</td>
+                        <td>40px</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="p-3 border rounded">
+                <div class="d-grid gap-row-3 text-align-center">
+                    <div class="d-grid grid-col-2 gap-0 gap-sm-1 bg-gray-200 outline">
+                        <div class="d-grid d-items-center bg-white"><code>gap-sm-1</code></div>
+                        <div class="d-grid d-items-center bg-white"><code>gap-sm-1</code></div>
+                        <div class="d-grid d-items-center bg-white"><code>gap-sm-1</code></div>
+                        <div class="d-grid d-items-center bg-white"><code>gap-sm-1</code></div>
+                    </div>
+                    <div class="d-grid grid-col-2 gap-0 gap-sm-2 bg-gray-200 outline">
+                        <div class="d-grid d-items-center bg-white"><code>gap-sm-2</code></div>
+                        <div class="d-grid d-items-center bg-white"><code>gap-sm-2</code></div>
+                        <div class="d-grid d-items-center bg-white"><code>gap-sm-2</code></div>
+                        <div class="d-grid d-items-center bg-white"><code>gap-sm-2</code></div>
+                    </div>
+                    <div class="d-grid grid-col-2 gap-0 gap-sm-3 bg-gray-200 outline">
+                        <div class="d-grid d-items-center bg-white"><code>gap-sm-3</code></div>
+                        <div class="d-grid d-items-center bg-white"><code>gap-sm-3</code></div>
+                        <div class="d-grid d-items-center bg-white"><code>gap-sm-3</code></div>
+                        <div class="d-grid d-items-center bg-white"><code>gap-sm-3</code></div>
+                    </div>
+                    <div class="d-grid grid-col-2 gap-0 gap-sm-4 bg-gray-200 outline">
+                        <div class="d-grid d-items-center bg-white"><code>gap-sm-4</code></div>
+                        <div class="d-grid d-items-center bg-white"><code>gap-sm-4</code></div>
+                        <div class="d-grid d-items-center bg-white"><code>gap-sm-4</code></div>
+                        <div class="d-grid d-items-center bg-white"><code>gap-sm-4</code></div>
+                    </div>
+                    <div class="d-grid grid-col-2 gap-0 gap-sm-5 bg-gray-200 outline">
+                        <div class="d-grid d-items-center bg-white"><code>gap-sm-5</code></div>
+                        <div class="d-grid d-items-center bg-white"><code>gap-sm-5</code></div>
+                        <div class="d-grid d-items-center bg-white"><code>gap-sm-5</code></div>
+                        <div class="d-grid d-items-center bg-white"><code>gap-sm-5</code></div>
+                    </div>
+                    <div class="d-grid grid-col-2 gap-0 gap-sm-6 bg-gray-200 outline">
+                        <div class="d-grid d-items-center bg-white"><code>gap-sm-6</code></div>
+                        <div class="d-grid d-items-center bg-white"><code>gap-sm-6</code></div>
+                        <div class="d-grid d-items-center bg-white"><code>gap-sm-6</code></div>
+                        <div class="d-grid d-items-center bg-white"><code>gap-sm-6</code></div>
+                    </div>
+                </div>
+            </div>
+            <pre>
+    &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">d-grid grid-col-4 gap-sm-6</span>"&gt;
+        &lt;div&gt;...&lt;/div&gt;
+        &lt;div&gt;...&lt;/div&gt;
+        &lt;div&gt;...&lt;/div&gt;
+        &lt;div&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+    </pre>
+            <h3 class="mt-6 text-weight-light">Grid Row Gap</h3>
+            <p>The <code>gap-{breakpoint}-row-{integer}</code> adds a gap between rows.</p>
+            <table class="width-full table-border-collapse my-3">
+                <thead>
+                    <tr class="border-bottom">
+                        <th class="text-weight-semibold">Class value</th>
+                        <th class="text-weight-semibold">Breakpoint</th>
+                        <th class="text-weight-semibold">Gap size</th>
+                    </tr>
+                </thead>
+                <tbody class="h6 text-weight-normal divider-row">
+                    <tr>
+                        <td><code>gap-{breakpoint}-row-0</code></td>
+                        <td>sm, md, lg, xl</td>
+                        <td>0px</td>
+                    </tr>
+                    <tr>
+                        <td><code>gap-{breakpoint}-row-1</code></td>
+                        <td>sm, md, lg, xl</td>
+                        <td>4px</td>
+                    </tr>
+                    <tr>
+                        <td><code>gap-{breakpoint}-row-2</code></td>
+                        <td>sm, md, lg, xl</td>
+                        <td>8px</td>
+                    </tr>
+                    <tr>
+                        <td><code>gap-{breakpoint}-row-3</code></td>
+                        <td>sm, md, lg, xl</td>
+                        <td>16px</td>
+                    </tr>
+                    <tr>
+                        <td><code>gap-{breakpoint}-row-4</code></td>
+                        <td>sm, md, lg, xl</td>
+                        <td>24px</td>
+                    </tr>
+                    <tr>
+                        <td><code>gap-{breakpoint}-row-5</code></td>
+                        <td>sm, md, lg, xl</td>
+                        <td>32px</td>
+                    </tr>
+                    <tr>
+                        <td><code>gap-{breakpoint}-row-6</code></td>
+                        <td>sm, md, lg, xl</td>
+                        <td>40px</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="p-3 border rounded">
+                <div class="d-grid grid-col-1 gap-row-0 gap-sm-row-3 text-align-center bg-gray-200 outline">
+                    <div class="d-grid d-items-center bg-white height-8"><code>gap-sm-row-3</code></div>
+                    <div class="d-grid d-items-center bg-white height-8"><code>gap-sm-row-3</code></div>
+                    <div class="d-grid d-items-center bg-white height-8"><code>gap-sm-row-3</code></div>
+                </div>
+            </div>
+            <pre>
+    &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">d-grid grid-col-1 gap-row-3</span>"&gt;
+        &lt;div&gt;...&lt;/div&gt;
+        &lt;div&gt;...&lt;/div&gt;
+        &lt;div&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+    </pre>
+            <h3 class="mt-6 text-weight-light">Grid Column Gap</h3>
+            <p>The <code>gap-{breakpoint}-col-{integer}</code> adds a gap between columns.</p>
+            <table class="width-full table-border-collapse my-3">
+                <thead>
+                    <tr class="border-bottom">
+                        <th class="text-weight-semibold">Class value</th>
+                        <th class="text-weight-semibold">Breakpoint</th>
+                        <th class="text-weight-semibold">Gap size</th>
+                    </tr>
+                </thead>
+                <tbody class="h6 text-weight-normal divider-row">
+                    <tr>
+                        <td><code>gap-{breakpoint}-col-0</code></td>
+                        <td>sm, md, lg, xl</td>
+                        <td>0px</td>
+                    </tr>
+                    <tr>
+                        <td><code>gap-{breakpoint}-col-1</code></td>
+                        <td>sm, md, lg, xl</td>
+                        <td>4px</td>
+                    </tr>
+                    <tr>
+                        <td><code>gap-{breakpoint}-col-2</code></td>
+                        <td>sm, md, lg, xl</td>
+                        <td>8px</td>
+                    </tr>
+                    <tr>
+                        <td><code>gap-{breakpoint}-col-3</code></td>
+                        <td>sm, md, lg, xl</td>
+                        <td>16px</td>
+                    </tr>
+                    <tr>
+                        <td><code>gap-{breakpoint}-col-4</code></td>
+                        <td>sm, md, lg, xl</td>
+                        <td>24px</td>
+                    </tr>
+                    <tr>
+                        <td><code>gap-{breakpoint}-col-5</code></td>
+                        <td>sm, md, lg, xl</td>
+                        <td>32px</td>
+                    </tr>
+                    <tr>
+                        <td><code>gap-{breakpoint}-col-6</code></td>
+                        <td>sm, md, lg, xl</td>
+                        <td>40px</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="p-3 border rounded">
+                <div class="d-grid grid-col-4 gap-col-0 gap-sm-col-3 text-align-center bg-gray-200 outline">
+                    <div class="d-grid d-items-center bg-white height-8"><code>gap-sm-col-3</code></div>
+                    <div class="d-grid d-items-center bg-white height-8"><code>gap-sm-col-3</code></div>
+                    <div class="d-grid d-items-center bg-white height-8"><code>gap-sm-col-3</code></div>
+                    <div class="d-grid d-items-center bg-white height-8"><code>gap-sm-col-3</code></div>
+                </div>
+            </div>
+            <pre>
+    &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">d-grid grid-col-4 gap-sm-col-3</span>"&gt;
+        &lt;div&gt;...&lt;/div&gt;
+        &lt;div&gt;...&lt;/div&gt;
+        &lt;div&gt;...&lt;/div&gt;
+        &lt;div&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+    </pre>
+            <h3 class="mt-6 text-weight-light">Fixed Grid Gap</h3>
+            <p>Fixed versions of the grid gaps are available using the <code>gap-{integer}</code>,
+                <code>gap-row-{integer}</code>
+                and <code>gap-col-{integer}</code> classes.</p>
+            <table class="width-full table-border-collapse my-3">
+                <thead>
+                    <tr class="border-bottom">
+                        <th class="text-weight-semibold">Class value</th>
+                        <th class="text-weight-semibold">Gap size</th>
+                    </tr>
+                </thead>
+                <tbody class="h6 text-weight-normal divider-row">
+                    <tr>
+                        <td><code>gap-0</code></td>
+                        <td>0px</td>
+                    </tr>
+                    <tr>
+                        <td><code>gap-1</code></td>
+                        <td>4px</td>
+                    </tr>
+                    <tr>
+                        <td><code>gap-2</code></td>
+                        <td>8px</td>
+                    </tr>
+                    <tr>
+                        <td><code>gap-3</code></td>
+                        <td>16px</td>
+                    </tr>
+                    <tr>
+                        <td><code>gap-4</code></td>
+                        <td>24px</td>
+                    </tr>
+                    <tr>
+                        <td><code>gap-5</code></td>
+                        <td>32px</td>
+                    </tr>
+                    <tr>
+                        <td><code>gap-6</code></td>
+                        <td>40px</td>
+                    </tr>
+                </tbody>
+            </table>
+    </section>
+
+    <!-- alignment -->
+    <section id="align" class="anchor">
+        <h2>Align</h2>
+        <hr class="divider">
+        <p>Display align utility classes aligns elements within flex and grid boxes.</p>
+
+        <table class="width-full table-border-collapse my-3">
+            <thead>
+                <tr class="border-bottom">
+                    <th class="text-weight-semibold">Property</th>
+                    <th class="text-weight-semibold">Class value</th>
+                    <th class="text-weight-semibold">Axis</th>
+                    <th class="text-weight-semibold">Applies to</th>
+                    <th class="text-weight-semibold">Aligns</th>
+                </tr>
+            </thead>
+            <tbody class="divider-row">
+                <tr>
+                    <td>justify-content</td>
+                    <td><code>d-justify-between</code></td>
+                    <td>main<br>inline</td>
+                    <td>block, flex, grid</td>
+                    <td>content within element by adjusting gap size</td>
+                </tr>
+                <tr>
+                    <td>justify-items</td>
+                    <td><code>d-align-center</code></td>
+                    <td>main<br>inline</td>
+                    <td>block, grid</td>
+                    <td>child elements within element by adjusting its own padding</td>
+                </tr>
+                <tr>
+                    <td>align-content</td>
+                    <td><code>d-content-between</code></td>
+                    <td>cross<br>block</td>
+                    <td>block, flex, grid</td>
+                    <td>content within element by adjusting padding</td>
+                </tr>
+                <tr>
+                    <td>align-items</td>
+                    <td><code>d-items-center</code></td>
+                    <td>cross<br>block</td>
+                    <td>flex, grid</td>
+                    <td>child elements inside box by adjusting padding</td>
+                </tr>
+                <tr>
+                    <td>align-self</td>
+                    <td><code>d-self-start</code></td>
+                    <td>cross<br>block</td>
+                    <td>absolutely-position boxes, flex, grid</td>
+                    <td>element within parent by adjusting margin</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3 class="mt-6 text-weight-light">Justify Content</h3>
+        <p>Aligns elements by adjusting the gap size along the main axis.</p>
+        <table class="width-full table-border-collapse my-3">
+            <thead>
+                <tr class="border-bottom">
+                    <th class="text-weight-semibold">Class value</th>
+                    <th class="text-weight-semibold">Breakpoint</th>
+                    <th class="text-weight-semibold">Justify content</th>
+                </tr>
+            </thead>
+            <tbody class="h6 text-weight-normal divider-row">
+                <tr>
+                    <td><code>d-{breakpoint}-justify-start</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>start</td>
+                </tr>
+                <tr>
+                    <td><code>d-{breakpoint}-justify-end</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>end</td>
+                </tr>
+                <tr>
+                    <td><code>d-{breakpoint}-justify-center</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>center</td>
+                </tr>
+                <tr>
+                    <td><code>d-{breakpoint}-justify-between</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>space-between</td>
+                </tr>
+                <tr>
+                    <td><code>d-{breakpoint}-justify-around</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>space-around</td>
+                </tr>
+                <tr>
+                    <td><code>d-{breakpoint}-justify-evenly</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>space-evenly</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="p-3 border rounded">
+            <div class="d-grid gap-row-3 text-align-center">
+                <div class="d-grid d-sm-align-start border rounded-1 height-8">
+                    <span class="d-grid d-content-center bg-blue-100 rounded-1 px-3"><code>d-sm-justify-start</code></span>
+                </div>
+                <div class="d-grid d-sm-justify-center border rounded-1 height-8">
+                    <span class="d-grid d-content-center bg-blue-100 rounded-1 px-3"><code>d-sm-justify-center</code></span>
+                </div>
+                <div class="d-grid d-sm-justify-end border rounded-1 height-8">
+                    <span class="d-grid d-content-center bg-blue-100 rounded-1 px-3"><code>d-sm-justify-end</code></span>
+                </div>
+                <div class="d-grid grid-flow-col d-sm-justify-between border rounded-1 height-8">
+                    <div class="d-grid d-content-center bg-blue-100 rounded-1 px-3"><code>d-sm-justify-between</code></div>
+                    <div class="d-grid d-content-center bg-blue-100 rounded-1 px-3"><code>d-sm-justify-between</code></div>
+                    <div class="d-grid d-content-center bg-blue-100 rounded-1 px-3"><code>d-sm-justify-between</code></div>
+                </div>
+                <div class="d-grid grid-flow-col d-sm-justify-around border rounded-1 height-8">
+                    <div class="d-grid d-content-center bg-blue-100 rounded-1 px-3"><code>d-sm-justify-around</code></div>
+                    <div class="d-grid d-content-center bg-blue-100 rounded-1 px-3"><code>d-sm-justify-around</code></div>
+                    <div class="d-grid d-content-center bg-blue-100 rounded-1 px-3"><code>d-sm-justify-around</code></div>
+                </div>
+                <div class="d-grid grid-flow-col d-sm-justify-evenly border rounded-1 height-8">
+                    <div class="d-grid d-content-center bg-blue-100 rounded-1 px-3"><code>d-sm-justify-evenly</code></div>
+                    <div class="d-grid d-content-center bg-blue-100 rounded-1 px-3"><code>d-sm-justify-evenly</code></div>
+                    <div class="d-grid d-content-center bg-blue-100 rounded-1 px-3"><code>d-sm-justify-evenly</code></div>
+                </div>
+            </div>
+        </div>
+        <pre>
+    &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">d-grid d-sm-justify-evenly grid-flow-col</span>"&gt;
+    &lt;div&gt;...&lt;/div&gt;
+    &lt;div&gt;...&lt;/div&gt;
+    &lt;div&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+    </pre>
+        <h3 class="mt-6 text-weight-light">Justify Items</h3>
+        <p>Aligns elements by adjusting the padding within its container along the main axis.</p>
+        <table class="width-full table-border-collapse my-3">
+            <thead>
+                <tr class="border-bottom">
+                    <th class="text-weight-semibold">Class value</th>
+                    <th class="text-weight-semibold">Breakpoint</th>
+                    <th class="text-weight-semibold">Justify items</th>
+                </tr>
+            </thead>
+            <tbody class="h6 text-weight-normal divider-row">
+                <tr>
+                    <td><code>d-{breakpoint}-align-start</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>start</td>
+                </tr>
+                <tr>
+                    <td><code>d-{breakpoint}-align-end</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>end</td>
+                </tr>
+                <tr>
+                    <td><code>d-{breakpoint}-align-center</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>center</td>
+                </tr>
+                <tr>
+                    <td><code>d-{breakpoint}-align-stretch</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>stretch</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="p-3 border rounded">
+            <div class="d-grid gap-row-3 text-align-center">
+                <div class="d-grid grid-col-3 d-sm-align-start border rounded-1 height-8">
+                    <span class="d-grid d-content-center bg-blue-100 rounded-1 px-3"><code>d-sm-align-start</code></span>
+                    <span class="d-grid d-content-center bg-blue-100 rounded-1 px-3"><code>d-sm-align-start</code></span>
+                    <span class="d-grid d-content-center bg-blue-100 rounded-1 px-3"><code>d-sm-align-start</code></span>
+                </div>
+                <div class="d-grid grid-col-3 d-sm-align-center border rounded-1 height-8">
+                    <span class="d-grid d-content-center bg-blue-100 rounded-1 px-3"><code>d-sm-align-center</code></span>
+                    <span class="d-grid d-content-center bg-blue-100 rounded-1 px-3"><code>d-sm-align-center</code></span>
+                    <span class="d-grid d-content-center bg-blue-100 rounded-1 px-3"><code>d-sm-align-center</code></span>
+                </div>
+                <div class="d-grid grid-col-3 d-sm-align-end border rounded-1 height-8">
+                    <span class="d-grid d-content-center bg-blue-100 rounded-1 px-3"><code>d-sm-align-end</code></span>
+                    <span class="d-grid d-content-center bg-blue-100 rounded-1 px-3"><code>d-sm-align-end</code></span>
+                    <span class="d-grid d-content-center bg-blue-100 rounded-1 px-3"><code>d-sm-align-end</code></span>
+                </div>
+            </div>
+        </div>
+        <pre>
+    &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">d-grid grid-col-3 d-sm-align-center</span>"&gt;
+    &lt;div&gt;...&lt;/div&gt;
+    &lt;div&gt;...&lt;/div&gt;
+    &lt;div&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+    </pre>
+
+        <h3 class="mt-6 text-weight-light">Align Content</h3>
+        <p>Align elements that wrap by adjusting the gap size along the cross axis.</p>
+        <table class="width-full table-border-collapse my-3">
+            <thead>
+                <tr class="border-bottom">
+                    <th class="text-weight-semibold">Class value</th>
+                    <th class="text-weight-semibold">Breakpoint</th>
+                    <th class="text-weight-semibold">Align content</th>
+                </tr>
+            </thead>
+            <tbody class="h6 text-weight-normal divider-row">
+                <tr>
+                    <td><code>d-{breakpoint}-content-start</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>start</td>
+                </tr>
+                <tr>
+                    <td><code>d-{breakpoint}-content-end</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>end</td>
+                </tr>
+                <tr>
+                    <td><code>d-{breakpoint}-content-center</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>center</td>
+                </tr>
+                <tr>
+                    <td><code>d-{breakpoint}-content-between</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>space-between</td>
+                </tr>
+                <tr>
+                    <td><code>d-{breakpoint}-content-around</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>space-around</td>
+                </tr>
+                <tr>
+                    <td><code>d-{breakpoint}-content-stretch</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>stretch</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="p-3 border rounded">
+            <div class="d-grid text-align-center gap-row-3">
+                <div class="d-grid grid-col-2 d-sm-content-start gap-1 border rounded-1" style="height: 100px">
+                    <div class="bg-blue-100 rounded-1"><code>d-sm-content-start</code></div>
+                    <div class="bg-blue-100 rounded-1"><code>d-sm-content-start</code></div>
+                    <div class="bg-blue-100 rounded-1"><code>d-sm-content-start</code></div>
+                </div>
+                <div class="d-grid grid-col-2 d-sm-content-end gap-1 border rounded-1" style="height: 100px">
+                    <div class="bg-blue-100 rounded-1"><code>d-sm-content-end</code></div>
+                    <div class="bg-blue-100 rounded-1"><code>d-sm-content-end</code></div>
+                    <div class="bg-blue-100 rounded-1"><code>d-sm-content-end</code></div>
+                </div>
+                <div class="d-grid grid-col-2 d-sm-content-center gap-1 border rounded-1" style="height: 100px">
+                    <div class="bg-blue-100 rounded-1"><code>d-sm-content-center</code></div>
+                    <div class="bg-blue-100 rounded-1"><code>d-sm-content-center</code></div>
+                    <div class="bg-blue-100 rounded-1"><code>d-sm-content-center</code></div>
+                </div>
+                <div class="d-grid grid-col-2 d-sm-content-between gap-1 border rounded-1" style="height: 100px">
+                    <div class="bg-blue-100 rounded-1"><code>d-sm-content-between</code></div>
+                    <div class="bg-blue-100 rounded-1"><code>d-sm-content-between</code></div>
+                    <div class="bg-blue-100 rounded-1"><code>d-sm-content-between</code></div>
+                </div>
+                <div class="d-grid grid-col-2 d-sm-content-around gap-1 border rounded-1" style="height: 100px">
+                    <div class="bg-blue-100 rounded-1"><code>d-sm-content-around</code></div>
+                    <div class="bg-blue-100 rounded-1"><code>d-sm-content-around</code></div>
+                    <div class="bg-blue-100 rounded-1"><code>d-sm-content-around</code></div>
+                </div>
+                <div class="d-grid grid-col-2 d-sm-content-stretch gap-1 border rounded-1" style="height: 100px">
+                    <div class="bg-blue-100 rounded-1"><code>d-sm-content-stretch</code></div>
+                    <div class="bg-blue-100 rounded-1"><code>d-sm-content-stretch</code></div>
+                    <div class="bg-blue-100 rounded-1"><code>d-sm-content-stretch</code></div>
+                </div>
+            </div>
+        </div>
+        <pre>
+    &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">d-grid grid-col-2 d-sm-content-around</span>"&gt;
+    &lt;div&gt;...&lt;/div&gt;
+    &lt;div&gt;...&lt;/div&gt;
+    &lt;div&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+    </pre>
+        <h3 class="mt-6 text-weight-light">Align Inline-items</h3>
+        <p>Align elements that wrap by adjusting the padding within its container along the cross axis.</p>
+        <table class="width-full table-border-collapse my-3">
+            <thead>
+                <tr class="border-bottom">
+                    <th class="text-weight-semibold">Class value</th>
+                    <th class="text-weight-semibold">Breakpoint</th>
+                    <th class="text-weight-semibold">Align items</th>
+                </tr>
+            </thead>
+            <tbody class="h6 text-weight-normal divider-row">
+                <tr>
+                    <td><code>d-{breakpoint}-items-start</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>start</td>
+                </tr>
+                <tr>
+                    <td><code>d-{breakpoint}-items-end</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>end</td>
+                </tr>
+                <tr>
+                    <td><code>d-{breakpoint}-items-center</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>center</td>
+                </tr>
+                <tr>
+                    <td><code>d-{breakpoint}-baseline</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>baseline</td>
+                </tr>
+                <tr>
+                    <td><code>d-{breakpoint}-items-stretch</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>stretch</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="p-3 border rounded">
+            <div class="d-grid text-align-center gap-row-3">
+                <div class="d-grid grid-col-2 d-sm-items-start gap-1 border rounded-1" style="height: 100px">
+                    <div class="bg-blue-100 rounded-1"><code>d-sm-items-start</code></div>
+                    <div class="bg-blue-100 rounded-1"><code>d-sm-items-start</code></div>
+                    <div class="bg-blue-100 rounded-1"><code>d-sm-items-start</code></div>
+                </div>
+                <div class="d-grid grid-col-2 d-sm-items-end gap-1 border rounded-1" style="height: 100px">
+                    <div class="bg-blue-100 rounded-1"><code>d-sm-items-end</code></div>
+                    <div class="bg-blue-100 rounded-1"><code>d-sm-items-end</code></div>
+                    <div class="bg-blue-100 rounded-1"><code>d-sm-items-end</code></div>
+                </div>
+                <div class="d-grid grid-col-2 d-sm-items-center gap-1 border rounded-1" style="height: 100px">
+                    <div class="bg-blue-100 rounded-1"><code>d-sm-items-center</code></div>
+                    <div class="bg-blue-100 rounded-1"><code>d-sm-items-center</code></div>
+                    <div class="bg-blue-100 rounded-1"><code>d-sm-items-center</code></div>
+                </div>
+                <div class="d-grid grid-col-2 d-sm-items-baseline gap-1 border rounded-1" style="height: 100px">
+                    <div class="bg-blue-100 rounded-1"><code>d-sm-items-baseline</code></div>
+                    <div class="bg-blue-100 rounded-1"><code>d-sm-items-baseline</code></div>
+                    <div class="bg-blue-100 rounded-1"><code>d-sm-items-baseline</code></div>
+                </div>
+                <div class="d-grid grid-col-2 d-sm-items-stretch gap-1 border rounded-1" style="height: 100px">
+                    <div class="bg-blue-100 rounded-1"><code>d-sm-items-stretch</code></div>
+                    <div class="bg-blue-100 rounded-1"><code>d-sm-items-stretch</code></div>
+                    <div class="bg-blue-100 rounded-1"><code>d-sm-items-stretch</code></div>
+                </div>
+            </div>
+        </div>
+        <pre>
+    &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">d-grid grid-col-2 d-sm-items-center</span>"&gt;
+    &lt;div&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+    </pre>
+        <h3 class="mt-6 text-weight-light">Align Self</h3>
+        <p>Align self by adjusting the margin within its container along the cross axis.</p>
+        <table class="width-full table-border-collapse my-3">
+            <thead>
+                <tr class="border-bottom">
+                    <th class="text-weight-semibold">Class value</th>
+                    <th class="text-weight-semibold">Breakpoint</th>
+                    <th class="text-weight-semibold">Align self</th>
+                </tr>
+            </thead>
+            <tbody class="h6 text-weight-normal divider-row">
+                <tr>
+                    <td><code>d-{breakpoint}-self-auto</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>auto</td>
+                </tr>
+                <tr>
+                    <td><code>d-{breakpoint}-self-start</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>start</td>
+                </tr>
+                <tr>
+                    <td><code>d-{breakpoint}-self-end</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>end</td>
+                </tr>
+                <tr>
+                    <td><code>d-{breakpoint}-self-flex-start</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>flex-start</td>
+                </tr>
+                <tr>
+                    <td><code>d-{breakpoint}-self-flex-end</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>flex-end</td>
+                </tr>
+                <tr>
+                    <td><code>d-{breakpoint}-self-center</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>center</td>
+                </tr>
+                <tr>
+                    <td><code>d-{breakpoint}-self-baseline</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>baseline</td>
+                </tr>
+                <tr>
+                    <td><code>d-{breakpoint}-self-stretch</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>stretch</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="p-3 border rounded">
+            <div class="d-grid grid-flow-col gap-1 border rounded-1 text-align-center" style="height: 100px">
+                <div class="d-sm-self-auto bg-blue-100 rounded-1"><code>d-sm-self-auto</code></div>
+                <div class="d-sm-self-start bg-blue-100 rounded-1"><code>d-sm-self-start</code></div>
+                <div class="d-sm-self-end bg-blue-100 rounded-1"><code>d-sm-self-end</code></div>
+                <div class="d-sm-self-center bg-blue-100 rounded-1"><code>d-sm-self-center</code></div>
+                <div class="d-sm-self-baseline bg-blue-100 rounded-1"><code>d-sm-self-baseline</code></div>
+                <div class="d-sm-self-stretch bg-blue-100 rounded-1"><code>d-sm-self-stretch</code></div>
+            </div>
+        </div>
+        <pre>
+    &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">d-grid grid-flow-col gap-1</span>"&gt;
+        ...
+        &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">d-sm-self-center</span>"&gt;...&lt;/div&gt;
+        ...
+    &lt;/div&gt;
+    </pre>
+        <h3 class="mt-6 text-weight-light">Fixed Align</h3>
+        <table class="width-full table-border-collapse my-3">
+            <thead>
+                <tr class="border-bottom">
+                    <th class="text-weight-semibold">Class value</th>
+                    <th class="text-weight-semibold">Property style</th>
+                </tr>
+            </thead>
+            <tbody class="h6 text-weight-normal divider-row">
+                <tr>
+                    <td><code>d-justify-start</code></td>
+                    <td>justify-content: start</td>
+                </tr>
+                <tr>
+                    <td><code>d-justify-end</code></td>
+                    <td>justify-content: end</td>
+                </tr>
+                <tr>
+                    <td><code>d-justify-center</code></td>
+                    <td>justify-content: center</td>
+                </tr>
+                <tr>
+                    <td><code>d-justify-between</code></td>
+                    <td>justify-content: space-between</td>
+                </tr>
+                <tr>
+                    <td><code>d-justify-around</code></td>
+                    <td>justify-content: space-around</td>
+                </tr>
+                <tr>
+                    <td><code>d-justify-evenly</code></td>
+                    <td>justify-content: space-evenly</td>
+                </tr>
+                <tr>
+                    <td><code>d-align-start</code></td>
+                    <td>justify-items: start</td>
+                </tr>
+                <tr>
+                    <td><code>d-align-end</code></td>
+                    <td>justify-items: end</td>
+                </tr>
+                <tr>
+                    <td><code>d-align-center</code></td>
+                    <td>justify-items: center</td>
+                </tr>
+                <tr>
+                    <td><code>d-align-stretch</code></td>
+                    <td>justify-items: stretch</td>
+                </tr>
+                <tr>
+                    <td><code>d-items-start</code></td>
+                    <td>align-items: start</td>
+                </tr>
+                <tr>
+                    <td><code>d-items-end</code></td>
+                    <td>align-items: end</td>
+                </tr>
+                <tr>
+                    <td><code>d-items-center</code></td>
+                    <td>align-items: center</td>
+                </tr>
+                <tr>
+                    <td><code>d-items-baseline</code></td>
+                    <td>align-items: baseline</td>
+                </tr>
+                <tr>
+                    <td><code>d-items-stretch</code></td>
+                    <td>align-items: stretch</td>
+                </tr>
+                <tr>
+                    <td><code>d-content-start</code></td>
+                    <td>align-content: start</td>
+                </tr>
+                <tr>
+                    <td><code>d-content-end</code></td>
+                    <td>align-content: end</td>
+                </tr>
+                <tr>
+                    <td><code>d-content-center</code></td>
+                    <td>align-content: center</td>
+                </tr>
+                <tr>
+                    <td><code>d-content-between</code></td>
+                    <td>align-content: space-between</td>
+                </tr>
+                <tr>
+                    <td><code>d-content-around</code></td>
+                    <td>align-content: space-around</td>
+                </tr>
+                <tr>
+                    <td><code>d-content-stretch</code></td>
+                    <td>align-content: stretch</td>
+                </tr>
+                <tr>
+                    <td><code>d-self-auto</code></td>
+                    <td>align-self: auto</td>
+                </tr>
+                <tr>
+                    <td><code>d-self-start</code></td>
+                    <td>align-self: start</td>
+                </tr>
+                <tr>
+                    <td><code>d-self-end</code></td>
+                    <td>align-self: end</td>
+                </tr>
+                <tr>
+                    <td><code>d-self-flex-start</code></td>
+                    <td>align-self: flex-start</td>
+                </tr>
+                <tr>
+                    <td><code>d-self-flex-end</code></td>
+                    <td>align-self: flex-end</td>
+                </tr>
+                <tr>
+                    <td><code>d-self-center</code></td>
+                    <td>align-self: center</td>
+                </tr>
+                <tr>
+                    <td><code>d-self-baseline</code></td>
+                    <td>align-self: baseline</td>
+                </tr>
+                <tr>
+                    <td><code>d-self-stretch</code></td>
+                    <td>align-self: stretch</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- floats -->
+    <section id="float" class="anchor">
+        <h2>Float</h2>
+        <hr class="divider">
+        <table class="width-full table-border-collapse my-3">
+            <thead>
+                <tr class="border-bottom">
+                    <th class="text-weight-semibold">Class value</th>
+                    <th class="text-weight-semibold">Breakpoint</th>
+                    <th class="text-weight-semibold">Float direction</th>
+                </tr>
+            </thead>
+            <tbody class="h6 text-weight-normal divider-row">
+                <tr>
+                    <td><code>float-{breakpoint}-left</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>left</td>
+                </tr>
+                <tr>
+                    <td><code>float-{breakpoint}-right</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>right</td>
+                </tr>
+                <tr>
+                    <td><code>float-{breakpoint}-none</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>none</td>
+                </tr>
+                <tr>
+                    <td><code>float-right</code></td>
+                    <td>-</td>
+                    <td>right</td>
+                </tr>
+                <tr>
+                    <td><code>float-left</code></td>
+                    <td>-</td>
+                    <td>left</td>
+                </tr>
+                <tr>
+                    <td><code>float-none</code></td>
+                    <td>-</td>
+                    <td>none</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="p-3 border rounded">
+            <div class="text-align-center clearfix">
+                <div class="d-flex d-items-center gap-flex-col-2 float-sm-left">
+                    <span
+                        class="d-grid d-content-center col-8 bg-blue-100 rounded-1 height-8"><code>float-left</code></span>
+                    <span
+                        class="d-grid d-content-center col-8 bg-blue-100 rounded-1 height-8"><code>float-left</code></span>
+                </div>
+                <div class="d-flex d-items-center gap-flex-col-2 float-sm-right">
+                    <span
+                        class="d-grid d-content-center col-8 bg-blue-100 rounded-1 height-8"><code>float-right</code></span>
+                    <span
+                        class="d-grid d-content-center col-8 bg-blue-100 rounded-1 height-8"><code>float-right</code></span>
+                </div>
+            </div>
+        </div>
+        <pre>
+    &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">float-sm-right</span>"&gt;
+    &lt;div&gt;...&lt;/div&gt;
+    &lt;div&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+    </pre>
+        <h3 class="mt-6 text-weight-light">Clearfix</h3>
+        <p>The <code>clearfix</code> property clears the left and right side of the floating element.</p>
+        <div class="p-3 border rounded">
+            <div class="p-3 mb-3 border rounded-1">
+                <h4 class="text-weight-light">Without Clearfix</h4>
+                <div class="d-grid d-content-center col-2 float-sm-right text-align-center bg-blue-100 rounded-1 height-8">
+                    <code>float-right</code>
+                </div>
+                This is a body text. Donec ullamcorper nulla non metus auctor fringilla.
+            </div>
+            <div class="p-3 border rounded-1 clearfix">
+                <h4 class="text-weight-light">With Clearfix</h4>
+                <div class="d-grid d-content-center col-2 float-sm-right text-align-center bg-blue-100 rounded-1 height-8">
+                    <code>float-right</code>
+                </div>
+                This is a body text. Donec ullamcorper nulla non metus auctor fringilla.
+            </div>
+        </div>
+        <pre>
+    &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">clearfix</span>"&gt;
+    &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">float-sm-right</span>"&gt;...&lt;/div&gt;
+    ...
+    &lt;/div&gt;
+    </pre>
+    </section>
+    <!-- overflow -->
+    <section id="overflow" class="anchor">
+        <h2>Overflow</h2>
+        <hr class="divider">
+        <p>Use the overflow utility classes to control content that is larger than its container.</p>
+        <table class="width-full table-border-collapse my-3">
+            <thead>
+                <tr class="border-bottom">
+                    <th class="text-weight-semibold">Class value</th>
+                    <th class="text-weight-semibold">Breakpoint</th>
+                    <th class="text-weight-semibold">Overflow style</th>
+                </tr>
+            </thead>
+            <tbody class="h6 text-weight-normal divider-row">
+                <tr>
+                    <td><code>overflow-{breakpoint}-visible</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>visible</td>
+                </tr>
+                <tr>
+                    <td><code>overflow-{breakpoint}-hidden</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>hidden</td>
+                </tr>
+                <tr>
+                    <td><code>overflow-{breakpoint}-auto</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>auto</td>
+                </tr>
+                <tr>
+                    <td><code>overflow-{breakpoint}-scroll</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>scroll</td>
+                </tr>
+                <tr>
+                    <td><code>overflow-visible</code></td>
+                    <td>-</td>
+                    <td>visible</td>
+                </tr>
+                <tr>
+                    <td><code>overflow-hidden</code></td>
+                    <td>-</td>
+                    <td>hidden</td>
+                </tr>
+                <tr>
+                    <td><code>overflow-auto</code></td>
+                    <td>-</td>
+                    <td>auto</td>
+                </tr>
+                <tr>
+                    <td><code>overflow-scroll</code></td>
+                    <td>-</td>
+                    <td>scroll</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="p-3 border rounded overflow-hidden">
+            <div class="d-grid grid-col-4 gap-2" style="min-height: 300px;">
+                <div class="p-2 overflow-sm-visible bg-blue-100 rounded-1" style="height: 200px;">
+                    <h4 class="text-weight-light">Visible</h4>
+                    Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla. Aenean lacinia bibendum nulla
+                    sed consectetur.
+                    Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
+                </div>
+                <div class="p-2 overflow-sm-hidden bg-blue-100 rounded-1" style="height: 200px;">
+                    <h4 class="text-weight-light">Hidden</h4>
+                    Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla. Aenean lacinia bibendum nulla
+                    sed consectetur.
+                    Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
+                </div>
+                <div class="p-2 overflow-sm-auto bg-blue-100 rounded-1" style="height: 200px;">
+                    <h4 class="text-weight-light">Auto</h4>
+                    Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla. Aenean lacinia bibendum nulla
+                    sed consectetur.
+                    Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
+                </div>
+                <div class="p-2 overflow-sm-scroll bg-blue-100 rounded-1" style="height: 200px;">
+                    <h4 class="text-weight-light">Scroll</h4>
+                    Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla. Aenean lacinia bibendum nulla
+                    sed consectetur.
+                    Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
+                </div>
+            </div>
+        </div>
+        <pre>
+    &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">overflow-sm-scroll</span>"&gt;
+        &lt;p&gt;...&lt;/p&gt;
+    &lt;/div&gt;
+    </pre>
+    </section>
+    <!-- position -->
+    <section id="position" class="anchor">
+        <h2>Position</h2>
+        <hr class="divider">
+        <table class="width-full table-border-collapse my-3">
+            <thead>
+                <tr class="border-bottom">
+                    <th class="text-weight-semibold">Class value</th>
+                    <th class="text-weight-semibold">Breakpoint</th>
+                    <th class="text-weight-semibold">Position style</th>
+                </tr>
+            </thead>
+            <tbody class="h6 text-weight-normal divider-row">
+                <tr>
+                    <td><code>position-{breakpoint}-static</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>static</td>
+                </tr>
+                <tr>
+                    <td><code>position-{breakpoint}-relative</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>relative</td>
+                </tr>
+                <tr>
+                    <td><code>position-{breakpoint}-absolute</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>absolute</td>
+                </tr>
+                <tr>
+                    <td><code>position-{breakpoint}-fixed</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>fixed</td>
+                </tr>
+                <tr>
+                    <td><code>position-{breakpoint}-sticky</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>sticky</td>
+                </tr>
+                <tr>
+                    <td><code>position-static</code></td>
+                    <td>-</td>
+                    <td>static</td>
+                </tr>
+                <tr>
+                    <td><code>position-relative</code></td>
+                    <td>-</td>
+                    <td>relative</td>
+                </tr>
+                <tr>
+                    <td><code>position-absolute</code></td>
+                    <td>-</td>
+                    <td>absolute</td>
+                </tr>
+                <tr>
+                    <td><code>position-fixed</code></td>
+                    <td>-</td>
+                    <td>fixed</td>
+                </tr>
+                <tr>
+                    <td><code>position-sticky</code></td>
+                    <td>-</td>
+                    <td>sticky</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3 class="mt-6 text-weight-light">Top, Right, Bottom & Left</h3>
+        <table class="width-full table-border-collapse my-3">
+            <thead>
+                <tr class="border-bottom">
+                    <th class="text-weight-semibold">Class value</th>
+                    <th class="text-weight-semibold">Edge</th>
+                    <th class="text-weight-semibold">Breakpoint</th>
+                    <th class="text-weight-semibold">Position</th>
+                </tr>
+            </thead>
+            <tbody class="h6 text-weight-normal divider-row">
+                <tr>
+                    <td><code>{position}-{breakpoint}-0</code></td>
+                    <td>top, right, bottom, left</td>
+                    <td>sm, md, lg, xl</td>
+                    <td>0px</td>
+                </tr>
+                <tr>
+                    <td><code>{position}-{breakpoint}-auto</code></td>
+                    <td>top, right, bottom, left</td>
+                    <td>sm, md, lg, xl</td>
+                    <td>auto</td>
+                </tr>
+                <tr>
+                    <td><code>{position}-0</code></td>
+                    <td>top, right, bottom, left</td>
+                    <td>-</td>
+                    <td>0px</td>
+                </tr>
+                <tr>
+                    <td><code>{position}-auto</code></td>
+                    <td>top, right, bottom, left</td>
+                    <td>-</td>
+                    <td>auto</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="p-3 border rounded">
+            <div class="d-grid grid-flow-col position-relative text-align-center" style="height: 200px;">
+                <div class="d-grid d-items-center position-absolute col-3 top-0 bg-blue-100 rounded-1">
+                    <code>position-absolute top-0</code></div>
+                <div class="d-grid d-items-center position-absolute col-3 bottom-0 bg-blue-100 rounded-1">
+                    <code>position-absolute bottom-0</code></div>
+                <div class="d-grid d-items-center position-absolute col-3 bottom-0 top-0 right-0 bg-blue-100 rounded-1">
+                    <code>position-absolute<br>top-0 right-0<br>bottom-0</code></div>
+            </div>
+        </div>
+        <pre>
+    &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">position-relative</span>"&gt;
+        &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">position-absolute top-0</span>"&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+    </pre>
+    </section>
+    <!-- z-index -->
+    <section id="zindex" class="anchor">
+        <h2>Z-index</h2>
+        <hr class="divider">
+        <p>The z-index property can be used to set the stack order of elements. The higher stack order number is always in
+            front of the element with the lower stack order number.</p>
+        <table class="width-full table-border-collapse my-3">
+            <thead>
+                <tr class="border-bottom">
+                    <th class="text-weight-semibold">Class value</th>
+                    <th class="text-weight-semibold">Breakpoint</th>
+                    <th class="text-weight-semibold">Stack order</th>
+                </tr>
+            </thead>
+            <tbody class="h6 text-weight-normal divider-row">
+                <tr>
+                    <td><code>zindex-{breakpoint}-00</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>1000</td>
+                </tr>
+                <tr>
+                    <td><code>zindex-{breakpoint}-01</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>1020</td>
+                </tr>
+                <tr>
+                    <td><code>zindex-{breakpoint}-02</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>1040</td>
+                </tr>
+                <tr>
+                    <td><code>zindex-00</code></td>
+                    <td>-</td>
+                    <td>1000</td>
+                </tr>
+                <tr>
+                    <td><code>zindex-01</code></td>
+                    <td>-</td>
+                    <td>1020</td>
+                </tr>
+                <tr>
+                    <td><code>zindex-02</code></td>
+                    <td>-</td>
+                    <td>1040</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="p-3 border rounded">
+            <div class="position-relative text-align-center" style="height: 200px;">
+                <div class="d-grid d-items-center position-absolute top-0 left-0 bg-blue-100 rounded-1"
+                    style="height: 100px; width: 150px;">
+                    <code>z-index 0</code>
+                </div>
+                <div class="d-grid d-items-center position-absolute bg-blue-200 rounded-1 opacity-8 zindex-00"
+                    style="height: 100px; width: 150px; transform: translate(50%, 30%);">
+                    <code>zindex-00</code>
+                </div>
+                <div class="d-grid d-items-center position-absolute bg-gray-200 rounded-1 opacity-8 zindex-01"
+                    style="height: 100px; width: 150px; transform: translate(10%, 80%);">
+                    <code>zindex-01</code>
+                </div>
+            </div>
+        </div>
+        <pre>
+    &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">position-relative</span>"&gt;
+        &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">position-absolute zindex-01</span>"&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+    </pre>
+    </section>
+</div>
+<!-- secondary nav -->
+<div class="d-none d-xl-block py-6 col-xl-2 position-sticky d-self-flex-start pl-xl-5" style="top: 40px;">
+    <div class="d-flex flex-col gap-flex-2">
+        <a class="h6 text-decoration-none text-weight-light" href="#breakpoint">Breakpoint</a>
+        <a class="h6 text-decoration-none text-weight-light" href="#column">Column</a>
+        <a class="h6 text-decoration-none text-weight-light" href="#widthHeight">Width & Height</a>
+        <a class="h6 text-decoration-none text-weight-light" href="#display">Display</a>
+        <a class="h6 text-decoration-none text-weight-light" href="#flexbox">Flexbox</a>
+        <a class="h6 text-decoration-none text-weight-light" href="#grid">Grid</a>
+        <a class="h6 text-decoration-none text-weight-light" href="#align">Align</a>
+        <a class="h6 text-decoration-none text-weight-light" href="#float">Float</a>
+        <a class="h6 text-decoration-none text-weight-light" href="#overflow">Overflow</a>
+        <a class="h6 text-decoration-none text-weight-light" href="#position">Position</a>
+        <a class="h6 text-decoration-none text-weight-light" href="#zindex">Z-index</a>
+    </div>
+</div>
+{{ end }}

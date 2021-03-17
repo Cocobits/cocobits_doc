@@ -1,0 +1,458 @@
+{{ define "main" }}
+<!-- spacing -->
+<div class="py-6 col-md-9 col-xl-7">
+    <section>
+        <h2>Spacing</h2>
+        <hr class="divider">
+        <p>Cocobits uses a base-8 scale as eight can be easily divided or multiplied to create a spatial system that offers
+            flexibility and consistency across blocks, elements and content.</p>
+        <h3 class="mt-6 text-weight-light">Syntax Definition</h3>
+        <table class="width-full table-border-collapse my-3">
+            <thead>
+                <tr class="border-bottom">
+                    <th class="text-weight-semibold">Syntax</th>
+                    <th class="text-weight-semibold">Definition</th>
+                </tr>
+            </thead>
+            <tbody class="h6 text-weight-normal divider-row">
+                <tr>
+                    <td><code>m</code></td>
+                    <td>margin</td>
+                </tr>
+                <tr>
+                    <td><code>p</code></td>
+                    <td>padding</td>
+                </tr>
+                <tr>
+                    <td><code>x</code></td>
+                    <td>right and left</td>
+                </tr>
+                <tr>
+                    <td><code>y</code></td>
+                    <td>top and bottom</td>
+                </tr>
+                <tr>
+                    <td><code>t</code></td>
+                    <td>top</td>
+                </tr>
+                <tr>
+                    <td><code>r</code></td>
+                    <td>right</td>
+                </tr>
+                <tr>
+                    <td><code>b</code></td>
+                    <td>bottom</td>
+                </tr>
+                <tr>
+                    <td><code>l</code></td>
+                    <td>left</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3 class="mt-6 text-weight-light">Scale Size</h3>
+        <table class="width-full table-border-collapse my-3">
+            <thead>
+                <tr class="border-bottom">
+                    <th class="text-weight-semibold">Scale</th>
+                    <th class="text-weight-semibold">Size</th>
+                </tr>
+            </thead>
+            <tbody class="h6 text-weight-normal divider-row">
+                <tr>
+                    <td><code>0</code></td>
+                    <td>0px</td>
+                </tr>
+                <tr>
+                    <td><code>1</code></td>
+                    <td>4px</td>
+                </tr>
+                <tr>
+                    <td><code>2</code></td>
+                    <td>8px</td>
+                </tr>
+                <tr>
+                    <td><code>3</code></td>
+                    <td>16px</td>
+                </tr>
+                <tr>
+                    <td><code>4</code></td>
+                    <td>24px</td>
+                </tr>
+                <tr>
+                    <td><code>5</code></td>
+                    <td>32px</td>
+                </tr>
+                <tr>
+                    <td><code>6</code></td>
+                    <td>40px</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    
+    <!-- margin -->
+    <section id="margin" class="anchor">
+        <h2>Margin</h2>
+        <hr class="divider">
+        <table class="width-full table-border-collapse my-3">
+            <thead>
+                <tr class="border-bottom">
+                    <th class="text-weight-semibold">Class value</th>
+                    <th class="text-weight-semibold">Breakpoint</th>
+                    <th class="text-weight-semibold">Scale</th>
+                    <th class="text-weight-semibold">Margin size</th>
+                </tr>
+            </thead>
+            <tbody class="h6 text-weight-normal divider-row">
+                <tr>
+                    <td><code>mx-{breakpoint}-auto</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>-</td>
+                    <td>margin-right: auto<br>margin-left: auto</td>
+                </tr>
+                <tr>
+                    <td><code>m-{breakpoint}-{scale}</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>0-6</td>
+                    <td>margin: size</td>
+                </tr>
+                <tr>
+                    <td><code>mt-{breakpoint}-{scale}</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>0-6</td>
+                    <td>margin-top: size</td>
+                </tr>
+                <tr>
+                    <td><code>mr-{breakpoint}-{scale}</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>0-6</td>
+                    <td>margin-right: size</td>
+                </tr>
+                <tr>
+                    <td><code>mb-{breakpoint}-{scale}</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>0-6</td>
+                    <td>margin-bottom: size</td>
+                </tr>
+                <tr>
+                    <td><code>ml-{breakpoint}-{scale}</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>0-6</td>
+                    <td>margin-left: size</td>
+                </tr>
+                <tr>
+                    <td><code>mx-{breakpoint}-{scale}</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>0-6</td>
+                    <td>margin-right: size<br>margin-left: size</td>
+                </tr>
+                <tr>
+                    <td><code>my-{breakpoint}-{scale}</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>0-6</td>
+                    <td>margin-top: size<br>margin-bottom: size</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="p-3 border rounded">
+            <div class="d-grid grid-flow-col gap-col-3 text-align-center">
+                <div class="d-grid bg-gray-200" style="height: 100px;">
+                    <div class="d-grid d-items-center m-sm-4 bg-blue-100 border">
+                        <code>m-sm-4</code>
+                    </div>
+                </div>
+                <div class="d-grid bg-gray-200" style="height: 100px;">
+                    <div class="d-grid d-items-center mt-sm-4 bg-blue-100 border">
+                        <code>mt-sm-4</code>
+                    </div>
+                </div>
+                <div class="d-grid bg-gray-200" style="height: 100px;">
+                    <div class="d-grid d-items-center mb-sm-4 bg-blue-100 border">
+                        <code>mb-sm-4</code>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+        <pre>
+    &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">m-sm-4</span>"&gt;...&lt;/div&gt;
+    </pre>
+        <h3 class="mt-6 text-weight-light">Negative Margin</h3>
+        <p>Sets negative margin spaces.</p>
+        <table class="width-full table-border-collapse my-3">
+            <thead>
+                <tr class="border-bottom">
+                    <th class="text-weight-semibold">Class value</th>
+                    <th class="text-weight-semibold">Breakpoint</th>
+                    <th class="text-weight-semibold">Scale</th>
+                    <th class="text-weight-semibold">Margin size</th>
+                </tr>
+            </thead>
+            <tbody class="h6 text-weight-normal divider-row">
+                <tr>
+                    <td><code>mt-{breakpoint}-n{scale}</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>1-6</td>
+                    <td>margin-top: -size</td>
+                </tr>
+                <tr>
+                    <td><code>mr-{breakpoint}-n{scale}</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>1-6</td>
+                    <td>margin-right: -size</td>
+                </tr>
+                <tr>
+                    <td><code>mb-{breakpoint}-n{scale}</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>1-6</td>
+                    <td>margin-bottom: -size</td>
+                </tr>
+                <tr>
+                    <td><code>ml-{breakpoint}-n{scale}</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>1-6</td>
+                    <td>margin-left: -size</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="p-3 border rounded">
+            <div class="d-grid grid-flow-col gap-col-3 text-align-center">
+                <div class="d-grid bg-gray-200" style="height: 100px;">
+                    <div class="d-grid d-items-center mb-sm-n3 bg-blue-100 opacity-8">
+                        <code>mb-sm-n3</code></span>
+                    </div>
+                </div>
+                <div class="d-grid bg-gray-200" style="height: 100px;">
+                    <div class="d-grid d-items-center mt-sm-n3 mb-sm-3 bg-blue-100 opacity-8">
+                        <code>mt-sm-n3<br>mb-sm-3</code></span>
+                    </div>
+                </div>
+                <div class="d-grid bg-gray-200" style="height: 100px;">
+                    <div class="d-grid d-items-center mr-sm-n3 bg-blue-100 opacity-8">
+                        <code>mr-sm-n3</code></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <pre>
+    &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">mb-sm-n3</span>"&gt;...&lt;/div&gt;
+    </pre>
+        <h3 class="mt-6 text-weight-light">Fixed Margin</h3>
+        <table class="width-full table-border-collapse my-3">
+            <thead>
+                <tr class="border-bottom">
+                    <th class="text-weight-semibold">Class value</th>
+                    <th class="text-weight-semibold">Scale</th>
+                    <th class="text-weight-semibold">Margin size</th>
+                </tr>
+            </thead>
+            <tbody class="h6 text-weight-normal divider-row">
+                <tr>
+                    <td><code>mx-auto</code></td>
+                    <td>-</td>
+                    <td>margin-right: auto<br>margin-left: auto</td>
+                </tr>
+                <tr>
+                    <td><code>m-{scale}</code></td>
+                    <td>0-6</td>
+                    <td>margin: size</td>
+                </tr>
+                <tr>
+                    <td><code>mt-{scale}</code></td>
+                    <td>0-6</td>
+                    <td>margin-top: size</td>
+                </tr>
+                <tr>
+                    <td><code>mr-{scale}</code></td>
+                    <td>0-6</td>
+                    <td>margin-right: size</td>
+                </tr>
+                <tr>
+                    <td><code>mb-{scale}</code></td>
+                    <td>0-6</td>
+                    <td>margin-bottom: size</td>
+                </tr>
+                <tr>
+                    <td><code>ml-{scale}</code></td>
+                    <td>0-6</td>
+                    <td>margin-left: size</td>
+                </tr>
+                <tr>
+                    <td><code>mx-{scale}</code></td>
+                    <td>0-6</td>
+                    <td>margin-right: size<br>margin-left: size</td>
+                </tr>
+                <tr>
+                    <td><code>my-{scale}</code></td>
+                    <td>0-6</td>
+                    <td>margin-top: size<br>margin-bottom: size</td>
+                </tr>
+                <tr>
+                    <td><code>mt-n{scale}</code></td>
+                    <td>1-6</td>
+                    <td>margin-top: -size</td>
+                </tr>
+                <tr>
+                    <td><code>mr-n{scale}</code></td>
+                    <td>1-6</td>
+                    <td>margin-right: -size</td>
+                </tr>
+                <tr>
+                    <td><code>mb-n{scale}</code></td>
+                    <td>1-6</td>
+                    <td>margin-bottom: -size</td>
+                </tr>
+                <tr>
+                    <td><code>ml-n{scale}</code></td>
+                    <td>1-6</td>
+                    <td>margin-left: -size</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    
+    <!-- padding -->
+    <section id="padding" class="anchor">
+        <h2>Padding</h2>
+        <hr class="divider">
+        <table class="width-full table-border-collapse my-3">
+            <thead>
+                <tr class="border-bottom">
+                    <th class="text-weight-semibold">Class value</th>
+                    <th class="text-weight-semibold">Breakpoint</th>
+                    <th class="text-weight-semibold">Scale</th>
+                    <th class="text-weight-semibold">Padding size</th>
+                </tr>
+            </thead>
+            <tbody class="h6 text-weight-normal divider-row">
+                <tr>
+                    <td><code>px-{breakpoint}-auto</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>-</td>
+                    <td>padding-right: auto<br>padding-left: auto</td>
+                </tr>
+                <tr>
+                    <td><code>p-{breakpoint}-{scale}</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>0-6</td>
+                    <td>padding: size</td>
+                </tr>
+                <tr>
+                    <td><code>pt-{breakpoint}-{scale}</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>0-6</td>
+                    <td>padding-top: size</td>
+                </tr>
+                <tr>
+                    <td><code>pr-{breakpoint}-{scale}</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>0-6</td>
+                    <td>padding-right: size</td>
+                </tr>
+                <tr>
+                    <td><code>pb-{breakpoint}-{scale}</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>0-6</td>
+                    <td>padding-bottom: size</td>
+                </tr>
+                <tr>
+                    <td><code>pl-{breakpoint}-{scale}</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>0-6</td>
+                    <td>padding-left: size</td>
+                </tr>
+                <tr>
+                    <td><code>px-{breakpoint}-{scale}</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>0-6</td>
+                    <td>padding-right: size<br>padding-left: size</td>
+                </tr>
+                <tr>
+                    <td><code>py-{breakpoint}-{scale}</code></td>
+                    <td>sm, md, lg, xl</td>
+                    <td>0-6</td>
+                    <td>padding-top: size<br>padding-bottom: size</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="p-3 border rounded">
+            <div class="d-grid grid-col-2 gap-col-2 gap-row-2 grid-sm-col-4 text-align-center">
+                <div class="p-sm-4 bg-gray-200 border">
+                    <span class="d-grid d-content-center bg-gray-050 height-full"><code>p-sm-4</code></span>
+                </div>
+                <div class="pt-sm-4 bg-gray-200 border">
+                    <span class="d-grid d-content-center bg-gray-050 height-full"><code>pt-sm-4</code></span>
+                </div>
+                <div class="px-sm-4 bg-gray-200 border">
+                    <span class="d-grid d-content-center bg-gray-050 height-full"><code>px-sm-4</code></span>
+                </div>
+                <div class="py-sm-4 bg-gray-200 border">
+                    <span class="d-grid d-content-center bg-gray-050 height-full"><code>py-sm-4</code></span>
+                </div>
+            </div>
+        </div>
+        <pre>
+    &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">p-sm-4</span>"&gt;...&lt;/div&gt;
+    </pre>
+        <h3 class="mt-6 text-weight-light">Fixed Padding</h3>
+        <table class="width-full table-border-collapse my-3">
+            <thead>
+                <tr class="border-bottom">
+                    <th class="text-weight-semibold">Class value</th>
+                    <th class="text-weight-semibold">Scale</th>
+                    <th class="text-weight-semibold">Padding size</th>
+                </tr>
+            </thead>
+            <tbody class="h6 text-weight-normal divider-row">
+                <tr>
+                    <td><code>px-auto</code></td>
+                    <td>-</td>
+                    <td>padding-right: auto<br>padding-left: auto</td>
+                </tr>
+                <tr>
+                    <td><code>p-{scale}</code></td>
+                    <td>0-6</td>
+                    <td>padding: size</td>
+                </tr>
+                <tr>
+                    <td><code>pt-{scale}</code></td>
+                    <td>0-6</td>
+                    <td>padding-top: size</td>
+                </tr>
+                <tr>
+                    <td><code>pr-{scale}</code></td>
+                    <td>0-6</td>
+                    <td>padding-right: size</td>
+                </tr>
+                <tr>
+                    <td><code>pb-{scale}</code></td>
+                    <td>0-6</td>
+                    <td>padding-bottom: size</td>
+                </tr>
+                <tr>
+                    <td><code>pl-{scale}</code></td>
+                    <td>0-6</td>
+                    <td>padding-left: size</td>
+                </tr>
+                <tr>
+                    <td><code>px-{scale}</code></td>
+                    <td>0-6</td>
+                    <td>padding-right: size<br>padding-left: size</td>
+                </tr>
+                <tr>
+                    <td><code>py-{scale}</code></td>
+                    <td>0-6</td>
+                    <td>padding-top: size<br>padding-bottom: size</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</div>
+<!-- secondary nav -->
+<div class="d-none d-xl-block py-6 col-xl-2 position-sticky d-self-flex-start pl-xl-5" style="top: 40px;">
+    <div class="d-flex flex-col gap-flex-2">
+        <a class="h6 text-decoration-none text-weight-light" href="#margin">Margin</a>
+        <a class="h6 text-decoration-none text-weight-light" href="#padding">Padding</a>
+    </div>
+</div>
+{{ end }}
