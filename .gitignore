@@ -3,3 +3,4 @@ __pscache__
 node_modules
 public/
 _gen
+.github
