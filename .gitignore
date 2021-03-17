@@ -1,6 +1,4 @@
 .DS_Store
 __pscache__
 node_modules
-public/
 _gen
-.github
