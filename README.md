@@ -3,4 +3,4 @@
 <h1>Cocobits</h1>
 </div>
 
-[cocobits.github.io](https://cocobits.github.io/){:target="_blank"}
+<a href="https://cocobits.github.io/">cocobits.github.io</a>
