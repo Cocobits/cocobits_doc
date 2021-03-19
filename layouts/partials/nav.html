@@ -1,10 +1,15 @@
 <!-- nav -->
 <header class="py-3 px-3 bg-gray-700 gray-300">
-    <div class="container-lg container-xl d-grid grid-flow-col">
-        <a class="text-decoration-none" href="{{ .Site.BaseURL }}">Cocobits</a>
-        <div class="d-grid grid-flow-col d-justify-end gap-3">
-            <a class="text-decoration-none text-weight-light" href="{{ .Site.BaseURL }}">Getting Started</a>
-            <a class="text-decoration-none text-weight-light" href="https://github.com/mileeme/cocobits" target="_blank">Github</a>
+    <div class="container-lg container-xl">
+        <div class="d-grid grid-flow-col d-items-center">
+            <div class="d-flex d-items-center gap-flex-col-3">
+                <img class="height-5" src="{{ "assets/cocobits_light_64px.png" | absURL }}" alt="Cocobits icon">
+                <a class="text-decoration-none" href="{{ .Site.BaseURL }}"><span class="h4 text-weight-normal white" style="letter-spacing: .05rem;">Cocobits</span></a>
+            </div>
+            <div class="d-grid grid-flow-col d-justify-end gap-6">
+                <a class="text-decoration-none text-weight-light" href="https://github.com/mileeme/cocobits"
+                    target="_blank">Github</a>
+            </div>
         </div>
     </div>
 </header>

@@ -1,25 +1,3 @@
-{{ define "main "}}
-    <!-- Getting Started -->
-    <section>
-        <h1>Introduction</h1>
-        <p class="text-lead">Cocobits is a foundational system that empowers designers to build elegant user experiences.
-            Responsive, interchangeable utility classes allow flexibility, consistency and ease-of-use for any web
-            applications. Influenced by
-            Object-Oriented CSS principles and functional CSS, Cocobits uses SASS variables and mixins and strives to meet
-            the highest WCAG accessibility standards.</p>
-    </section>
-    
-    <!-- highlights -->
-    <section>
-        <h2>Highlights</h2>
-        <hr class="divider">
-        <ul>
-            <li>Responsive, mobile-first and accessible by default</li>
-            <li>Flexible and interchangeable utility classes</li>
-            <li>Base-8 spacing for consistency and dynamic vertical and horizontal rhythm</li>
-            <li>Font-size, line-height and weight options for readability</li>
-            <li>Color system for meaningful content and interaction signals</li>
-        </ul>
-    </section>
-
+{{ define "main" }}
+    {{ .Content }}
 {{ end }}

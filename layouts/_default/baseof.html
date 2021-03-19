@@ -9,13 +9,15 @@
         {{ partial "nav.html" . }}
 
         <!-- site wrapper -->
-        <main style="min-height: calc(100vh - 120px)">
+        <main  class="mx-3">
+            
             <!-- section content -->
-            <div class="container-lg container-xl mx-3 d-md-flex gap-xl-col-3 position-relative">
+            <div class="container-lg container-xl d-md-flex gap-xl-col-3 position-relative">
+                
                 <!-- side nav -->
                 <nav class="py-6 d-none d-md-block col-md-3 col-xl-2 zindex-md-01 position-sticky d-self-flex-start" style="top: 40px;">
-                    <div class="d-grid grid-flow-row d-container-center gap-row-2">
-                        <a class="h6 text-decoration-none is--active" href="{{ .Site.BaseURL }}">Getting Started</a>
+                    <div id="sideNav" class="d-grid grid-flow-row d-container-center gap-row-2">
+                        <a class="h6 text-decoration-none" href="{{ .Site.BaseURL }}">Getting Started</a>
                         <a class="h6 text-decoration-none" href="{{ "layout" | relURL }}">Layout</a>
                         <a class="h6 text-decoration-none" href="{{ "spacing" | relURL }}">Spacing</a>
                         <a class="h6 text-decoration-none" href="{{ "typography" | relURL }}">Typography</a>
@@ -23,13 +25,15 @@
                         <a class="h6 text-decoration-none" href="{{ "color" | relURL }}">Color</a>
                         <div class="h6 text-decoration-none gray-300">Components <span
                                 class="bg-blue-050 blue-200 text-small py-1 px-2 rounded-4">Soon</span></div>
-                        <div class="h6 text-decoration-none gray-300">Animation <span
+                        <div class="h6 text-decoration-none gray-300">Functions <span
                                 class="bg-blue-050 blue-200 text-small py-1 px-2 rounded-4">Soon</span></div>
                     </div>
                 </nav>
+                
                 <!-- section content -->
                 {{ block "main" . }}{{ end }}
             </div>
+
         </main>
 
         {{ partial "footer.html" . }}
