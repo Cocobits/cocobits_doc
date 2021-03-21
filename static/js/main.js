@@ -22,4 +22,15 @@ mainLinks.forEach(link => {
     }
 })
 
-
+// Show and hide dropdown menu
+const dropdownButton = document.querySelector('#dropdownButton')
+dropdownButton.addEventListener('click', (e) => {
+    const dropdownMenu = document.querySelector('#dropdownMenu')
+    
+    // Toggle show/hide by replacing css class
+    if (dropdownMenu.classList.contains('is--visible')) {
+        dropdownMenu.classList.replace('is--visible', 'is--hidden')
+    } else {
+        dropdownMenu.classList.replace('is--hidden', 'is--visible')
+    }
+})
