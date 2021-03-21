@@ -20,18 +20,10 @@
     height: 8px;
 }
 
-.dropdown-menu {
-
-}
 .dropdown-menu a:hover {
     background: rgb(248, 248, 250);
     border-radius: 8px;
 }
-
-pre {
-    overflow-x: auto;
-}
-
 
 .is--hidden {
     display: none;
