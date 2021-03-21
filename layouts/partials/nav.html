@@ -1,5 +1,5 @@
 <!-- nav -->
-<header class="py-3 px-3 bg-gray-700 gray-300">
+<header class="position-sticky top-0 zindex-02 position-md-relative py-3 px-3 bg-gray-700 gray-300">
     <div class="container-lg container-xl">
         <div class="d-grid grid-flow-col d-items-center">
             <div class="d-flex d-items-center gap-flex-col-3">
@@ -7,26 +7,27 @@
                 <a class="text-decoration-none" href="{{ .Site.BaseURL }}"><span class="h4 text-weight-normal white" style="letter-spacing: .05rem;">Cocobits</span></a>
             </div>
             <div class="d-grid grid-flow-col d-justify-end gap-3">
-                <a id="dropdownButton" class="py-1 px-3"><span class="dropdown-button d-self-center d-block"></span></a>
+                <a id="dropdownButton" class="d-md-none py-1 px-3"><span class="dropdown-button d-self-center d-block"></span></a>
                 <a class="d-none d-md-inline text-decoration-none text-weight-light" href="https://github.com/mileeme/cocobits"
                     target="_blank">Github</a>
             </div>
         </div>
     </div>
-</header>
 
-<!-- Dropdown Menu -->
-<div id="dropdownMenu" class="is--hidden dropdown-menu rounded box-shadow-2 d-grid m-2 p-2">
-    <a class="d-grid d-items-center height-7 pl-3 text-decoration-none" href="{{ .Site.BaseURL }}">Getting Started</a>
-    <a class="d-grid d-items-center height-7 pl-3 text-decoration-none" href="{{ "layout" | relURL }}">Layout</a>
-    <a class="d-grid d-items-center height-7 pl-3 text-decoration-none" href="{{ "spacing" | relURL }}">Spacing</a>
-    <a class="d-grid d-items-center height-7 pl-3 text-decoration-none" href="{{ "typography" | relURL }}">Typography</a>
-    <a class="d-grid d-items-center height-7 pl-3 text-decoration-none" href="{{ "content" | relURL }}">Content</a>
-    <a class="d-grid d-items-center height-7 pl-3 mb-2 text-decoration-none" href="{{ "color" | relURL }}">Color</a>
-    <hr>
-    <a class="d-grid d-items-center height-7 pl-3 mt-2 text-decoration-none" href="https://github.com/mileeme/cocobits"
-        target="_blank">Github</a>
-</div>
+    <!-- Dropdown Menu -->
+    <div id="dropdownMenu"
+        class="is--hidden dropdown-menu position-absolute zindex-02 bg-white rounded box-shadow-2 d-grid right-0 left-0 mx-2 mt-4 blur-4 bg-opacity-white-7">
+        <a class="d-grid d-items-center height-7 pl-3 text-decoration-none" href="{{ .Site.BaseURL }}">Getting Started</a>
+        <a class="d-grid d-items-center height-7 pl-3 text-decoration-none" href="{{ "layout" | relURL }}">Layout</a>
+        <a class="d-grid d-items-center height-7 pl-3 text-decoration-none" href="{{ "spacing" | relURL }}">Spacing</a>
+        <a class="d-grid d-items-center height-7 pl-3 text-decoration-none" href="{{ "typography" | relURL }}">Typography</a>
+        <a class="d-grid d-items-center height-7 pl-3 text-decoration-none" href="{{ "content" | relURL }}">Content</a>
+        <a class="d-grid d-items-center height-7 pl-3 mb-2 text-decoration-none" href="{{ "color" | relURL }}">Color</a>
+        <hr>
+        <a class="d-grid d-items-center height-7 pl-3 mt-2 text-decoration-none" href="https://github.com/mileeme/cocobits"
+            target="_blank">Github</a>
+    </div>
+</header>
 
 
 <!-- Secondary Nav -->
