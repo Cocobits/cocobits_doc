@@ -1,5 +1,11 @@
+:root {
+  /* --btn-primary-text: lightgray;
+  --btn-primary-bg: lightblue;
+  --btn-primary-bg-hover: navy; */
+}
+
 .anchor {
-    scroll-margin-top: 64px;
+  scroll-margin-top: 64px;
 }
 
 .dropdown-button {
@@ -31,4 +37,265 @@
 
 .is--visible {
     display: block;
+}
+
+/* Button components */
+.btn-sm {
+  height: 32px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.btn-md {
+  height: 40px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.btn-lg {
+  height: 48px;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.btn-primary {
+  display: grid;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  border-radius: var(--btn-primary-border-radius, 4px);
+  font-size: 14px;
+  text-decoration: none;
+  color: var(--btn-primary-text, rgb(255, 255, 255));
+  background: var(--btn-primary-bg, rgb(59, 140, 244));
+  transition: background .3s;
+}
+
+.btn-primary:hover,
+.btn-primary:active {
+  border: none;
+  background: var(--btn-primary-bg-hover, rgb(35, 84, 146));
+  transition: background .3s;
+}
+
+.btn-secondary {
+  display: grid;
+  align-items: center;
+  cursor: pointer;
+  border: var(--btn-secondary-border, 1px solid rgb(76, 76, 76));
+  border-radius: var(--btn-secondary-border-radius, 4px);
+  font-size: 14px;  
+  background: transparent;
+  color: var(--btn-secondary-text, rgb(76, 76, 76));
+  transition: border .3s background .3s;
+}
+
+.btn-secondary:hover,
+.btn-secondary:active {
+  background: var(--btn-secondary-bg-hover, rgb(76, 76, 76));
+  color: var(--btn-secondary-text-hover, rgb(255, 255, 255));
+  transition: all .3s;
+}
+
+.link-underline {
+  text-decoration: none;
+  padding-bottom: 4px;
+  color: var(--link-underline-text, rgb(76, 76, 76));
+  border-bottom: var(--link-underline-border, 2px solid rgb(76, 76, 76));
+  transition: color .3s border-bottom .3s;
+}
+
+.link-underline:hover,
+.link-underline:active {
+  color: var(--link-underline-text-hover, rgb(59, 140, 244));
+  border-bottom: var(--link-underline-border-hover, 2px solid rgb(59, 140, 244));
+  transition: color .3s border-bottom .3s;
+}
+
+/* Input components */
+.input-sm {
+  height: 32px;
+  padding-left: 8px;
+  padding-right: 8px;
+  font-size: 14px;
+  border: 1px solid rgb(209, 209, 209);
+  border-radius: 4px;
+  color: rgb(76, 76, 76);
+}
+
+.input-md {
+  height: 40px;
+  padding-left: 8px;
+  padding-right: 8px;
+  font-size: 14px;
+  border: 1px solid rgb(209, 209, 209);
+  border-radius: 4px;
+  color: rgb(76, 76, 76);
+}
+
+.input-lg {
+  height: 48px;
+  padding-left: 8px;
+  padding-right: 8px;
+  font-size: 14px;
+  border: 1px solid rgb(209, 209, 209);
+  border-radius: 4px;
+  color: rgb(76, 76, 76);
+}
+
+/* Tab component */
+.tab-menu {
+  display: flex;
+  flex-direction: row;
+  padding: 16px 0;
+  overflow: auto;
+}
+.tab-menu a {
+  text-decoration: none;
+  padding-bottom: 4px;
+  font-size: 14px;
+  font-weight: normal;
+  white-space: nowrap;
+}
+.tab-menu a:hover {
+  color: var(--tab-menu, rgb(59, 140, 244));
+}
+.tab-menu a:not(:last-child) {
+  margin-right: 24px;
+}
+.content--visible {
+  color: var(--tab-menu, rgb(59, 140, 244));
+  border-bottom: var(--tab-menu-border-bottom, 2px solid rgb(59, 140, 244));
+}
+.tab-contents {
+}
+
+/* Accordion component */
+.accordion {
+  cursor: pointer;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: 16px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  background-color: var(--accordion-bg, rgb(231, 231, 231));
+  transition: 0.4s;
+}
+.accordion:hover,
+.accordion-active {
+  background-color: var(--accordion-bg-active, rgb(209, 209, 209));
+}
+.accordion-content {
+  max-height: 0;
+  padding: 0px 16px;
+  overflow: hidden;
+  transition: all 0.2s ease-out;
+}
+.plus {
+  position: relative;
+  margin-left: auto;
+  display: block;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+.plus:before, .plus:after {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  content: ' ';
+  height: 16px;
+  width: 1px;
+  background-color: #333;
+}
+.plus:before {
+  transform: rotate(90deg);
+  transition: transform .3s ease;
+}
+.plus:after {
+  transform: rotate(var(--plus-after, 0deg));
+  transition: transform .2s ease;
+}
+
+/* Carousel component */
+.carousel {
+  position: relative;
+  overflow: hidden;
+}
+.slide-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  /* overflow: hidden; */
+  align-items: center;
+}
+.slide {
+  /* height: 100%; */
+}
+img.slide {
+  display: block;
+  width: 100%;
+}
+.animate { transition: transform 0.3s ease-out; }
+
+.prev { 
+  position: absolute;
+  left: 0;
+  z-index: 1000;
+  cursor: pointer;
+  border: var(--arrow-border, 1px solid rgb(170, 170, 171));
+  border-width: var(--arrow-border-width, 0 2px 2px 0);
+  width: var(--arrow-width, 16px);
+  height: var(--arrow-height, 16px);
+  top: var(--slide-controller-center, 50%);
+  transform: translateY(50%);
+  transition: border 0.3s ease;
+  transform: rotate(135deg); 
+}
+.next { 
+  position: absolute;
+  right: 0;
+  z-index: 1000;
+  cursor: pointer;
+  border: var(--arrow-border, 1px solid rgb(170, 170, 171));
+  border-width: var(--arrow-border-width, 0 2px 2px 0);
+  width: var(--arrow-width, 16px);
+  height: var(--arrow-height, 16px);
+  top: var(--slide-controller-center, 50%);
+  transform: translateY(50%);
+  transition: border 0.3s ease;
+  transform: rotate(-45deg); 
+}
+
+.prev:hover,
+.next:hover {
+  border: var(--arrow-border-hover, 1px solid rgb(76, 76, 76));
+  border-width: var(--arrow-border-width, 0 2px 2px 0);
+  transition: all 0.3s ease;
+}
+
+.slide-nav-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 16px 0;
+}
+.slide-nav {
+  cursor: pointer;
+  width: var(--slide-nav-width, 16px);
+  height: var(--slide-nav-height, 16px);
+  border-radius: var(--slide-nav-border-radius, 50%);
+  background: var(--slide-nav-bg, rgb(209, 209, 209));
+  transition: background 0.2s ease;
+}
+.slide-nav:not(:last-child) {
+  margin-right: 8px;
+}
+.slide-nav--active {
+  background: var(--slide-nav-bg--active, rgb(122, 122, 123));
+  transition: background 0.2s ease;
 }

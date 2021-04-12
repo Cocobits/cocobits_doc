@@ -1,0 +1,583 @@
+{{ define "main" }}
+<div class="py-6 col-md-9 col-xl-7">
+  <section>
+    <h1>Components</h1>
+  </section>
+
+  <!-- Buttons -->
+  <section id="button" class="anchor">
+    <h2>Button</h2>
+    <hr class="divider">
+    <p>Buttons come in three sizes and button variations such as <code>btn-primary</code>'s default color can be overridden by setting new property values in the <code>:root</code> of your custom <kbd>css</kbd> file.</p>
+    <table class="width-full table-border-collapse my-3">
+      <thead>
+        <tr class="border-bottom">
+          <th class="text-weight-semibold">Class value</th>
+          <th class="text-weight-semibold">Property style</th>
+        </tr>
+      </thead>
+      <tbody class="h6 text-weight-normal divider-row">
+        <tr>
+          <td><code>btn-sm</code></td>
+          <td>height: 32px<br>padding: 0 16px</td>
+        </tr>
+        <tr>
+          <td><code>btn-md</code></td>
+          <td>height: 40px<br>padding: 0 24px</td>
+        </tr>
+        <tr>
+          <td><code>btn-lg</code></td>
+          <td>height: 48px<br>padding: 0 32px</td>
+        </tr>
+        <tr>
+          <td><code>btn-primary</code></td>
+          <td>border-radius: var(--btn-primary-border-radius, $rounded)<br>color: var(--btn-primary-text, $white)<br>background: var(--btn-primary-bg, $blue-300)</td>
+        </tr>
+        <tr>
+          <td><code>btn-primary</code> (hover state)</td>
+          <td>background: var(--btn-primary-bg-hover, $blue-500)</td>
+        </tr>
+        <tr>
+          <td><code>btn-secondary</code></td>
+          <td>border: var(--btn-secondary-border, 1px solid $gray-500)<br>border-radius: var(--btn-secondary-border-radius, $rounded)<br>color: var(--btn-secondary-text, $gray-500)</td>
+        </tr>
+        <tr>
+          <td><code>btn-secondary</code> (hover/active state)</td>
+          <td>background: var(--btn-secondary-bg-hover, $gray-500)<br>color: var(--btn-secondary-text-hover, $white)</td>
+        </tr>
+        <tr>
+          <td><code>link-underline</code></td>
+          <td>color: var(--link-underline-text, $gray-500)<br>border-bottom: var(--link-underline-border, 2px solid $gray-500)</td>
+        </tr>
+        <tr>
+          <td><code>link-underline</code> (hover/active state)</td>
+          <td>color: var(--link-underline-text-hover, $blue-300)<br>border-bottom: var(--link-underline-border, 2px solid $blue-300)</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="p-3 border rounded">
+      <div class="d-grid grid-flow-row gap-row-3">
+        <div class="d-flex flex-col flex-sm-row gap-flex-row-1 d-justify-evenly d-items-center">
+          <button class="btn-primary btn-sm">btn-primary sm</button>
+          <button class="btn-primary btn-md">btn-primary md</button>
+          <button class="btn-primary btn-lg">btn-primary lg</button>
+        </div>
+        <div class="d-flex flex-col flex-sm-row gap-flex-row-1 d-justify-evenly d-items-center">
+          <button class="btn-secondary btn-sm">btn-secondary sm</button>
+          <button class="btn-secondary btn-md">btn-secondary md</button>
+          <button class="btn-secondary btn-lg">btn-secondary lg</button>
+        </div>
+        <div class="d-flex flex-col flex-sm-row gap-flex-row-1 d-justify-evenly d-items-center">
+          <a class="link-underline">link-underline</a>
+        </div>
+      </div>
+    </div>
+<pre>
+&lt;button <span class="pre-attribute">class</span>="<span class="pre-value">btn-primary btn-md</span>"&gt;btn-primary md&lt;/button&gt;
+&lt;a <span class="pre-attribute">class</span>="<span class="pre-value">link-underline</span>"&gt;link-underline&lt;/a&gt;
+</pre>
+
+  <h3 class="mt-6 text-weight-light">CSS customization</h3>
+  <p>To override the default settings of the buttons, simply set a new style for the button property values in your custom <kbd>CSS</kbd> file. View the example below:</p>
+<pre>
+// Your Custom CSS File
+:root {
+  --btn-primary-bg: (your custom background-color);
+  --btn-primary-bg-hover: (your custom hover background-color);
+  --btn-primary-border-radius: (your custom border-radius);
+  --btn-primary-text: (your custom color)
+  --btn-secondary-border: (your custom border color);
+  --btn-secondary-border-radius: (your custom border-radius);
+  --btn-secondary-text: (your custom color);
+  --btn-secondary-bg-hover: (your custom background color);
+  --btn-secondary-text-hover: (your custom color);
+  --link-underline-text: (your custom color);
+  --link-underline-border: (your custom border color);
+  --link-underline-hover: (your custom color);
+  --link-underline-border-hover: (your customer border color);
+}
+</pre>  
+  </section>
+
+  <!-- Input -->
+  <section id="input" class="anchor">
+    <h2>Input</h2>
+    <hr class="divider">
+    <table class="width-full table-border-collapse my-3">
+      <thead>
+        <tr class="border-bottom">
+          <th class="text-weight-semibold">Class value</th>
+          <th class="text-weight-semibold">Property style</th>
+        </tr>
+      </thead>
+      <tbody class="h6 text-weight-normal divider-row">
+        <tr>
+          <td><code>input-sm</code></td>
+          <td>height: 32px<br>padding: 0 8px</td>
+        </tr>
+        <tr>
+          <td><code>input-md</code></td>
+          <td>height: 40px<br>padding: 0 8px</td>
+        </tr>
+        <tr>
+          <td><code>input-lg</code></td>
+          <td>height: 48px<br>padding: 0 8px</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="p-3 border rounded">
+      <div class="d-flex flex-col gap-flex-row-1 d-justify-evenly d-items-center">
+        <input type="email" placeholder="input-sm" class="input-sm width-full">
+        <input type="email" placeholder="input-md" class="input-md width-full">
+        <input type="email" placeholder="input-lg" class="input-lg width-full">
+      </div>
+    </div>
+<pre>
+&lt;input <span class="pre-attribute">class</span>="<span class="pre-value">input-sm</span>"&gt;
+</pre>
+  </section>
+
+  <!-- Tabs -->
+  <section id="tab" class="anchor">
+    <h2>Tabs</h2>
+    <p>Tabs are great for organizing content and consist of two parts: <code>tab-menu</code> and its corresponding content, <code>tab-contents</code>. To match the tab link to its content, simply use the same value for the <kbd>data-tab</kbd> as shown below. Override the default color of the tab menu links by setting a new property value in the <code>:root</code> of your custom <kbd>CSS</kbd> file.</p>
+    <hr class="divider">
+    <table class="width-full table-border-collapse my-3">
+      <thead>
+        <tr class="border-bottom">
+          <th class="text-weight-semibold">Class value</th>
+          <th class="text-weight-semibold">Applies to</th>
+          <th class="text-weight-semibold">Property style</th>
+        </tr>
+      </thead>
+      <tbody class="h6 text-weight-normal divider-row">
+        <tr>
+          <td><code>tab-menu</code></td>
+          <td>menu container</td>
+          <td>display: flex<br>flex-direction: row<br>overflow: auto</td>
+        </tr>
+        <tr>
+          <td><code>-</code></td>
+          <td>tab menu link active state</td>
+          <td>color: var(--tab-link, $blue-300)<br>border-bottom: var(--tab-link-border-bottom, 2px solid $blue-300)</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="p-3 border rounded">
+      <div class="tab-menu">
+        <a data-tab="one">tab-menu #1</a>
+        <a data-tab="two">tab-menu #2</a>
+        <a data-tab="three">tab-menu #3</a>
+      </div>
+      <div class="tab-contents">
+        <div data-tab="one">
+          <p>tab-content #1</p>
+          <p>Donec ullamcorper nulla non metus auctor fringilla. Aenean lacinia bibendum nulla sed consectetur. Fusce dapibus, tellus
+          ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas sed diam eget risus
+          varius blandit sit amet non magna. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur rdata-tabiculus mus.
+          Etiam porta sem malesuada magna mollis euismod.</p>
+        </div>
+        <div data-tab="two">
+          <p>tab-content #2</p>
+          <p>Donec ullamcorper nulla non metus auctor fringilla. Aenean lacinia bibendum nulla sed consectetur. Fusce dapibus, tellus
+          ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas sed diam eget
+          risus.</p>
+        </div>
+        <div data-tab="three">
+          <p>tab-content #3</p>
+          <p>Donec ullamcorper nulla non metus auctor fringilla. Aenean lacinia bibendum nulla sed consectetur. Fusce dapibus,
+          tellusac cursus commodo.</p>
+        </div>
+      </div>
+    </div>
+<pre>
+&lt;!-- Tab links -->
+&lt;div <span class="pre-attribute">class</span>="<span class="pre-value">tab-menu</span>"&gt;
+  &lt;a <span class="pre-attribute">data-tab</span>="<span class="pre-value">one</span>"&gt;tab-menu #1&lt;/a&gt;
+  ...
+&lt;/div&gt;
+
+&lt;!-- Tab contents -->
+&lt;div <span class="pre-attribute">class</span>="<span class="pre-value">tab-contents</span>"&gt;
+  &lt;div <span class="pre-attribute">data-tab</span>="<span class="pre-value">one</span>"&gt;
+    &lt;p&gt;tab-content #1&lt;/p&gt;
+  &lt;/div&gt;
+  ...
+&lt;/div&gt;
+</pre>
+<pre>
+// Your Custom CSS File
+:root {
+  --tab-menu: (your custom menu color);
+  --tab-menu-border-bottom: (your custom menu border color);
+}
+</pre>
+  </section>
+
+  <!-- Accordion -->
+  <section id="accordion" class="anchor">
+    <h2>Accordion</h2>
+    <hr class="divider">
+    <p>The accordion component provides a way to organize content by topic and consists of two parts: the button takes on the class <code>accordion</code> and plus sign <code>plus</code> and the content which takes on the class <code>accordion-content</code>. The accordion is responsive and stacked vertically by default.</p>
+    <table class="width-full table-border-collapse my-3">
+      <thead>
+        <tr class="border-bottom">
+          <th class="text-weight-semibold">Class value</th>
+          <th class="text-weight-semibold">Applies to</th>
+          <th class="text-weight-semibold">Property style</th>
+        </tr>
+      </thead>
+      <tbody class="h6 text-weight-normal divider-row">
+        <tr>
+          <td><code>accordion</code></td>
+          <td>button</td>
+          <td>background-color: var(--accordion-bg, $gray-100)</td>
+        </tr>
+        <tr>
+          <td><code>accordion</code> (active state)</td>
+          <td>button</td>
+          <td>background-color: var(--accordion-bg-active, $gray-200)</td>
+        </tr>
+        <tr>
+          <td><code>plus</code></td>
+          <td>button</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td><code>accordion-content</code></td>
+          <td>content</td>
+          <td>-</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="p-3 border rounded">
+      <button class="accordion">accordion 1<div class="plus"></div></button>
+      <div class="accordion-content">accordion content 1</div>
+      <button class="accordion">accordion 2<div class="plus"></div></button>
+      <div class="accordion-content">accordion content 2</div>
+    </div>
+<pre>
+&lt;button <span class="pre-attribute">class</span>="<span class="pre-value">accordion</span>"&gt;accordion 1&lt;div <span class="pre-attribute">class</span>="<span class="pre-value">plus</span>"&gt;&lt;/div&gt;&lt;/button&gt;
+&lt;div <span class="pre-attribute">class</span>="<span class="pre-value">accordion-content</span>"&gt;accordion content 1&lt;/div&gt;
+</pre>
+<pre>
+// Your Custom CSS File
+:root {
+  --accordion-bg: (your custom accordion color);
+  --accordion-bg-active: (your custom accordion active color);
+}
+</pre>
+  </section>
+
+  <!-- Carousel -->
+  <section>
+    <h2>Carousel</h2>
+    <hr class="divider">
+    <p>The carousel component is specifically designed to display multiple images for ecommerce or image gallery application. The carousel is responsive by default and touch enabled.</p>
+    <p>The carousel height is set by the height of the first image and vertically center aligned. This means if subsequent images with greater height will be automatically cropped on the top and bottom. For best results, make sure all images have consistent size ratios. Override the default color and width of the arrow controller by setting new property values in the <code>:root</code> of your custom <kbd>CSS</kbd> file.</p>
+    <!-- Carousel container -->
+    <div class="carousel">
+      <!-- Controls -->
+      <div class="prev ml-3"></div>
+      <div class="next mr-3"></div>
+
+      <!-- Container for slides -->
+      <div class="slide-container">
+
+        <!-- Slides -->
+        <img  class="slide" 
+              src="https://images.unsplash.com/photo-1429516387459-9891b7b96c78?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1500&q=80"
+              srcset="https://images.unsplash.com/photo-1429516387459-9891b7b96c78?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1500&q=80 1500w"
+              sizes="(max-width: 700px) 1500w"
+              alt="Yosemite valley slide 1">
+        <img  class="slide" 
+              src="https://images.unsplash.com/photo-1516622484907-f20f21efa97d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=100v&q=80"
+              srcset="https://images.unsplash.com/photo-1516622484907-f20f21efa97d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80 1500w"
+              sizes="(max-width: 700px) 1500w"
+              alt="Yosemite valley slide 2">
+        <img  class="slide" 
+              src="https://images.unsplash.com/photo-1526838223946-b4db99314705?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1500&q=80" 
+              srcset="https://images.unsplash.com/photo-1526838223946-b4db99314705?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1500&q=80 1500w"
+              sizes="(max-width: 700px) 1500w"
+              alt="Yosemite valley slide 3">
+      </div>
+      <!-- Buttons -->
+      <div class="slide-nav-container">
+        <div class="slide-nav"></div>
+        <div class="slide-nav"></div>
+        <div class="slide-nav"></div>
+      </div>
+      </section>
+    </div>
+
+  <!-- Scroll -->
+</div>
+
+<script>
+
+  document.addEventListener('DOMContentLoaded', function () {
+    tab()
+    accordion()
+    carousel()
+  })
+
+  // Tab
+  function tab() {
+    // Initialize variables
+    const tabLinks = document.querySelector('.tab-menu').children,
+      tabContents = document.querySelector('.tab-contents').children
+
+    // Select first tab link by default
+    tabLinks[0].classList.add('content--visible')
+    // Show first tab content by default
+    tabContents[0].classList.add('d-block')
+    // Hide rest of content by default
+    Array.from(tabContents).forEach(child => {
+      if (child.classList.contains('d-block')) {
+
+      } else {
+        child.classList.add('d-none')
+      }
+    })
+
+    Array.from(tabLinks).forEach(link => {
+      // Listen for click
+      link.addEventListener('click', (e) => {
+        // Loop menu links
+        Array.from(tabLinks).forEach(link => {
+          link.classList.remove('content--visible')
+        })
+        // Change color of selected link
+        if (e.target == link) {
+          link.classList.add('content--visible')
+        }
+        // Show content of selected link
+        Array.from(tabContents).forEach(content => {
+          if (link.dataset.tab == content.dataset.tab) {
+            content.classList.replace('d-none', 'd-block')
+          } else {
+            content.classList.replace('d-block', 'd-none')
+          }
+        })
+      })
+    })
+  }
+
+  // Accordion
+  function accordion() {
+    const accButtons = document.querySelectorAll('.accordion'),
+          py = 48
+    
+    // Listen for click
+    accButtons.forEach(button => {
+      button.addEventListener('click', function () {
+        button.classList.toggle('accordion-active')
+        console.log(button.querySelector('.plus').parentElement)
+        if (button.classList.contains('accordion-active')) {
+          button.querySelector('.plus').style.setProperty('--plus-after', '90deg')
+        } else {
+          button.querySelector('.plus').style.setProperty('--plus-after', '0deg')
+        }
+        let content = button.nextElementSibling
+
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null
+          content.style.padding = '0px 16px'
+        } else {
+          content.style.maxHeight = `${content.scrollHeight + py}px`
+          content.style.padding = '24px 16px'
+        }
+      })
+    })
+  }
+
+// Load carousel on window resize
+window.addEventListener('resize', (event) => {
+  carousel()
+}, false)
+
+// Carousel
+function carousel() {
+  // Initialize variables
+  let carousel = document.querySelector('.carousel'),
+      slideContainer = document.querySelector('.slide-container'),
+      slides = document.querySelectorAll('.slide'),
+      navContainer = document.querySelector('.slide-nav-container'),
+      navs = document.querySelectorAll('.slide-nav'),
+      slidesCount = slides.length,
+      slideWidth = slides[0].offsetWidth,
+      slideHeight = slides[0].scrollHeight,
+      slideContainerWidth = slideWidth * slidesCount,
+      lastSlidePos = slideContainer - slideWidth,
+      lastIndex = slidesCount - 1,
+      startX = undefined,
+      moveX = undefined,
+      distanceX = undefined,
+      index = 0,
+      longTouch = false,
+      mouseMoving = false,
+      prev = document.querySelector('.prev'),
+      next = document.querySelector('.next')
+
+  // Reset carousel on page load or window resize
+  slideContainer.classList.remove('animate')
+  slideContainer.style.transform = 'translate3d(0px, 0px, 0px)'
+  slideContainer.style.height = `${slideHeight}px`
+  prev.style.setProperty('--slide-controller-center', `${slideHeight/2}px`)
+  next.style.setProperty('--slide-controller-center', `${slideHeight/2}px`)
+  prev.style.display = 'none'
+  navs[0].classList.add('slide-nav--active')
+
+  // EventListeners
+  slideContainer.onmousedown = start
+  slideContainer.addEventListener('touchstart', (event) => { start(event) }, false)
+  slideContainer.addEventListener('touchmove', (event) => { move(event) }, false)
+  slideContainer.addEventListener('touchend', (event) => { end(event) }, false)
+  prev.addEventListener('click', (event) => { shiftSlide(event, 'prev') }, false)
+  next.addEventListener('click', (event) => { shiftSlide(event, 'next') }, false)
+  navs.forEach((nav, i) => {
+    let clickIndex = i
+    nav.addEventListener('click', (event) => { 
+      navigateSlide(clickIndex, null) 
+          console.log(clickIndex)
+    }, false)
+  })
+  
+  // TEST
+  console.log(`initial index: ${index}`)
+
+  // Start function
+  function start(event) {
+    event.preventDefault()
+
+    if (event.type == 'touchstart') {
+      // Test for flick
+      longTouch = false 
+      setTimeout(function () {
+        slideContainer.longTouch = true
+      }, 250)
+
+      // Get initial touch position
+      startX = event.touches[0].clientX
+    } else if (event.type == 'mousedown') {
+      mouseMoving = true
+      startX = event.clientX 
+      slideContainer.onmousemove = move
+      slideContainer.onmouseup = end 
+    }
+  }
+
+  // Move function
+  function move(event) {
+    event.preventDefault()
+
+    if (event.type == 'touchmove') {
+      // Get moving touch position
+      moveX = event.touches[0].clientX
+      // Calc container touch movement
+      distanceX = (index * slideWidth) + (startX - moveX)
+      // Limit container from moving beyond last slide
+      if (moveX < lastSlidePos) {
+        slideContainer.style.transform = `translate3d(-${moveX}px, 0, 0)`
+      }
+    } else if (mouseMoving) {
+      moveX = event.clientX
+      // Calc container mouse movement
+      distanceX = (index * slideWidth) + (startX - moveX)
+    }
+  }
+
+  // End function
+  function end(event) {
+    event.preventDefault()
+
+    // Calc distance swiped 
+    let absMove = Math.abs(index * slideWidth - distanceX)
+    
+    if (event.type == 'mouseup' || event.type == 'touchend') {
+      if (absMove > 100 || longTouch == false) {
+        if (distanceX > (index * slideWidth) && index < lastIndex) {
+          index++
+        } else if (distanceX < (index * slideWidth) && index > 0) {
+          index--
+        }
+      }
+      mouseMoving = false 
+      // TEST
+      console.log(`end index: ${index}`)
+      console.log(index * slideWidth)
+
+      // Move and animate container
+      slideContainer.classList.add('animate')
+      slideContainer.style.transform = `translate3d(-${index * slideWidth}px, 0, 0)`
+      // Show/hide controller based on index position
+      if (index == 0) {
+        prev.style.display = 'none'
+      } else if (index == lastIndex) {
+        next.style.display = 'none'
+      } else if (index > 0 && index < lastIndex) {
+        prev.style.display = 'block'
+        next.style.display = 'block'
+      }
+      // Move to new nav position
+      let slideIndex = index
+      navigateSlide(null,slideIndex)
+    }
+  }
+
+  // Shiftslide function
+  function shiftSlide(event, clickEvent) {
+    event.preventDefault()
+
+    if (event.type == 'click') {
+      if (clickEvent == 'next' && index < lastIndex) {
+        index++
+      } else if (clickEvent == 'prev' && index > 0) {
+        index--
+      }
+    }
+    // Move and animate container
+    slideContainer.classList.add('animate')
+    slideContainer.style.transform = `translate3d(-${index * slideWidth}px, 0, 0)`
+    // TEST
+    console.log(`shift index: ${index}`)
+    // Show/hide controller based on index position
+    if (index == 0) {
+      prev.style.display = 'none'
+    } else if (index == lastIndex) {
+      next.style.display = 'none'
+    } else if (index > 0 && index < lastIndex) {
+      prev.style.display = 'block'
+      next.style.display = 'block'
+    }
+    // Move to new nav position
+    let slideIndex = index
+    navigateSlide(null, slideIndex)
+  }
+
+  // Navigate to slide function
+  function navigateSlide(clickIndex, slideIndex) {
+    if (clickIndex != null) {
+      index = clickIndex
+      // Move and animate container
+      slideContainer.classList.add('animate')
+      slideContainer.style.transform = `translate3d(-${index * slideWidth}px, 0, 0)`
+      // Move to new nav position
+      navs.forEach(nav => {
+        nav.classList.remove('slide-nav--active')
+      })
+      navs[clickIndex].classList.add('slide-nav--active')
+    }
+
+    // Move to new nav position
+    if (slideIndex != null) {
+      navs.forEach(nav => {
+        nav.classList.remove('slide-nav--active')
+      })
+      navs[slideIndex].classList.add('slide-nav--active')
+    }
+  }
+}
+
+</script>
+{{ end }}
