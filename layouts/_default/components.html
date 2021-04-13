@@ -13,7 +13,7 @@
       <thead>
         <tr class="border-bottom">
           <th class="text-weight-semibold">Class value</th>
-          <th class="text-weight-semibold">Property style</th>
+          <th class="text-weight-semibold">Property/Customizable style</th>
         </tr>
       </thead>
       <tbody class="h6 text-weight-normal divider-row">
@@ -138,7 +138,7 @@
   </section>
 
   <!-- Tabs -->
-  <section id="tab" class="anchor">
+  <section id="tabs" class="anchor">
     <h2>Tabs</h2>
     <p>Tabs are great for organizing content and consist of two parts: <code>tab-menu</code> and its corresponding content, <code>tab-contents</code>. To match the tab link to its content, simply use the same value for the <kbd>data-tab</kbd> as shown below. Override the default color of the tab menu links by setting a new property value in the <code>:root</code> of your custom <kbd>CSS</kbd> file.</p>
     <hr class="divider">
@@ -147,19 +147,24 @@
         <tr class="border-bottom">
           <th class="text-weight-semibold">Class value</th>
           <th class="text-weight-semibold">Applies to</th>
-          <th class="text-weight-semibold">Property style</th>
+          <th class="text-weight-semibold">Customizable style</th>
         </tr>
       </thead>
       <tbody class="h6 text-weight-normal divider-row">
         <tr>
           <td><code>tab-menu</code></td>
           <td>menu container</td>
-          <td>display: flex<br>flex-direction: row<br>overflow: auto</td>
+          <td>-</td>
         </tr>
         <tr>
-          <td><code>-</code></td>
-          <td>tab menu link active state</td>
+          <td><code>tab-menu</code></td>
+          <td>menu link active</td>
           <td>color: var(--tab-link, $blue-300)<br>border-bottom: var(--tab-link-border-bottom, 2px solid $blue-300)</td>
+        </tr>
+        <tr>
+          <td><code>tab-contents</code></td>
+          <td>container for content</td>
+          <td>-</td>
         </tr>
       </tbody>
     </table>
@@ -224,7 +229,7 @@
         <tr class="border-bottom">
           <th class="text-weight-semibold">Class value</th>
           <th class="text-weight-semibold">Applies to</th>
-          <th class="text-weight-semibold">Property style</th>
+          <th class="text-weight-semibold">Customizable style</th>
         </tr>
       </thead>
       <tbody class="h6 text-weight-normal divider-row">
@@ -234,8 +239,8 @@
           <td>background-color: var(--accordion-bg, $gray-100)</td>
         </tr>
         <tr>
-          <td><code>accordion</code> (active state)</td>
-          <td>button</td>
+          <td><code>accordion</code></td>
+          <td>button active</td>
           <td>background-color: var(--accordion-bg-active, $gray-200)</td>
         </tr>
         <tr>
@@ -270,16 +275,77 @@
   </section>
 
   <!-- Carousel -->
-  <section>
+  <section id="carousel" class="anchor">
     <h2>Carousel</h2>
     <hr class="divider">
-    <p>The carousel component is specifically designed to display multiple images for ecommerce or image gallery application. The carousel is responsive by default and touch enabled.</p>
-    <p>The carousel height is set by the height of the first image and vertically center aligned. This means if subsequent images with greater height will be automatically cropped on the top and bottom. For best results, make sure all images have consistent size ratios. Override the default color and width of the arrow controller by setting new property values in the <code>:root</code> of your custom <kbd>CSS</kbd> file.</p>
+    <p>The carousel component is designed to display multiple images for ecommerce application. The carousel is responsive by default and offers three ways to navigate the images. Swipe and arrow controllers move the slide one at a time while the bottom navigation allows you to get to a specific slide location.</p>
+    <p>The height of the carousel is based on the height of the first image and vertically center aligned. This means subsequent images with greater height will be automatically cropped on the top and bottom.</p>
+    <p>As a best practice, make sure all images have consistent size ratios. Though the <code>slide-prev</code>,
+      <code>slide-next</code> as well as <code>slide-nav</code> utility classes provide multiple means of navigating the
+      slides, for best user experience, implement just one navigation option. Override the default styles by setting new
+      property values in the <code>:root</code> of your custom <kbd>CSS</kbd> file.
+    </p>
+    <table class="width-full table-border-collapse my-3">
+      <thead>
+        <tr class="border-bottom">
+          <th class="text-weight-semibold">Class value</th>
+          <th class="text-weight-semibold">Applies to</th>
+          <th class="text-weight-semibold">Customizable style</th>
+        </tr>
+      </thead>
+      <tbody class="h6 text-weight-normal divider-row">
+        <tr>
+          <td><code>carousel</code></td>
+          <td>container for carousel</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td><code>slide-container</code></td>
+          <td>container for slides</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td><code>slide</code></td>
+          <td>image</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td><code>slide-prev</code></td>
+          <td>left arrow controller</td>
+          <td>border: var(--arrow-border, 1px solid $gray-300)<br>border-width: var(--arrow-border-width, 0 2px 2px 0)<br>width: width: var(--arrow-width, 16px)<br>height: height: var(--arrow-height, 16px)</td>
+        </tr>
+        <tr>
+          <td><code>next</code></td>
+          <td>right arrow controller</td>
+          <td>border: var(--arrow-border, 1px solid $gray-300)<br>border-width: var(--arrow-border-width, 0 2px 2px 0)<br>width: width: var(--arrow-width, 16px)<br>height: height: var(--arrow-height, 16px)</td>
+        </tr>
+        <tr>
+          <td><code>slide-prev</code> / <code>slide-next</code></td>
+          <td>controller hover</td>
+          <td>border: var(--arrow-border-hover, 1px solid $gray-400)</td>
+        </tr>
+        <tr>
+          <td><code>slide-nav-container</code></td>
+          <td>container for navigation</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td><code>slide-nav</code></td>
+          <td>navigation</td>
+          <td>width: var(--slide-nav-width, 16px)<br>height: var(--slide-nav-height, 16px)<br>border-radius: var(--slide-nav-border-radius, 50%)<br>background: var(--slide-nav-bg, $gray-200)</td>
+        </tr>
+        <tr>
+          <td><code>slide-nav</code></td>
+          <td>navigation active</td>
+          <td>background: var(--slide-nav-bg--active, $gray-500)</td>
+        </tr>
+      </tbody>
+    </table>
     <!-- Carousel container -->
     <div class="carousel">
       <!-- Controls -->
-      <div class="prev ml-3"></div>
-      <div class="next mr-3"></div>
+      <div class="slide-prev ml-3"></div>
+      <div class="slide-next mr-3"></div>
 
       <!-- Container for slides -->
       <div class="slide-container">
@@ -301,16 +367,61 @@
               sizes="(max-width: 700px) 1500w"
               alt="Yosemite valley slide 3">
       </div>
-      <!-- Buttons -->
+      <!-- Navigation -->
       <div class="slide-nav-container">
         <div class="slide-nav"></div>
         <div class="slide-nav"></div>
         <div class="slide-nav"></div>
       </div>
-      </section>
     </div>
+<pre>
+&lt;!-- Container for carousel -->
+&lt;div <span class="pre-attribute">class</span>="<span class="pre-value">carousel</span>"&gt;
+  
+  &lt;!-- Controllers -->
+  // You can omit the controllers 
+  &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">slide-prev ml-3</span>"&gt;&lt;/div&gt;
+  &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">slide-next mr-3</span>"&gt;&lt;/div&gt;
 
+  &lt;!-- Container for slides -->
+  &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">slide-container</span>"&gt;
+    &lt;!-- Slides -->
+    &lt;img <span class="pre-attribute">class</span>="<span class="pre-value">slide</span>" src="#" alt="Image for Carousel"&gt;
+    ...
+  &lt;/div&gt;
+
+  &lt;!-- Container for navigation -->
+  // You can omit the navigation
+  &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">slide-nav-container</span>"&gt;
+    &lt;!-- Navigation items -->
+    &lt;div <span class="pre-attribute">class</span>="<span class="pre-value">slide-nav</span>"&gt;&lt;/div&gt;
+    ...
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+<pre>
+  // Your Custom CSS File
+  :root {
+  --arrow-border: (Your custom border);
+  --arrow-border-width: (Your custom border width);
+  ...
+  }
+</pre>
+  </section>
   <!-- Scroll -->
+</div>
+
+<!-- secondary nav -->
+<div class="d-none d-xl-block py-6 col-xl-2 position-sticky d-self-flex-start pl-xl-5" style="top: 40px;">
+  <h6 class="text-weight-normal">In this section</h6>
+  <hr class="divider">
+  <div class="d-flex flex-col gap-flex-2">
+    <a class="h6 text-decoration-none text-weight-light" href="#button">Button</a>
+    <a class="h6 text-decoration-none text-weight-light" href="#input">Input</a>
+    <a class="h6 text-decoration-none text-weight-light" href="#tabs">Tabs</a>
+    <a class="h6 text-decoration-none text-weight-light" href="#accordion">Accordion</a>
+    <a class="h6 text-decoration-none text-weight-light" href="#carousel">Carousel</a>
+  </div>
 </div>
 
 <script>
@@ -372,7 +483,7 @@
     accButtons.forEach(button => {
       button.addEventListener('click', function () {
         button.classList.toggle('accordion-active')
-        console.log(button.querySelector('.plus').parentElement)
+
         if (button.classList.contains('accordion-active')) {
           button.querySelector('.plus').style.setProperty('--plus-after', '90deg')
         } else {
@@ -402,7 +513,6 @@ function carousel() {
   let carousel = document.querySelector('.carousel'),
       slideContainer = document.querySelector('.slide-container'),
       slides = document.querySelectorAll('.slide'),
-      navContainer = document.querySelector('.slide-nav-container'),
       navs = document.querySelectorAll('.slide-nav'),
       slidesCount = slides.length,
       slideWidth = slides[0].offsetWidth,
@@ -416,35 +526,40 @@ function carousel() {
       index = 0,
       longTouch = false,
       mouseMoving = false,
-      prev = document.querySelector('.prev'),
-      next = document.querySelector('.next')
+      prev = document.querySelector('.slide-prev'),
+      next = document.querySelector('.slide-next')
 
   // Reset carousel on page load or window resize
-  slideContainer.classList.remove('animate')
+  slideContainer.classList.remove('animate-transition')
   slideContainer.style.transform = 'translate3d(0px, 0px, 0px)'
   slideContainer.style.height = `${slideHeight}px`
-  prev.style.setProperty('--slide-controller-center', `${slideHeight/2}px`)
-  next.style.setProperty('--slide-controller-center', `${slideHeight/2}px`)
-  prev.style.display = 'none'
-  navs[0].classList.add('slide-nav--active')
+  if (navs[0]) { navs[0].classList.add('slide-nav--active') }
+
+  if (prev && next) {
+    prev.style.setProperty('--slide-controller-center', `${slideHeight / 2}px`)
+    next.style.setProperty('--slide-controller-center', `${slideHeight / 2}px`)
+    prev.classList.add('d-none')
+    next.classList.add('d-block')
+  }
 
   // EventListeners
   slideContainer.onmousedown = start
   slideContainer.addEventListener('touchstart', (event) => { start(event) }, false)
   slideContainer.addEventListener('touchmove', (event) => { move(event) }, false)
   slideContainer.addEventListener('touchend', (event) => { end(event) }, false)
-  prev.addEventListener('click', (event) => { shiftSlide(event, 'prev') }, false)
-  next.addEventListener('click', (event) => { shiftSlide(event, 'next') }, false)
-  navs.forEach((nav, i) => {
-    let clickIndex = i
-    nav.addEventListener('click', (event) => { 
-      navigateSlide(clickIndex, null) 
-          console.log(clickIndex)
-    }, false)
-  })
-  
-  // TEST
-  console.log(`initial index: ${index}`)
+  slideContainer.addEventListener('transitionend', (event) => { transition(event)}, false)
+  if (prev && next) {
+    prev.addEventListener('click', (event) => { shiftSlide(event, 'prev') }, false)
+    next.addEventListener('click', (event) => { shiftSlide(event, 'next') }, false)
+  }
+  if (navs) {
+    navs.forEach((nav, i) => {
+      let clickIndex = i
+      nav.addEventListener('click', (event) => {
+        navigateToSlide(clickIndex, null)
+      }, false)
+    })
+  }
 
   // Start function
   function start(event) {
@@ -502,26 +617,16 @@ function carousel() {
           index--
         }
       }
-      mouseMoving = false 
-      // TEST
-      console.log(`end index: ${index}`)
-      console.log(index * slideWidth)
+    }
+    mouseMoving = false
+    // Move and animate container
+    slideContainer.classList.add('animate-transition')
+    slideContainer.style.transform = `translate3d(-${index * slideWidth}px, 0, 0)`
 
-      // Move and animate container
-      slideContainer.classList.add('animate')
-      slideContainer.style.transform = `translate3d(-${index * slideWidth}px, 0, 0)`
-      // Show/hide controller based on index position
-      if (index == 0) {
-        prev.style.display = 'none'
-      } else if (index == lastIndex) {
-        next.style.display = 'none'
-      } else if (index > 0 && index < lastIndex) {
-        prev.style.display = 'block'
-        next.style.display = 'block'
-      }
-      // Move to new nav position
+    // Move to new nav position
+    if (navs[0]) {
       let slideIndex = index
-      navigateSlide(null,slideIndex)
+      navigateToSlide(null, slideIndex)
     }
   }
 
@@ -537,30 +642,22 @@ function carousel() {
       }
     }
     // Move and animate container
-    slideContainer.classList.add('animate')
+    slideContainer.classList.add('animate-transition')
     slideContainer.style.transform = `translate3d(-${index * slideWidth}px, 0, 0)`
-    // TEST
-    console.log(`shift index: ${index}`)
-    // Show/hide controller based on index position
-    if (index == 0) {
-      prev.style.display = 'none'
-    } else if (index == lastIndex) {
-      next.style.display = 'none'
-    } else if (index > 0 && index < lastIndex) {
-      prev.style.display = 'block'
-      next.style.display = 'block'
-    }
+
     // Move to new nav position
-    let slideIndex = index
-    navigateSlide(null, slideIndex)
+    if (navs[0]) {
+      let slideIndex = index
+      navigateToSlide(null, slideIndex)
+    }
   }
 
   // Navigate to slide function
-  function navigateSlide(clickIndex, slideIndex) {
+  function navigateToSlide(clickIndex, slideIndex) {
     if (clickIndex != null) {
       index = clickIndex
       // Move and animate container
-      slideContainer.classList.add('animate')
+      slideContainer.classList.add('animate-transition')
       slideContainer.style.transform = `translate3d(-${index * slideWidth}px, 0, 0)`
       // Move to new nav position
       navs.forEach(nav => {
@@ -575,6 +672,23 @@ function carousel() {
         nav.classList.remove('slide-nav--active')
       })
       navs[slideIndex].classList.add('slide-nav--active')
+    }
+  }
+
+  // Transition function
+  function transition(event) {
+    event.preventDefault()
+
+    // Show/hide arrow controller based on slide index position
+    if (index == 0) {
+      prev.classList.replace('d-block', 'd-none')
+      next.classList.replace('d-none', 'd-block')
+    } else if (index == lastIndex) {
+      prev.classList.replace('d-none', 'd-block')
+      next.classList.replace('d-block', 'd-none')
+    } else {
+      prev.classList.replace('d-none', 'd-block')
+      next.classList.replace('d-none', 'd-block')
     }
   }
 }
